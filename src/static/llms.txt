@@ -1,6 +1,6 @@
 # [BRAND]
 
-> [BRAND] builds websites, SEO and Google Ads for US roofing contractors — only roofing contractors. One goal: more leads for the roofer. Remote team on US hours (Mon–Fri 8am–6pm Central). Founder: [FOUNDER_NAME]. Phone [US_PHONE], email [EMAIL].
+> [BRAND] builds websites, SEO and Google Ads for US roofing contractors — only roofing contractors. One goal: more leads for the roofer. Remote team on US hours (Mon–Fri 8am–6pm Central). Founder: [FOUNDER_NAME]. Contact: WhatsApp ([WHATSAPP_URL]) or email [EMAIL].
 
 ## Offer
 - Free homepage preview within 5 days of a 15-minute call. $0 upfront. Pay only if you love it.

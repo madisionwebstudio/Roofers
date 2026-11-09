@@ -88,6 +88,8 @@
     var cta = a.getAttribute("data-cta");
     if (cta) track("cta_click", { cta: cta, text: (a.textContent || "").trim().slice(0, 60) });
     if (a.href && a.href.indexOf("tel:") === 0) { track("phone_click", { cta: cta || "tel" }); adsConversion(cfg.adsCallLabel); }
+    if (a.href && a.href.indexOf("wa.me/") !== -1) { track("whatsapp_click", { cta: cta || "whatsapp" }); adsConversion(cfg.adsCallLabel); }
+    if (a.href && a.href.indexOf("mailto:") === 0) { track("email_click", { cta: cta || "email" }); adsConversion(cfg.adsCallLabel); }
   });
 
   /* ---------- Before/after slider ---------- */

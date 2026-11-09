@@ -5,7 +5,7 @@ The owner uses an **older iPhone (older iOS) that cannot open claude.ai artifact
 1. Rebuild (`python3 tools/build.py`), commit and push.
 2. Republish the clickable artifact (preview copy with relative links — see the preview script used before).
 3. **Always also send files that open on any iPhone, via SendUserFile:**
-   - a PDF of phone-size screenshots (390 px wide @2x) of Home, the 3 service pages, Pricing, Our Work and Free Preview, one phone screen per PDF page;
+   - a PDF of phone-size screenshots (390 px wide @2x) of Home, the 3 service pages, Pricing, Our Work, the Hardtland case study and Free Preview, one phone screen per PDF page;
    - 1–2 JPG screenshots of what changed (phone + desktop).
 4. Send the zips (`public_html` upload zip + full project) when asked.
 
@@ -16,6 +16,10 @@ The owner uses an **older iPhone (older iOS) that cannot open claude.ai artifact
 
 ## Design (current)
 - Font: Plus Jakarta Sans everywhere (`DISPLAY_FONT: "jakarta"`), minimalist style inspired by groksmm.com: sentence-case headings with tight tracking, one italic orange accent word, pill buttons, soft rounded white cards, quiet labels. Navy + orange kept. Theme layer = the `html.f-jakarta` block at the end of main.css.
+
+## Contact
+- No phone-call buttons. Contact is **WhatsApp** (`WHATSAPP` in config.json → `[WHATSAPP_URL]`) and **email**. Clicks on both are tracked as conversions.
+- Hardtland Home Improvement is a **client** (new site launching soon) with a case study at `/our-work/hardtland-home-improvement/`. Facts come from crawling both sites; add post-launch results only when real.
 
 ## Rules from the owner's briefs
 - Services: Web Design, SEO, Google Ads only. Main CTA "Get my free website preview".

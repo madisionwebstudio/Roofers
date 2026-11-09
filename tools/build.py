@@ -33,6 +33,8 @@ missing = [k for k, v in cfg.items() if UNSET(v) and k not in ("CHAT_AI", "FOUND
 digits = re.sub(r"\D", "", cfg["US_PHONE"])
 cfg["US_PHONE_E164"] = "+1" + digits[-10:] if len(digits) >= 10 else ""
 cfg["YEAR"] = str(date.today().year)
+_wa = re.sub(r"\D", "", cfg.get("WHATSAPP", ""))
+cfg["WHATSAPP_URL"] = ("https://wa.me/" + _wa + "?text=" + "Hi%20" + cfg["FOUNDER_NAME"].split()[0] + "%2C%20I%27m%20a%20roofer%20and%20I%27d%20like%20a%20free%20website%20preview.") if _wa else "https://wa.me/[WHATSAPP]"
 BASE = "https://" + cfg["DOMAIN"].strip().rstrip("/")
 LAUNCH_ON = cfg.get("LAUNCH_PRICING", "on").lower() == "on"
 FONT = cfg.get("DISPLAY_FONT", "jakarta").lower() if cfg.get("DISPLAY_FONT", "jakarta").lower() in ("anton", "archivo", "jakarta") else "jakarta"
@@ -126,7 +128,7 @@ def work_tag(m):
     out = []
     for i, w in enumerate(real):
         loc = f'{w["city"]}, {w["state"]}'
-        badge = "Client" if w.get("status") == "client" else "Redesign concept — not a client"
+        badge = ("Client" + (" · " + w["status_note"] if w.get("status_note") else "")) if w.get("status") == "client" else "Redesign concept — not a client"
         bcls = "badge badge--client" if w.get("status") == "client" else "badge badge--concept"
         before = img_tag(re.match(r"(.*)", f'name="{w["before_img"]}" alt="Before: {w["name"]} current website homepage" sizes="(min-width:1000px) 760px, 92vw"'))
         after = img_tag(re.match(r"(.*)", f'name="{w["after_img"]}" alt="After: our redesign of the {w["name"]} homepage" sizes="(min-width:1000px) 760px, 92vw"'))
@@ -149,7 +151,8 @@ def work_tag(m):
     <p class="muted">{html.escape(w.get("description", ""))}</p>
     <ul class="wcard__imps" role="list">{imps}</ul>
     <p class="small muted">{html.escape(w.get("note", ""))}</p>
-    <a class="arrow-link" href="{w["live_url"]}" target="_blank" rel="noopener" data-cta="work-live-{i}">View live redesign <svg aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow"/></svg></a>
+    <p class="btn-row">{('<a class="btn btn--dark" href="' + w["case_study"] + '" data-cta="work-case-' + str(i) + '">Read the case study <svg aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow"/></svg></a>') if w.get("case_study") else ""}
+    <a class="arrow-link" href="{w["live_url"]}" target="_blank" rel="noopener" data-cta="work-live-{i}">See the new site <svg aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow"/></svg></a></p>
   </div>
 </article>''')
     slot_html = []
@@ -228,12 +231,12 @@ def minify_css(css):
 
 
 ORG = {"@type": "Organization", "@id": BASE + "/#org", "name": cfg["BRAND"], "url": BASE + "/",
-       "logo": BASE + "/assets/img/logo.png", "email": cfg["EMAIL"], "telephone": cfg["US_PHONE_E164"],
+       "logo": BASE + "/assets/img/logo.png", "email": cfg["EMAIL"],
        "founder": {"@type": "Person", "@id": BASE + "/about/#founder", "name": cfg["FOUNDER_NAME"]},
        "areaServed": {"@type": "Country", "name": "United States"},
        "slogan": "A perfect website gets you more roofing leads.",
        "description": f"{cfg['BRAND']} is a marketing agency for US roofing contractors: roofing web design, roofing SEO and Google Ads.",
-       "contactPoint": {"@type": "ContactPoint", "contactType": "sales", "telephone": cfg["US_PHONE_E164"], "email": cfg["EMAIL"],
+       "contactPoint": {"@type": "ContactPoint", "contactType": "sales", "email": cfg["EMAIL"], "url": cfg["WHATSAPP_URL"],
                         "areaServed": "US", "availableLanguage": "English",
                         "hoursAvailable": {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "08:00", "closes": "18:00"}},
        "knowsAbout": ["Roofing web design", "Roofing SEO", "Google Ads for roofers"]}

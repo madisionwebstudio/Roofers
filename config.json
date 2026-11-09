@@ -12,6 +12,8 @@
   "US_PHONE": "[US_PHONE]",
   "_US_PHONE_help": "Display format, e.g. (608) 555-1234 — use a local US number (Google Voice / OpenPhone). tel: links are generated from it.",
   "EMAIL": "[EMAIL]",
+  "WHATSAPP": "[WHATSAPP]",
+  "_WHATSAPP_help": "WhatsApp number in international format, digits only, e.g. 16085551234 (US) or 919876543210 (India). Used for every WhatsApp button (wa.me link).",
   "PRICE_SEO_LOCAL": "$597",
   "PRICE_SEO_PRO": "$997",
   "_PRICE_SEO_help": "[CONFIRM] SEO prices — used on every page, the chat and llms.txt.",

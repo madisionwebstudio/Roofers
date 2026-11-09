@@ -37,6 +37,7 @@ Everything lives in **`config.json`**. Values still in `[BRACKETS]` are not set 
 | `DOMAIN` | Domain without `https://` (canonicals, sitemap, OG, schema, robots, form origin check) | **`[DOMAIN]` — set it** |
 | `US_PHONE` | Display phone, e.g. `(608) 555-1234` — use a **local US number**; `tel:` links are generated from it | **`[US_PHONE]` — set it** |
 | `EMAIL` | Public email | **`[EMAIL]` — set it** |
+| `WHATSAPP` | WhatsApp number, international digits only (e.g. `16085551234`) — every contact button is WhatsApp or email; no call buttons | **`[WHATSAPP]` — set it** |
 | `FOUNDER_NAME`, `FOUNDER_PHOTO`, `FOUNDER_VIDEO` | Founder block (photo 4:5; video = YouTube/Vimeo embed URL or `/assets/video/intro.mp4`) | photo + video **needed** |
 | `LINKEDIN_URL`, `FIVERR_URL` | Founder profiles (also in Person schema `sameAs`) | set |
 | `PRICE_SEO_LOCAL`, `PRICE_SEO_PRO` | SEO prices used everywhere (pages, schema, chat, llms.txt) | **`[CONFIRM]` $597 / $997** |

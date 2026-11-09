@@ -246,5 +246,43 @@
   ],
   "ratio": 2.1641,
   "jpg": 390
+ },
+ "work/hardtland-before-mobile": {
+  "widths": [
+   240,
+   390
+  ],
+  "ratio": 2.1641,
+  "jpg": 390
+ },
+ "work/hardtland-before-full": {
+  "widths": [
+   640,
+   1000
+  ],
+  "ratio": 1.52708,
+  "jpg": 1000
+ },
+ "work/hardtland-after-full": {
+  "widths": [
+   640,
+   1000
+  ],
+  "ratio": 2.29167,
+  "jpg": 1000
+ },
+ "work/hardtland-before-mobile-long": {
+  "widths": [
+   390
+  ],
+  "ratio": 4.32821,
+  "jpg": 390
+ },
+ "work/hardtland-after-mobile-long": {
+  "widths": [
+   390
+  ],
+  "ratio": 4.32821,
+  "jpg": 390
  }
 }

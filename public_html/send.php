@@ -83,7 +83,7 @@ $ip = $_SERVER['REMOTE_ADDR'] ?? '0.0.0.0';
 $rateDir = is_dir($PRIVATE_DIR) || @mkdir($PRIVATE_DIR, 0750, true) ? $PRIVATE_DIR : sys_get_temp_dir();
 $rateFile = $rateDir . '/rate-' . hash('sha256', $ip . BRAND) . '.json';
 $hits = array_filter((array) json_decode((string) @file_get_contents($rateFile), true), fn($t) => is_int($t) && $t > time() - RATE_WINDOW);
-if (count($hits) >= RATE_MAX) respond(false, 'Too many submissions — please wait 15 minutes or call us.', 429);
+if (count($hits) >= RATE_MAX) respond(false, 'Too many submissions — please wait 15 minutes or message us on WhatsApp.', 429);
 $hits[] = time();
 @file_put_contents($rateFile, json_encode(array_values($hits)), LOCK_EX);
 
