@@ -29,7 +29,6 @@ Redirect 301 /services/website-care-plans/ /pricing/
 Redirect 301 /services/lead-response-automation/ /roofing-lead-generation/
 Redirect 301 /services/reviews-reputation/ /local-seo-for-roofing-companies/
 Redirect 301 /services/ /roofing-website-design/
-Redirect 301 /locations/index.html /locations/san-antonio-tx/
 Redirect 301 /resources/ /blog/
 Redirect 301 /demos/ /our-work/
 

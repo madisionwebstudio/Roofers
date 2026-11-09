@@ -1096,3 +1096,12 @@ html.f-jakarta .hdr__phone svg{color:#25D366}
 @media (max-width:999px){.sec--navy .case-phones{margin-top:12px}}
 .logo b{white-space:nowrap}
 .steps4 li>span{grid-column:2}
+/* city pages */
+.tags{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}
+.tags li{padding:7px 14px;border:1px solid var(--line);border-radius:999px;background:var(--white);font-size:.9rem}
+.loc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr));gap:14px}
+.loc-card{display:block;padding:20px 22px;background:var(--white);border:1px solid var(--line);border-radius:18px;text-decoration:none;color:var(--ink);transition:border-color .2s,transform .2s}
+.loc-card:hover{border-color:var(--orange);transform:translateY(-2px)}
+.loc-card b{display:block;font-size:1.1rem;letter-spacing:-.01em}
+.loc-card span{display:block;margin-top:4px;font-size:.88rem;color:var(--steel)}
+@media (min-width:1000px){.loc-grid{grid-template-columns:repeat(4,1fr)}}
