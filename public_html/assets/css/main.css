@@ -1105,3 +1105,18 @@ html.f-jakarta .hdr__phone svg{color:#25D366}
 .loc-card b{display:block;font-size:1.1rem;letter-spacing:-.01em}
 .loc-card span{display:block;margin-top:4px;font-size:.88rem;color:var(--steel)}
 @media (min-width:1000px){.loc-grid{grid-template-columns:repeat(4,1fr)}}
+/* WhatsApp + email buttons: one brand style, large icons */
+.cbtn{--cb:52px;display:inline-flex;align-items:center;justify-content:center;gap:10px;flex:none;width:var(--cb);height:var(--cb);border-radius:999px;background:var(--white);color:var(--orange);text-decoration:none;border:2px solid var(--orange);box-shadow:0 2px 10px rgba(0,0,0,.12);transition:background .2s,color .2s,transform .2s}
+.cbtn svg{width:28px;height:28px;flex:none}
+.cbtn:hover,.cbtn:focus-visible{background:var(--orange);color:var(--white);transform:translateY(-1px)}
+.cbtn--solid{background:var(--orange);color:var(--white)}
+.cbtn--solid:hover,.cbtn--solid:focus-visible{background:var(--navy);border-color:var(--navy);color:var(--white)}
+.cbtn--wide{width:auto;padding:0 24px 0 18px;font:700 1rem/1 var(--f-body)}
+.cbtn-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.mnav .cbtn-row .cbtn{flex:1;--cb:58px}
+.hdr__c{display:none;--cb:46px}
+.hdr__c svg{width:24px;height:24px}
+@media (min-width:1280px){.hdr__c{display:inline-flex}}
+@media (min-width:1180px) and (max-width:1419px){html.f-jakarta .nav a{padding:10px 9px;font-size:.88rem}}
+.mbar .mbar__c{--cb:54px}
+.mbar .mbar__c svg{width:28px;height:28px}
