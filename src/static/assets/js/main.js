@@ -2,6 +2,9 @@
 (function () {
   "use strict";
   var d = document, cfg = window.SITE || {};
+  /* Site root, worked out from this script's own URL so assets load from any folder */
+  var meScript = d.currentScript || d.querySelector('script[src*="assets/js/main.js"]');
+  var BASE = meScript && meScript.src ? meScript.src.replace(/assets\/js\/main\.js.*$/, "") : "/";
   d.documentElement.classList.remove("no-js");
   var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -181,7 +184,7 @@
     var load = function (openNow) {
       if (openNow) d.getElementById("chatbot").setAttribute("data-open-on-load", "true");
       if (loaded) { return; } loaded = true;
-      var s = d.createElement("script"); s.src = "/assets/js/chat.js"; s.async = true; d.body.appendChild(s);
+      var s = d.createElement("script"); s.src = BASE + "assets/js/chat.js"; s.async = true; d.body.appendChild(s);
     };
     chatBtn.addEventListener("pointerenter", function () { load(false); }, { once: true });
     chatBtn.addEventListener("focus", function () { load(false); }, { once: true });

@@ -40,8 +40,7 @@ for rel in files:
     open(d_path,'w',encoding='utf-8').write(h)
 # patch JS for preview
 mj=os.path.join(OUT,'assets/js/main.js'); s=open(mj).read()
-s=s.replace('"/assets/img/icons.svg#"','(cfg.root||"/")+"assets/img/icons.svg#"')
-s=s.replace('s.src = "/assets/js/chat.js"','s.src = (cfg.root||"/")+"assets/js/chat.js"')
+s=s.replace('"/assets/img/icons.svg#"','(cfg.preview?(cfg.root||""):"/")+"assets/img/icons.svg#"')
 s=s.replace('      var btn = form.querySelector("[type=submit]"), label = btn.innerHTML;','''      if (cfg.preview) { if (status) { status.textContent = "Preview only: this form sends leads once the site is live on your hosting."; status.setAttribute("data-show", "true"); status.style.borderLeftColor = "#F26B1D"; status.style.background = "#FFF1E6"; status.style.color = "#6B2A05"; } return; }
       var btn = form.querySelector("[type=submit]"), label = btn.innerHTML;''')
 open(mj,'w').write(s)
