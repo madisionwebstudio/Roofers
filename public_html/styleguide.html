@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Style guide — Roofrs</title>
+<meta name="description" content="Roofrs design system: tokens, type, buttons, forms and components.">
+<link rel="canonical" href="https://[DOMAIN]/styleguide.html">
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#0F1E2E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Roofrs">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Style guide — Roofrs">
+<meta property="og:description" content="Roofrs design system: tokens, type, buttons, forms and components.">
+<meta property="og:url" content="https://[DOMAIN]/styleguide.html">
+<meta property="og:image" content="https://[DOMAIN]/assets/img/og-default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Style guide — Roofrs">
+<meta name="twitter:description" content="Roofrs design system: tokens, type, buttons, forms and components.">
+<meta name="twitter:image" content="https://[DOMAIN]/assets/img/og-default.jpg">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"></noscript>
+<style>body{margin:0;background:#F5F3EF;color:#14181D;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif}.site-header{background:#0F1E2E;min-height:72px}</style>
+<link rel="stylesheet" href="/assets/css/main.css">
+<script>document.documentElement.classList.add('js')</script>
+<script src="/assets/js/config.js" defer></script>
+<script src="/assets/js/main.js" defer></script>
+<!-- Analytics: GA4 + Google Ads load from /assets/js/config.js (set analytics.enabled = true). -->
+
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header" data-header>
+  <div class="container site-header__inner">
+    <a class="logo" href="/" aria-label="Roofrs home"><svg viewBox="0 0 30 20" aria-hidden="true" focusable="false"><path d="M2 17.5L15 4.5l13 13" fill="none" stroke="#F26B1D" stroke-width="3.2" stroke-linecap="square"/><path d="M9 17.5h12" stroke="#FFFFFF" stroke-width="1.6" opacity=".55"/></svg><span class="logo__word">ROOFRS</span></a>
+    <nav class="nav" aria-label="Main">
+      <ul class="nav__list">
+        <li class="nav__item--drop" data-dropdown data-open="false">
+          <button class="nav__link" type="button" aria-expanded="false" aria-controls="dd-services">Services <svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-chevron"></use></svg></button>
+          <ul class="dropdown" id="dd-services"><li><a href="/services/roofing-seo/"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-map-roof"></use></svg><div><strong>Roofing SEO</strong><span>Maps 3-pack, city pages, Google Business Profile</span></div></a></li><li><a href="/services/roofing-web-design/"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-browser"></use></svg><div><strong>Roofing Web Design</strong><span>Fast, mobile-first sites built to get calls</span></div></a></li><li><a href="/services/roofing-marketing/"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-chart"></use></svg><div><strong>Google Ads, LSA & Meta</strong><span>Paid leads you can trace to signed jobs</span></div></a></li><li><a href="/services/lead-response-automation/"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-phone-missed"></use></svg><div><strong>Lead Response & Automation</strong><span>Missed-call text-back and estimate follow-up</span></div></a></li><li><a href="/services/reviews-reputation/"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-star-roof"></use></svg><div><strong>Reviews & Reputation</strong><span>Out-review the roofers above you in Maps</span></div></a></li><li><a href="/services/website-care-plans/"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-shield"></use></svg><div><strong>Website Care Plans</strong><span>Hosting, updates, backups, small edits</span></div></a></li><li class="dropdown__all"><a href="/services/"><div><strong>All services</strong><span>How the six fit together</span></div></a></li></ul>
+        </li>
+        <li><a class="nav__link" href="/pricing/">Pricing</a></li>
+        <li><a class="nav__link" href="/our-work/">Our Work</a></li>
+        <li><a class="nav__link" href="/resources/">Resources</a></li>
+        <li><a class="nav__link" href="/about/">About</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn--sm header-cta" href="/free-audit/" data-track="header_audit">Get Free Audit</a>
+    <div class="header-mobile">
+      <a class="btn btn--sm" href="/free-audit/" data-track="header_audit_m">Free Audit</a>
+      <a class="icon-btn" href="tel:[US_PHONE_E164]" aria-label="Call Roofrs" data-track="header_call"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-phone"></use></svg></a>
+      <button class="icon-btn burger" type="button" data-burger aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu"><span></span></button>
+    </div>
+  </div>
+</header>
+<nav class="mobile-nav" id="mobile-nav" aria-label="Mobile">
+  <p class="mobile-nav__group">Services</p>
+  <ul class="sub"><li><a href="/services/roofing-seo/">Roofing SEO</a></li><li><a href="/services/roofing-web-design/">Roofing Web Design</a></li><li><a href="/services/roofing-marketing/">Google Ads, LSA & Meta</a></li><li><a href="/services/lead-response-automation/">Lead Response & Automation</a></li><li><a href="/services/reviews-reputation/">Reviews & Reputation</a></li><li><a href="/services/website-care-plans/">Website Care Plans</a></li><li><a href="/services/">All services</a></li></ul>
+  <p class="mobile-nav__group">Company</p>
+  <ul>
+    <li><a href="/pricing/">Pricing</a></li>
+    <li><a href="/our-work/">Our Work</a></li>
+    <li><a href="/resources/">Resources</a></li>
+    <li><a href="/about/">About</a></li>
+    <li><a href="/contact/">Contact</a></li>
+  </ul>
+  <a class="btn btn--lg" href="/free-audit/" data-track="mnav_audit">Get my free Lead-Leak Audit</a>
+</nav>
+<main id="main">
+<section class="page-hero grid-paper--dark">
+  <div class="container">
+    <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><span aria-current="page">Style guide</span></li></ol></nav>
+    <div class="page-hero__grid">
+      <div>
+        <p class="eyebrow"><span class="tape" aria-hidden="true"></span><span>Design system</span></p>
+        <h1>The Roofline — style guide</h1>
+        <p class="page-hero__lead">Every component on the site, in one place. Pitched dividers, blueprint dimension lines, hi-vis tape, grid paper, big editorial numbers and a single-stroke icon set.</p>
+        
+      </div>
+      
+    </div>
+  </div>
+</section>
+<section class="section grid-paper pitch-l"><div class="container">
+  <div class="sg-block" style="border:0;padding-top:0"><h2>Color tokens</h2><p class="c-steel">Orange is precious — about 5% of any screen. Text on orange is always ink, never white (contrast).</p><div class="sg-swatches"><div class="sg-swatch"><i style="background:#0F1E2E"></i><div><b>--navy</b><br>#0F1E2E<br><span class="c-steel">Hero, header, footer</span></div></div><div class="sg-swatch"><i style="background:#1F2A37"></i><div><b>--slate</b><br>#1F2A37<br><span class="c-steel">Cards on dark</span></div></div><div class="sg-swatch"><i style="background:#F26B1D"></i><div><b>--orange</b><br>#F26B1D<br><span class="c-steel">CTAs & key numbers only</span></div></div><div class="sg-swatch"><i style="background:#F5F3EF"></i><div><b>--paper</b><br>#F5F3EF<br><span class="c-steel">Light sections</span></div></div><div class="sg-swatch"><i style="background:#14181D"></i><div><b>--ink</b><br>#14181D<br><span class="c-steel">Body text</span></div></div><div class="sg-swatch"><i style="background:#5B6770"></i><div><b>--steel</b><br>#5B6770<br><span class="c-steel">Muted text, lines</span></div></div><div class="sg-swatch"><i style="background:#FFFFFF"></i><div><b>--white</b><br>#FFFFFF<br><span class="c-steel">Cards on light</span></div></div><div class="sg-swatch"><i style="background:#A9B3BB"></i><div><b>--fog</b><br>#A9B3BB<br><span class="c-steel">Muted text on dark (derived)</span></div></div></div></div>
+  <div class="sg-block"><h2>Type</h2>
+    <p class="label">Display / H1 — Barlow Condensed 800</p><p class="mb-4" style="font-family:var(--font-display);font-weight:800;font-size:var(--fs-h1);line-height:.95">Stop paying for leads you never answer.</p>
+    <p class="label">H2 — Barlow Condensed 700</p><h2>The leak is the problem.</h2>
+    <p class="label">H3 — Barlow Condensed 700</p><h3>Missed-call text-back</h3>
+    <p class="label">H4 — Barlow Condensed 600</p><h4>Estimate follow-up</h4>
+    <p class="label">Body — Inter 400, 17–18px / 1.6</p><p class="maxw-40">Roofers pay more per lead than any other home-service trade, then lose a share of those leads to missed calls, slow callbacks and estimates nobody follows up on.</p>
+    <p class="label">Big number — Barlow Condensed 700, tabular</p><div class="bignum tnum">$228</div>
+  </div>
+  <div class="sg-block"><h2>Buttons &amp; links</h2>
+    <div class="sg-row"><a class="btn btn--lg" href="/free-audit/" data-track="sg">Get my free Lead-Leak Audit <svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-arrow"></use></svg></a><a class="btn btn--ghost" href="#">See pricing</a><a class="btn btn--dark" href="#">Dark</a><a class="btn btn--sm" href="#">Small</a><a class="link-arrow" href="#">Text link</a></div>
+    <div class="sg-row mt-4" style="background:var(--navy);padding:24px"><a class="btn" href="#">Primary on navy</a><a class="btn btn--ghost-light" href="#">Ghost on navy</a></div>
+  </div>
+  <div class="sg-block"><h2>Hi-vis tape &amp; eyebrow</h2><span class="tape" aria-hidden="true"></span><div class="mt-4"><p class="eyebrow"><span class="tape" aria-hidden="true"></span><span>Section eyebrow label</span></p></div></div>
+  <div class="sg-block"><h2>Blueprint dimension lines</h2><div style="max-width:520px"><div class="dim " aria-hidden="true"><span class="dim__label">8.7 hrs average callback</span></div></div><div style="max-width:200px" class="mt-3"><div class="dim " aria-hidden="true"><span class="dim__label">5 min</span></div></div></div>
+  <div class="sg-block"><h2>Icons — 1.5px stroke</h2><div class="sg-icons"><div><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-phone"></use></svg><span>phone</span></div><div><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-phone-missed"></use></svg><span>phone-missed</span></div><div><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-voicemail"></use></svg><span>voicemail</span></div><div><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-shingles"></use></svg><span>shingles</span></div><div><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-map-roof"></use></svg><span>map-roof</span></div><div><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-calendar-check"></use></svg><span>calendar-check</span></div><div><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-star-roof"></use></svg><span>star-roof</span></div><div><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-receipt"></use></svg><span>receipt</span></div><div><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-browser"></use></svg><span>browser</span></div><div><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-chart"></use></svg><span>chart</span></div><div><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-chat"></use></svg><span>chat</span></div><div><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-shield"></use></svg><span>shield</span></div><div><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-check"></use></svg><span>check</span></div><div><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-x"></use></svg><span>x</span></div><div><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-arrow"></use></svg><span>arrow</span></div><div><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-chevron"></use></svg><span>chevron</span></div><div><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-mail"></use></svg><span>mail</span></div><div><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-clock"></use></svg><span>clock</span></div><div><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-pin"></use></svg><span>pin</span></div><div><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-play"></use></svg><span>play</span></div><div><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-gauge"></use></svg><span>gauge</span></div><div><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-user"></use></svg><span>user</span></div><div><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-doc"></use></svg><span>doc</span></div><div><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-key"></use></svg><span>key</span></div><div><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-truck"></use></svg><span>truck</span></div></div></div>
+  <div class="sg-block"><h2>Form fields</h2>
+    <form class="form maxw-40" onsubmit="return false">
+      <div class="field"><label for="sg-n">Your name <span class="req">required</span></label><input class="input" id="sg-n" placeholder="Jordan Reyes"></div>
+      <div class="field"><label for="sg-s">Monthly leads</label><select class="select" id="sg-s"><option>10–25</option></select></div>
+      <fieldset class="field"><legend>Do you run Google Ads?</legend><div class="choices"><label class="choice"><input type="radio" name="sg" checked><span>Yes</span></label><label class="choice"><input type="radio" name="sg"><span>No</span></label><label class="choice"><input type="radio" name="sg"><span>Not sure</span></label></div></fieldset>
+      <label class="consent"><input type="checkbox"><span>I agree to be contacted by phone, text and email about my audit.</span></label>
+    </form></div>
+  <div class="sg-block"><h2>Checklist</h2><ul class="checks"><li><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-check"></use></svg><div><strong>Missed-call text-back</strong><span>Sends in seconds</span></div></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-check"></use></svg><div><strong>Estimate follow-up</strong><span>5 touches over 14 days</span></div></li></ul></div>
+</div></section>
+<section class="section section--navy pitch-r"><div class="container">
+  <h2>On navy: call log, stats, dims</h2><div class="cols"><div><div class="dim dim--dark" aria-hidden="true"><span class="dim__label">Your callback: hours</span></div></div><figure class="calllog" aria-label="Example call log showing missed calls">
+  <div class="calllog__head"><span class="calllog__title">Missed calls today</span><span class="calllog__tag">Example</span></div>
+  <ul><li class=""><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-phone"></use></svg><div><span class="calllog__what">Leak over the kitchen after last night's rain</span><span class="calllog__meta">Answered · inspection booked Thu 10 AM</span></div><div class="calllog__time">8:12 AM<br></div></li><li class="is-missed"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-phone-missed"></use></svg><div><span class="calllog__what">Insurance claim question</span><span class="calllog__meta">Missed · no callback for 4 hrs 9 min</span></div><div class="calllog__time">12:37 PM<br><span class="calllog__status">Missed</span></div></li><li class="is-missed"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-phone-missed"></use></svg><div><span class="calllog__what">Hail damage inquiry</span><span class="calllog__meta">Missed · crew on a roof across town</span></div><div class="calllog__time">4:52 PM<br><span class="calllog__status">Missed</span></div></li><li class=""><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-voicemail"></use></svg><div><span class="calllog__what">Roof replacement quote</span><span class="calllog__meta">Voicemail · after hours, no auto-reply</span></div><div class="calllog__time">6:18 PM<br><span class="calllog__status calllog__status--vm">Voicemail</span></div></li><li class="is-missed"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-phone-missed"></use></svg><div><span class="calllog__what">Storm damage, needs a tarp tonight</span><span class="calllog__meta">Missed · after hours</span></div><div class="calllog__time">7:05 PM<br><span class="calllog__status">Missed</span></div></li></ul>
+  <figcaption class="calllog__foot">
+    <div class="dim dim--dark" aria-hidden="true"><span class="dim__label">Your callback: hours</span></div>
+    <div style="width:28%;margin-top:.75rem"><div class="dim dim--dark" aria-hidden="true"><span class="dim__label">Theirs: min</span></div></div>
+    <p><strong style="color:#fff">Average roofer callback: hours. Homeowners call the next roofer in minutes.</strong> Illustrative call log — not a real customer.</p>
+  </figcaption>
+</figure></div>
+</div></section>
+<section class="section section--paper pitch-l"><div class="container">
+  <h2>Pricing card</h2><div class="plans"><article class="plan" aria-labelledby="plan-starter">
+  
+  <h3 class="plan__name" id="plan-starter">Starter</h3>
+  <p class="plan__for">For 2–5 person crews that need the basics running without babysitting.</p>
+  <div class="plan__price"><b>$397</b><small>/mo</small></div>
+  <ul><li><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-check"></use></svg><span>Website hosting &amp; care</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-check"></use></svg><span>Google Business Profile management</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-check"></use></svg><span>Missed-call text-back</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-check"></use></svg><span>Review request automation</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-check"></use></svg><span>Monthly report: calls, leads, reviews</span></li></ul>
+  <a class="btn btn--dark btn--block" href="/free-audit/?plan=starter" data-track="sg_starter">Start with a free audit</a>
+</article><article class="plan plan--hot" aria-labelledby="plan-growth">
+  <div class="plan__flag"><span class="tape tape--wide" aria-hidden="true"></span><span>Most roofers start here</span></div>
+  <h3 class="plan__name" id="plan-growth">Growth</h3>
+  <p class="plan__for">For crews ready to buy leads and want proof of what each one is worth.</p>
+  <div class="plan__price"><b>$1,297</b><small>/mo</small></div>
+  <ul><li class="plan__inherit"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-check"></use></svg><span>Everything in Starter, plus:</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-check"></use></svg><span>Local SEO for 1 city</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-check"></use></svg><span>Google Ads + Local Services Ads management</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-check"></use></svg><span>Call tracking &amp; recording</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-check"></use></svg><span>Cost-per-signed-job report</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-check"></use></svg><span>Estimate follow-up automation (5 touches)</span></li></ul>
+  <a class="btn btn--block" href="/free-audit/?plan=growth" data-track="sg_growth">Start with a free audit</a>
+</article><article class="plan" aria-labelledby="plan-premium">
+  
+  <h3 class="plan__name" id="plan-premium">Premium</h3>
+  <p class="plan__for">For multi-crew operations working several cities or storm markets.</p>
+  <div class="plan__price"><span class="plan__from">from</span><b>$2,497</b><small>/mo</small></div>
+  <ul><li class="plan__inherit"><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-check"></use></svg><span>Everything in Growth, plus:</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-check"></use></svg><span>SEO for 2–4 cities</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-check"></use></svg><span>Facebook &amp; Instagram ads</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-check"></use></svg><span>CRM integration (JobNimbus, AccuLynx, Roofr)</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-check"></use></svg><span>After-hours answering</span></li><li><svg class="icon" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-check"></use></svg><span>Quarterly strategy call</span></li></ul>
+  <a class="btn btn--dark btn--block" href="/free-audit/?plan=premium" data-track="sg_premium">Start with a free audit</a>
+</article></div>
+  <h2 class="mt-8">Calculator</h2><div class="calc calc--mini" data-calc>
+  <form class="calc__inputs" onsubmit="return false" aria-label="Missed-call cost inputs">
+    <div class="field"><label for="m-calls">Inbound calls per week</label>
+  <input class="input tnum" type="number" inputmode="numeric" id="m-calls" name="calls" value="20" min="0" max="500" step="1"></div>
+    <div class="range-row">
+  <div class="range-row__top"><label for="m-missed">% of calls missed</label><output for="m-missed" class="tnum">20%</output></div>
+  <input type="range" id="m-missed" name="missed" min="0" max="80" step="1" value="20" data-unit="%">
+</div>
+    <div class="field"><label for="m-value">Average job value ($)</label>
+  <input class="input tnum" type="number" inputmode="numeric" id="m-value" name="value" value="11000" min="0" max="200000" step="500"></div>
+    <div class="range-row">
+  <div class="range-row__top"><label for="m-close">Your close rate</label><output for="m-close" class="tnum">25%</output></div>
+  <input type="range" id="m-close" name="close" min="5" max="80" step="1" value="25" data-unit="%">
+</div>
+  </form>
+  <div class="calc__out" aria-live="polite">
+    <span class="calc__label">You may be losing about</span>
+    <span class="bignum" data-out="month">$0</span>
+    <span class="calc__label">per month in signed work</span>
+    <p class="calc__note">Estimate only — assumes half of missed calls are real roofing leads. Change every assumption in the <a href="/resources/missed-call-calculator/">full calculator</a>.</p>
+  </div>
+</div>
+  <h2 class="mt-8">Device frame</h2><div style="max-width:640px"><div class="devices" role="img" aria-label="Demo A — Storm restoration shown on a laptop and phone"><div class="laptop"><div class="laptop__screen"><div class="mock mock--a"><div class="mock__nav"><span>RIDGELINE</span><i></i></div><div class="mock__h">Hail damage? Free inspection in 24 hrs</div><div class="mock__bar"></div><div class="mock__lines"><i></i><i></i><i></i></div><svg class="mock__roof" viewBox="0 0 100 60" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1"><path d="M5 58 L50 10 L95 58"/><path d="M20 58 L50 26 L80 58" stroke-dasharray="2 3"/><path d="M50 10 V58"/></svg><div class="mock__row"><i></i><i></i><i></i></div></div></div><div class="laptop__base"></div></div><div class="phone"><div class="mock mock--a"><div class="mock__nav"><span>RIDGELINE</span></div><div class="mock__h">Hail damage? Free inspection in 24 hrs</div><div class="mock__bar"></div><div class="mock__lines"><i></i><i></i><i></i></div></div></div></div></div><div class="mt-2"><span class="demo-label"><svg class="icon icon--sm" aria-hidden="true" focusable="false"><use href="/assets/img/icons.svg#i-browser"></use></svg>Demo build — not a client</span></div>
+  <h2 class="mt-8">Sample report</h2><div style="max-width:420px"><div class="report" aria-label="Sample audit report preview, blurred">
+  <div class="report__page">
+    <span class="report__stamp">Sample</span>
+    <div class="report__blur" aria-hidden="true">
+      <h4>Lead-Leak Audit — Sample Roofing Co.</h4>
+      <div class="rgrid"><div><b>2/4</b><span>Test calls answered</span></div><div><b>#7</b><span>Maps rank</span></div><div><b>41</b><span>Reviews vs 212</span></div></div>
+      <div class="rlines"><i></i><i></i><i></i></div>
+      <div class="rbar rbar--hot"><b style="width:38%"></b></div>
+      <div class="rbar"><b style="width:72%"></b></div>
+      <div class="rbar"><b style="width:55%"></b></div>
+      <div class="rlines"><i></i><i></i><i></i><i></i></div>
+    </div>
+  </div>
+  <div class="report__page report__page--2" aria-hidden="true"><div class="report__blur"><div class="rlines"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="rbar"><b style="width:60%"></b></div><div class="rlines"><i></i><i></i><i></i></div></div></div>
+</div></div>
+</div></section>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a class="logo" href="/" aria-label="Roofrs home"><svg viewBox="0 0 30 20" aria-hidden="true" focusable="false"><path d="M2 17.5L15 4.5l13 13" fill="none" stroke="#F26B1D" stroke-width="3.2" stroke-linecap="square"/><path d="M9 17.5h12" stroke="#FFFFFF" stroke-width="1.6" opacity=".55"/></svg><span class="logo__word">ROOFRS</span></a>
+        <p>Marketing for US roofing contractors, measured in signed jobs — not rankings.</p>
+        <div class="footer__contact">
+          <span>8am–6pm Central, Mon–Fri</span>
+          <a href="mailto:hello@[DOMAIN]">hello@[DOMAIN]</a>
+          <a href="tel:[US_PHONE_E164]">[US PHONE]</a>
+        </div>
+      </div>
+      <div><h2>Services</h2><ul><li><a href="/services/roofing-seo/">Roofing SEO</a></li><li><a href="/services/roofing-web-design/">Roofing Web Design</a></li><li><a href="/services/roofing-marketing/">Google Ads, LSA & Meta</a></li><li><a href="/services/lead-response-automation/">Lead Response & Automation</a></li><li><a href="/services/reviews-reputation/">Reviews & Reputation</a></li><li><a href="/services/website-care-plans/">Website Care Plans</a></li></ul></div>
+      <div><h2>Company</h2><ul>
+        <li><a href="/free-audit/">Free Lead-Leak Audit</a></li>
+        <li><a href="/pricing/">Pricing</a></li>
+        <li><a href="/our-work/">Our Work</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/contact/">Contact</a></li></ul></div>
+      <div><h2>Resources</h2><ul>
+        <li><a href="/resources/">All resources</a></li>
+        <li><a href="/resources/missed-call-calculator/">Missed-call calculator</a></li>
+        <li><a href="/resources/lsa-google-ads-migration-2026/">LSA → Google Ads guide</a></li></ul></div>
+      <div><h2>Locations</h2><ul>
+        <li><a href="/locations/san-antonio-tx/">San Antonio, TX</a></li>
+        <li><span class="soon">Omaha, NE — soon</span></li>
+        <li><span class="soon">Colorado Springs, CO — soon</span></li>
+        <li><span class="soon">Oklahoma City, OK — soon</span></li>
+        <li><span class="soon">Milwaukee, WI — soon</span></li>
+        <li><a href="/locations/">All locations</a></li></ul></div>
+    </div>
+    <div class="footer__bottom">
+      <span>&copy; 2026 Roofrs. Remote team. No ranking guarantees — we report calls, inspections and signed jobs.</span>
+      <span><a href="/privacy/">Privacy</a> &nbsp;·&nbsp; <a href="/terms/">Terms</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

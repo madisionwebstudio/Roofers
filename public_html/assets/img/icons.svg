@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+<!-- Roofrs icon set — 32×32 grid, 1.5px stroke, round caps. Styled by .icon in main.css (stroke: currentColor). -->
+<symbol id="i-phone" viewBox="0 0 32 32"><path d="M9.5 4.5h4l2 6-3 2.2a15.5 15.5 0 0 0 6.8 6.8l2.2-3 6 2v4a3 3 0 0 1-3 3A20.5 20.5 0 0 1 6.5 7.5a3 3 0 0 1 3-3z"/></symbol>
+<symbol id="i-phone-missed" viewBox="0 0 32 32"><path d="M9.5 4.5h4l2 6-3 2.2a15.5 15.5 0 0 0 6.8 6.8l2.2-3 6 2v4a3 3 0 0 1-3 3A20.5 20.5 0 0 1 6.5 7.5a3 3 0 0 1 3-3z"/><path d="M4 4l24 24"/></symbol>
+<symbol id="i-voicemail" viewBox="0 0 32 32"><circle cx="9" cy="17" r="4.5"/><circle cx="23" cy="17" r="4.5"/><path d="M9 21.5h14"/></symbol>
+<symbol id="i-shingles" viewBox="0 0 32 32"><path d="M4 7h24v6H4zM4 13v6h24v-6M4 19v6h24v-6"/><path d="M10 7v6M16 7v6M22 7v6M7 13v6M13 13v6M19 13v6M25 13v6M10 19v6M16 19v6M22 19v6"/></symbol>
+<symbol id="i-map-roof" viewBox="0 0 32 32"><path d="M16 2.5a5 5 0 0 0-5 5c0 3.8 5 8.5 5 8.5s5-4.7 5-8.5a5 5 0 0 0-5-5z"/><circle cx="16" cy="7.5" r="1.6"/><path d="M3 27l13-8 13 8"/><path d="M7.5 24.5v5h17v-5"/></symbol>
+<symbol id="i-calendar-check" viewBox="0 0 32 32"><rect x="5" y="7" width="22" height="20" rx="2"/><path d="M5 13h22M11 4v6M21 4v6"/><path d="M11.5 20l3 3 6-6"/></symbol>
+<symbol id="i-star-roof" viewBox="0 0 32 32"><path d="M3 14.5L16 4.5l13 10"/><path d="M16 15l1.8 3.9 4.2.4-3.2 2.8.9 4.2L16 24.1l-3.7 2.2.9-4.2-3.2-2.8 4.2-.4z"/></symbol>
+<symbol id="i-receipt" viewBox="0 0 32 32"><path d="M8 3.5h16v25l-2.7-2-2.6 2-2.7-2-2.6 2-2.7-2L8 28.5z"/><path d="M18.6 10.4c-.6-.9-1.6-1.3-2.6-1.3-1.5 0-2.7.8-2.7 2.1 0 2.9 5.4 1.7 5.4 4.6 0 1.3-1.2 2.2-2.7 2.2-1 0-2-.4-2.6-1.3M16 7.4v1.7M16 18v1.7M12 23h8"/></symbol>
+<symbol id="i-browser" viewBox="0 0 32 32"><rect x="3" y="5.5" width="26" height="21" rx="2"/><path d="M3 10.5h26"/><path d="M6.5 8h.01M9.5 8h.01M12.5 8h.01"/><path d="M10 22v-3.5l6-4.5 6 4.5V22"/></symbol>
+<symbol id="i-chart" viewBox="0 0 32 32"><path d="M5 4v23h23"/><path d="M9 21l5-6 4 3 7-9"/><path d="M20 9h5v5"/></symbol>
+<symbol id="i-chat" viewBox="0 0 32 32"><path d="M4.5 6.5h23v15H14l-6 5v-5H4.5z"/><path d="M9.5 12h13M9.5 16h8"/></symbol>
+<symbol id="i-shield" viewBox="0 0 32 32"><path d="M16 3l10 4v8.5c0 6.5-4.4 10.8-10 13.5-5.6-2.7-10-7-10-13.5V7z"/><path d="M11.5 16l3 3 6-6"/></symbol>
+<symbol id="i-check" viewBox="0 0 32 32"><path d="M6 16.5l6.5 6.5L26 9.5"/></symbol>
+<symbol id="i-x" viewBox="0 0 32 32"><path d="M9 9l14 14M23 9L9 23"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 32 32"><path d="M5 16h22M19 8l8 8-8 8"/></symbol>
+<symbol id="i-chevron" viewBox="0 0 32 32"><path d="M7 12l9 9 9-9"/></symbol>
+<symbol id="i-mail" viewBox="0 0 32 32"><rect x="4" y="7" width="24" height="18" rx="2"/><path d="M4.5 8.5L16 17l11.5-8.5"/></symbol>
+<symbol id="i-clock" viewBox="0 0 32 32"><circle cx="16" cy="16" r="12"/><path d="M16 9v7l5 3"/></symbol>
+<symbol id="i-pin" viewBox="0 0 32 32"><path d="M16 3.5a8 8 0 0 0-8 8c0 6 8 17 8 17s8-11 8-17a8 8 0 0 0-8-8z"/><circle cx="16" cy="11.5" r="2.8"/></symbol>
+<symbol id="i-play" viewBox="0 0 32 32"><rect x="3" y="6" width="26" height="20" rx="2"/><path d="M13.5 11.5v9l7-4.5z"/></symbol>
+<symbol id="i-gauge" viewBox="0 0 32 32"><path d="M4.5 23a11.5 11.5 0 1 1 23 0"/><path d="M16 23l6-7"/><path d="M8 14.5l1.4 1.2M16 11v1.8M24 14.5l-1.4 1.2"/><circle cx="16" cy="23" r="1.5"/></symbol>
+<symbol id="i-user" viewBox="0 0 32 32"><circle cx="16" cy="11" r="5"/><path d="M6 28c1-6 5-9 10-9s9 3 10 9"/></symbol>
+<symbol id="i-doc" viewBox="0 0 32 32"><path d="M8 3.5h11l5 5v20H8z"/><path d="M19 3.5v5h5M12 15h8M12 19h8M12 23h5"/></symbol>
+<symbol id="i-key" viewBox="0 0 32 32"><circle cx="11" cy="16" r="5.5"/><path d="M16.5 16H28M24 16v4M28 16v3"/></symbol>
+<symbol id="i-truck" viewBox="0 0 32 32"><path d="M3 9h16v13H3zM19 13h5l4 4v5h-9"/><circle cx="8.5" cy="23.5" r="2.5"/><circle cx="23.5" cy="23.5" r="2.5"/><path d="M5 9l7-4.5L19 9"/></symbol>
+</svg>
