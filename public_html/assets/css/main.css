@@ -1120,3 +1120,14 @@ html.f-jakarta .hdr__phone svg{color:#25D366}
 @media (min-width:1180px) and (max-width:1419px){html.f-jakarta .nav a{padding:10px 9px;font-size:.88rem}}
 .mbar .mbar__c{--cb:54px}
 .mbar .mbar__c svg{width:28px;height:28px}
+/* v2: real WhatsApp logo in WhatsApp green, email in brand orange — both solid, large white icons */
+.cbtn{border:0;box-shadow:0 4px 14px rgba(0,0,0,.18)}
+.cbtn--wa{background:#25D366;color:#fff}
+.cbtn--mail{background:var(--orange);color:#fff}
+.cbtn--wa:hover,.cbtn--wa:focus-visible{background:#1EBE5A;color:#fff}
+.cbtn--mail:hover,.cbtn--mail:focus-visible{background:#D95A12;color:#fff}
+.cbtn--wa svg{width:30px;height:30px}
+.hdr__c{--cb:48px}
+.hdr__c svg{width:26px;height:26px}
+.mbar .mbar__c{--cb:56px}
+.mbar .mbar__c.cbtn--wa svg{width:32px;height:32px}
