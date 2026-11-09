@@ -12,5 +12,9 @@
   "GADS_FORM_LABEL": "",
   "GADS_CALL_LABEL": "",
   "TO_EMAIL": "",
-  "FROM_EMAIL": ""
+  "FROM_EMAIL": "",
+  "SAME_AS": "",
+  "_SAME_AS_help": "Comma-separated URLs of your own profiles (Google Business Profile, LinkedIn, Facebook, Clutch...). Goes into Organization schema sameAs.",
+  "CHAT_AI": "off",
+  "_CHAT_AI_help": "\"on\" sends questions the built-in answers cannot handle to Claude via chat.php. Needs an Anthropic API key in ../private/anthropic-key.txt (outside public_html) or the ANTHROPIC_API_KEY server env var."
 }

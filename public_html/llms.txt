@@ -1,0 +1,27 @@
+# Roofrs
+
+> Roofrs is a marketing agency that works only with US roofing contractors. We build roofing websites designed to turn Google searches into calls, run local SEO, and manage Google Ads and Local Services Ads. Remote team, US Central business hours (Mon–Fri 8am–6pm). Phone (210) 555-0142, email hello@example.com.
+
+## Offer
+- Free growth plan + homepage preview within 5 days of a 15-minute call. $0 upfront.
+- If the roofer approves the full website, they pay $199/month (12-month minimum; they own the site after 12 months) or $1,499 one-time (owned outright; 12 months of hosting and care included, then $29/month optional).
+- If they don't love the preview, they pay nothing.
+- Every website: custom design, 8–10 pages, mobile-first, click-to-call, quote form, admin panel (leads inbox, business info, photos, blog), Search Console + Analytics setup, on-page SEO, 1 month of SEO free.
+- Roofing SEO: Local SEO $597/month (1 city), SEO Pro $997/month (2–3 cities). Month to month. Sign 6 months → 3 extra landing pages free.
+- Google Ads management $597/month; Google Ads + Local Services Ads $797/month; $300 one-time setup; recommended ad spend $1,500+/month paid directly to Google.
+- Clients always own their domain, Google Business Profile and ad accounts. No ranking or lead guarantees.
+
+## Key pages
+- [Roofing website design](https://example.com/roofing-websites/)
+- [Roofing SEO](https://example.com/roofing-seo/)
+- [Google Ads & LSA for roofers](https://example.com/roofing-google-ads/)
+- [Pricing](https://example.com/pricing/)
+- [Free growth plan + website preview](https://example.com/free-preview/)
+- [Our work (demo builds, labeled)](https://example.com/our-work/)
+- [Admin panel](https://example.com/admin-panel/)
+- [About](https://example.com/about/)
+
+## Guides
+- [Roofing website checklist: 25 must-haves](https://example.com/blog/roofing-website-checklist/)
+- [How much does a roofing website cost in 2026?](https://example.com/blog/roofing-website-cost/)
+- [Do roofers need SEO? A straight answer](https://example.com/blog/do-roofers-need-seo/)

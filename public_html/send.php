@@ -88,7 +88,7 @@ $hits[] = time();
 @file_put_contents($rateFile, json_encode(array_values($hits)), LOCK_EX);
 
 // Fields
-$form = in_array($_POST['form'] ?? '', ['free-preview', 'contact'], true) ? $_POST['form'] : 'contact';
+$form = in_array($_POST['form'] ?? '', ['free-preview', 'contact', 'chat'], true) ? $_POST['form'] : 'contact';
 $name = clean('name', 100);
 $company = clean('company', 120);
 $website = clean('website', 200);
@@ -97,20 +97,27 @@ $phone = clean('phone', 30);
 $email = clean('email', 160);
 $logo = in_array($_POST['logo'] ?? '', ['Yes', 'No'], true) ? $_POST['logo'] : '';
 $notes = clean_multiline('notes');
-$message = clean_multiline('message');
+$message = clean_multiline('message', $form === 'chat' ? 6000 : 2000);
 $allowedServices = ['Replacement', 'Repair', 'Storm/insurance', 'Commercial', 'Gutters', 'Siding'];
 $services = array_values(array_intersect((array) ($_POST['services'] ?? []), $allowedServices));
 $consent = ($_POST['consent'] ?? '') === 'yes';
 
 $errors = [];
 if ($name === '') $errors[] = 'name';
-if (!filter_var($email, FILTER_VALIDATE_EMAIL)) $errors[] = 'email';
 $digits = preg_replace('/\D/', '', $phone) ?? '';
-if (strlen($digits) < 10 || strlen($digits) > 11) $errors[] = 'phone';
+$phoneOk = strlen($digits) >= 10 && strlen($digits) <= 11;
+$emailOk = (bool) filter_var($email, FILTER_VALIDATE_EMAIL);
+if ($form === 'chat') {
+    // Chat leads need a name and at least one way to reach them
+    if (!$phoneOk && !$emailOk) $errors[] = 'phone or email';
+} else {
+    if (!$emailOk) $errors[] = 'email';
+    if (!$phoneOk) $errors[] = 'phone';
+}
 if ($form === 'free-preview') {
     if ($company === '') $errors[] = 'company';
     if ($city === '') $errors[] = 'city and state';
-} elseif ($message === '') {
+} elseif ($form === 'contact' && $message === '') {
     $errors[] = 'message';
 }
 if (!$consent) $errors[] = 'contact consent';
@@ -121,7 +128,7 @@ $page = clean('page', 200) ?: ($_SERVER['HTTP_REFERER'] ?? '');
 $ua = mb_substr((string) ($_SERVER['HTTP_USER_AGENT'] ?? ''), 0, 250);
 
 $lines = [
-    'New ' . ($form === 'free-preview' ? 'FREE PREVIEW request' : 'contact message') . ' — ' . BRAND,
+    'New ' . ($form === 'free-preview' ? 'FREE PREVIEW request' : ($form === 'chat' ? 'CHAT lead' : 'contact message')) . ' — ' . BRAND,
     str_repeat('-', 48),
     "Name:      $name",
     "Company:   $company",
@@ -132,7 +139,7 @@ $lines = [
     'Services:  ' . implode(', ', $services),
     "Has logo:  $logo",
     '',
-    'Notes / message:',
+    ($form === 'chat' ? 'Chat transcript:' : 'Notes / message:'),
     $notes . $message,
     '',
     str_repeat('-', 48),
@@ -164,14 +171,13 @@ if (is_dir($PRIVATE_DIR) || @mkdir($PRIVATE_DIR, 0750, true)) {
 $mailed = false;
 if (filter_var(TO_EMAIL, FILTER_VALIDATE_EMAIL)) {
     $from = filter_var(FROM_EMAIL, FILTER_VALIDATE_EMAIL) ? FROM_EMAIL : 'no-reply@' . SITE_HOST;
-    $subject = ($form === 'free-preview' ? 'Free preview: ' : 'Contact: ') . ($company ?: $name);
+    $subject = ($form === 'free-preview' ? 'Free preview: ' : ($form === 'chat' ? 'Chat lead: ' : 'Contact: ')) . ($company ?: $name);
     $subject = '=?UTF-8?B?' . base64_encode(mb_substr($subject, 0, 120)) . '?=';
     $headers = [
         'From: ' . BRAND . ' website <' . $from . '>',
-        'Reply-To: ' . $email,
         'Content-Type: text/plain; charset=UTF-8',
-        'X-Mailer: PHP',
     ];
+    if ($emailOk) $headers[] = 'Reply-To: ' . $email;
     $mailed = @mail(TO_EMAIL, $subject, $body, implode("\r\n", $headers), '-f' . $from);
 }
 

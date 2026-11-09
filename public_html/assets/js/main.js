@@ -147,6 +147,22 @@
     }
   }
 
+  /* ---------- Chat assistant: load chat.js on first intent ---------- */
+  var chatBtn = d.getElementById("chat-launcher");
+  if (chatBtn) {
+    var loaded = false;
+    var load = function (openNow) {
+      if (openNow) d.getElementById("chatbot").setAttribute("data-open-on-load", "true");
+      if (loaded) { return; } loaded = true;
+      var s = d.createElement("script"); s.src = "/assets/js/chat.js"; s.async = true; d.body.appendChild(s);
+    };
+    chatBtn.addEventListener("pointerenter", function () { load(false); }, { once: true });
+    chatBtn.addEventListener("focus", function () { load(false); }, { once: true });
+    chatBtn.addEventListener("click", function onFirst(e) {
+      if (!window.__chatReady) { e.stopImmediatePropagation(); load(true); }
+    }, { once: true });
+  }
+
   /* ---------- Year ---------- */
   d.querySelectorAll("[data-year]").forEach(function (el) { el.textContent = new Date().getFullYear(); });
 })();

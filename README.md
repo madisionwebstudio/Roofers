@@ -46,8 +46,10 @@ Everything lives in **`config.json`**. Each `[KEY]` in the source is replaced si
 | `GA4_ID` | GA4 measurement ID. Empty = no analytics script at all | empty |
 | `GADS_CONVERSION_ID` | Google Ads ID (`AW-…`) | empty |
 | `GADS_FORM_LABEL` / `GADS_CALL_LABEL` | Ads conversion labels for form submits and phone clicks | empty |
-| `TO_EMAIL` | Inbox that receives leads (`send.php`) | empty |
+| `TO_EMAIL` | Inbox that receives leads (`send.php`) — forms **and** chat leads | empty |
 | `FROM_EMAIL` | Sender — must be a mailbox on your own domain (create it in Hostinger → Emails) | empty |
+| `SAME_AS` | Comma-separated URLs of your own profiles (Google Business Profile, LinkedIn, Facebook, Clutch…) → Organization schema `sameAs` | empty |
+| `CHAT_AI` | `"on"` = chat questions the built-in answers can't handle go to Claude via `chat.php` (needs an API key, see below). `"off"` = built-in answers only, no API cost | `off` |
 
 **If you change the brand name**, also re-render the bitmaps that contain it:
 `node tools/brand/render.js "NewBrand" "Founder Name"` then convert the founder placeholder (or just add a real founder photo).
@@ -119,6 +121,36 @@ If you add a cookie banner, only set `GA4_ID` behind consent.
 
 ---
 
+## SEO setup (follows the Territory local SEO manual)
+
+- **Titles** are keyword-first and ≤ 60 characters (`build.py` warns above 60), e.g. “Roofing Website Design for Contractors | Brand”. **Descriptions** are 140–160 characters with the service, the benefit and the offer.
+- **Every H1 contains the target term** as a small keyword line (`<span class="h1-kw">Roofing website design</span>`) above the big sales headline, so the page keeps its punchy headline and still ranks for the term.
+- **Cities always include the state** (“San Antonio, Texas” / “TX”) in titles, H1s and schema (`addressRegion` via `containedInPlace`).
+- **Schema:** Organization (+ `contactPoint` with hours, `slogan`, `knowsAbout`, and `sameAs` from config), WebSite, Service (with `audience: Roofing contractors` and offers), BreadcrumbList, FAQPage, Article + Person. No LocalBusiness address and no Google Business Profile storefront: we're a remote operator and the manual is clear that faking a local address risks suspension.
+- **`/llms.txt`** gives AI assistants a plain, consistent summary of the business, prices and key pages (the “AI answers” surface).
+- `index, follow, max-image-preview:large` on indexable pages, Twitter title/description, OG image alt.
+- Every page links to `/free-preview/` and `/pricing/`; no orphan pages; tested at 360 px.
+
+Still on you (from the manual's 26-week tracker): local phone number in `config.json`, `SAME_AS` profiles, Bing Places / Apple Business Connect, 15–20 real citations, real case studies (replace demo builds), and a review system.
+
+---
+
+## Chat assistant (bottom-right on every page)
+
+- A button opens a chat panel. It answers common questions **instantly from a built-in list** (`src/static/assets/js/chat.js` → `KB`): $0 upfront, pricing, ownership, 12-month minimum, timeline, SEO, guarantees, ads, admin panel, pages, redesigns, team, examples.
+- **“Leave my details”** walks the visitor through name → company → city → phone → email → consent, then posts the lead **with the full chat transcript** to `send.php` (`form=chat`). It arrives in `TO_EMAIL` and `form-leads/leads.csv` like the other forms, and fires `generate_lead` + the Ads conversion.
+- `chat.js` only loads when someone hovers or taps the button, so it costs nothing on page speed.
+- Edit the answers in the `KB` list in `chat.js` (keywords → answer) and rebuild.
+
+### Optional: real AI answers (Claude)
+1. Create an API key at console.anthropic.com.
+2. On Hostinger, create `private/anthropic-key.txt` **one level above** `public_html` (next to `form-leads/`) containing only the key. Never put it in `public_html`, `config.json` or git.
+3. Set `"CHAT_AI": "on"` in `config.json`, rebuild, upload.
+
+`chat.php` then sends questions to Claude (`claude-opus-5-5`, low effort, short answers) with a system prompt containing only your real offer and prices, and rules against inventing facts or promising rankings. It's rate-limited (30 replies per IP per hour), same-origin only, and falls back to the built-in answers if the key is missing or the API is down. Cost: each reply is one API call billed to your Anthropic account. Edit the facts in `chat.php` if your prices change.
+
+---
+
 ## Add your work
 - **Real client site:** screenshot desktop (1440 wide) and phone (390 wide @2x), add like `tools/demos/make_demos.py` does, then
   use `{{device key="client-name" label="Client site" url="…"}}` on `/our-work/` and Home. Only with written permission.
@@ -181,9 +213,11 @@ See `src/static/assets/img/CREDITS.md` (every photo, photographer, source) and `
 9. **Form leads are saved to CSV outside `public_html` even when `TO_EMAIL` is empty**, so the site works on day one and no lead is lost if email delivery fails.
 10. **Growth-first messaging (v2.1).** Headlines lead with the outcome roofers buy — more calls and booked jobs (“Turn Google searches into booked roof jobs”) — not with the website or with paying later. The risk reversal stays in the sub-copy, steps, pricing and FAQ. No result is promised: copy says what the system is *built to* do.
 11. **“Free growth plan” added to the free preview.** Delivered with the homepage preview in 5 days: who shows up in Google Maps for the roofer's towns, the searches homeowners use, and the first three fixes we'd make. Confirm you're happy to deliver this on every preview call.
-12. **Only one city page**, built as a template with a `[DATA: …]` block. More cities should be added only with real local data (the footer says so).
+12. **Font: Archivo** (900/800, slightly condensed, subset to 22 KB) replaced Anton + Barlow Condensed for a cleaner, more premium look; body stays Inter. The demo sites keep their own fonts.
+13. **Chat assistant** works without AI by default (no running cost, no wrong answers); AI answers are opt-in with your own key.
+14. **Only one city page**, built as a template with a `[DATA: …]` block. More cities should be added only with real local data (the footer says so).
 
 ## Quality checks run
 - Playwright screenshots of all 20 pages at 390 and 1440 (plus 375 / 768 / 1024 on key pages): no horizontal scroll; offer + CTA visible in the first screen on mobile and desktop.
-- Lighthouse mobile (local PHP server, no gzip — production will be faster): Home 97/100/100/100, Free Preview 98/100/100/100, Pricing 100/100/100/100 (Performance/Accessibility/Best practices/SEO).
+- Lighthouse mobile (local PHP server, no gzip — production will be faster): Home 98/100/100/100, Free Preview 99/100/100/100, Pricing 100/100/100/100, Roofing SEO 96/100/100/100 (Performance/Accessibility/Best practices/SEO).
 - End-to-end form test: validation, submit, CSV write, redirect; `send.php` honeypot, origin check, GET rejection and plain-POST fallback tested with curl.

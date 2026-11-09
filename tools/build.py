@@ -28,7 +28,7 @@ TODAY = date.today().isoformat()
 
 cfg = json.load(open(os.path.join(ROOT, "config.json")))
 cfg = {k: v for k, v in cfg.items() if not k.startswith("_")}
-missing = [k for k, v in cfg.items() if not str(v).strip()]
+missing = [k for k, v in cfg.items() if not str(v).strip() and k != "CHAT_AI"]
 digits = re.sub(r"\D", "", cfg["US_PHONE"])
 cfg["US_PHONE_E164"] = "+1" + digits[-10:] if len(digits) >= 10 else ""
 cfg["YEAR"] = str(date.today().year)
@@ -126,7 +126,15 @@ ORG = {"@type": "Organization", "@id": BASE + "/#org", "name": cfg["BRAND"], "ur
        "logo": BASE + "/assets/img/logo.png", "email": cfg["EMAIL"], "telephone": cfg["US_PHONE_E164"],
        "founder": {"@type": "Person", "@id": BASE + "/about/#founder", "name": cfg["FOUNDER_NAME"]},
        "areaServed": {"@type": "Country", "name": "United States"},
+       "slogan": "Turn Google searches into booked roof jobs.",
+       "description": f"{cfg['BRAND']} is a marketing agency for US roofing contractors: roofing website design, local SEO and Google Ads / Local Services Ads management.",
+       "contactPoint": {"@type": "ContactPoint", "contactType": "sales", "telephone": cfg["US_PHONE_E164"], "email": cfg["EMAIL"],
+                        "areaServed": "US", "availableLanguage": "English",
+                        "hoursAvailable": {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "08:00", "closes": "18:00"}},
        "knowsAbout": ["Roofing website design", "Roofing SEO", "Google Ads for roofers", "Local Services Ads"]}
+SAME_AS = [u.strip() for u in cfg.get("SAME_AS", "").split(",") if u.strip()]
+if SAME_AS:
+    ORG["sameAs"] = SAME_AS
 
 NAV = [("Websites", "/roofing-websites/"), ("SEO", "/roofing-seo/"), ("Google Ads", "/roofing-google-ads/"),
        ("Pricing", "/pricing/"), ("Our Work", "/our-work/"), ("Blog", "/blog/")]
@@ -142,7 +150,7 @@ def render(path_rel, raw, css_inline):
     canonical = BASE + url_path
     title = meta["title"]
     desc = meta["description"]
-    if len(title) > 62:
+    if len(title) > 60:
         print(f"  ! title {len(title)} chars: {url_path}")
     if not (70 <= len(desc) <= 165):
         print(f"  ! description {len(desc)} chars: {url_path}")
@@ -177,7 +185,8 @@ def render(path_rel, raw, css_inline):
     if meta.get("service"):
         s = meta["service"]
         node = {"@type": "Service", "name": s["name"], "serviceType": s.get("type", s["name"]), "provider": {"@id": BASE + "/#org"},
-                "areaServed": s.get("area", {"@type": "Country", "name": "United States"}), "url": canonical, "description": desc}
+                "areaServed": s.get("area", {"@type": "Country", "name": "United States"}), "url": canonical, "description": desc,
+                "audience": {"@type": "BusinessAudience", "audienceType": "Roofing contractors"}}
         if s.get("offers"):
             node["offers"] = [{"@type": "Offer", "name": o[0], "price": o[1], "priceCurrency": "USD",
                                **({"priceSpecification": {"@type": "UnitPriceSpecification", "price": o[1], "priceCurrency": "USD", "unitText": o[2]}} if len(o) > 2 else {})}
@@ -198,10 +207,11 @@ def render(path_rel, raw, css_inline):
     ld = json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False, separators=(",", ":"))
 
     og_img = BASE + "/assets/img/" + (meta.get("og") or "og-default.jpg")
-    robots = '<meta name="robots" content="noindex, follow">\n' if meta.get("noindex") else ""
+    robots = '<meta name="robots" content="noindex, follow">\n' if meta.get("noindex") else '<meta name="robots" content="index, follow, max-image-preview:large">\n'
     preload = preload_tag(meta["preload"], meta.get("preloadSizes", "100vw")) if meta.get("preload") else ""
     site_js = {"calendly": cfg["CALENDLY_URL"], "adsId": cfg["GADS_CONVERSION_ID"],
-               "adsFormLabel": cfg["GADS_FORM_LABEL"], "adsCallLabel": cfg["GADS_CALL_LABEL"]}
+               "adsFormLabel": cfg["GADS_FORM_LABEL"], "adsCallLabel": cfg["GADS_CALL_LABEL"],
+               "chatAI": "on" if cfg.get("CHAT_AI", "").lower() == "on" else "off"}
     analytics = ""
     if cfg["GA4_ID"]:
         ids = [cfg["GA4_ID"]] + ([cfg["GADS_CONVERSION_ID"]] if cfg["GADS_CONVERSION_ID"] else [])
@@ -220,8 +230,10 @@ def render(path_rel, raw, css_inline):
         f'<meta property="og:image" content="{og_img}">\n'
         f'<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">\n'
         f'<meta name="twitter:card" content="summary_large_image">\n'
-        f'<link rel="preload" href="/assets/fonts/anton-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>\n'
-        f'<link rel="preload" href="/assets/fonts/barlow-condensed-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>\n'
+        f'<meta name="twitter:title" content="{html.escape(meta.get("ogTitle", title), quote=True)}">\n'
+        f'<meta name="twitter:description" content="{html.escape(desc, quote=True)}">\n'
+        f'<meta property="og:image:alt" content="{html.escape(cfg["BRAND"])} — roofing websites, SEO and Google Ads">\n'
+        f'<link rel="preload" href="/assets/fonts/archivo-cond-600-900.woff2" as="font" type="font/woff2" crossorigin>\n'
         f'{preload}'
         f'<style>{css_inline}</style>\n'
         f'<script>document.documentElement.classList.add("js");window.SITE={json.dumps(site_js)}</script>\n'
