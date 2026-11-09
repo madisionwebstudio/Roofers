@@ -1,0 +1,5 @@
+tools/.img-cache/
+__pycache__/
+.DS_Store
+node_modules/
+form-leads/

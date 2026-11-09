@@ -1,0 +1,81 @@
+<div class="tabs" role="tablist" aria-label="Admin panel screens">
+  <button role="tab" id="t-leads" aria-controls="tp-leads" aria-selected="true">Leads inbox</button>
+  <button role="tab" id="t-info" aria-controls="tp-info" aria-selected="false" tabindex="-1">Business info</button>
+  <button role="tab" id="t-blog" aria-controls="tp-blog" aria-selected="false" tabindex="-1">Blog post</button>
+  <button role="tab" id="t-photos" aria-controls="tp-photos" aria-selected="false" tabindex="-1">Photos</button>
+</div>
+<div class="adm-wrap">
+  <span class="example-tag label-chip label-chip--light">Example screen</span>
+  <div class="tabpanel" id="tp-leads" role="tabpanel" aria-labelledby="t-leads">
+    <div class="adm" aria-label="Example: leads inbox in the admin panel">
+      <aside class="adm__side" aria-hidden="true">
+        <div class="adm__brand"><i></i>Your Roofing Co.</div>
+        <nav class="adm__nav"><a class="on">Leads <em>3</em></a><a>Business info</a><a>Services</a><a>Photos</a><a>Blog</a><a>Settings</a></nav>
+      </aside>
+      <div class="adm__main">
+        <div class="adm__top"><p class="adm__h">Leads</p><span class="adm__btn">All leads</span></div>
+        <div class="adm__kpis"><div class="adm__kpi"><b>3</b><span>New this week</span></div><div class="adm__kpi"><b>Quote form</b><span>Top source</span></div><div class="adm__kpi"><b>All</b><span>Saved, nothing lost</span></div></div>
+        <div class="adm__table">
+          <div class="adm__row"><span>Name</span><span>Request</span><span>Received</span><span class="hide-s">Status</span></div>
+          <div class="adm__row"><span><b>Homeowner A.</b><small>Northside</small></span><span>Hail damage — needs inspection</span><span>Today 9:14am</span><span class="hide-s"><i class="tag tag--new">New</i></span></div>
+          <div class="adm__row"><span><b>Homeowner B.</b><small>Westover Hills</small></span><span>Full replacement quote</span><span>Yesterday</span><span class="hide-s"><i class="tag tag--new">New</i></span></div>
+          <div class="adm__row"><span><b>Homeowner C.</b><small>Alamo Heights</small></span><span>Leak over garage</span><span>Mon</span><span class="hide-s"><i class="tag">Called</i></span></div>
+          <div class="adm__row"><span><b>Homeowner D.</b><small>Stone Oak</small></span><span>Gutters + repair</span><span>Fri</span><span class="hide-s"><i class="tag tag--ok">Booked</i></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tabpanel" id="tp-info" role="tabpanel" aria-labelledby="t-info" hidden>
+    <div class="adm" aria-label="Example: edit business info in the admin panel">
+      <aside class="adm__side" aria-hidden="true">
+        <div class="adm__brand"><i></i>Your Roofing Co.</div>
+        <nav class="adm__nav"><a>Leads <em>3</em></a><a class="on">Business info</a><a>Services</a><a>Photos</a><a>Blog</a><a>Settings</a></nav>
+      </aside>
+      <div class="adm__main">
+        <div class="adm__top"><p class="adm__h">Business info</p><span class="adm__btn adm__btn--o">Save changes</span></div>
+        <div class="adm__form">
+          <div class="adm__f2"><div class="adm__f"><label>Phone</label><div>(210) 555-0100</div></div><div class="adm__f"><label>Emergency line</label><div>(210) 555-0101</div></div></div>
+          <div class="adm__f"><label>Hours</label><div>Mon–Fri 7am–6pm · Sat 8am–2pm</div></div>
+          <div class="adm__f"><label>Service areas</label><div>San Antonio · New Braunfels · Boerne · Schertz · Helotes</div></div>
+          <div class="adm__f"><label>Services</label><div>Roof replacement · Repair · Storm &amp; hail · Insurance claims · Gutters</div></div>
+          <div class="adm__f"><label>Homepage headline</label><div>Storm damage? Free inspection within 24 hours.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tabpanel" id="tp-blog" role="tabpanel" aria-labelledby="t-blog" hidden>
+    <div class="adm" aria-label="Example: blog editor in the admin panel">
+      <aside class="adm__side" aria-hidden="true">
+        <div class="adm__brand"><i></i>Your Roofing Co.</div>
+        <nav class="adm__nav"><a>Leads <em>3</em></a><a>Business info</a><a>Services</a><a>Photos</a><a class="on">Blog</a><a>Settings</a></nav>
+      </aside>
+      <div class="adm__main">
+        <div class="adm__top"><p class="adm__h">New post</p><span class="adm__btn adm__btn--o">Publish</span></div>
+        <div class="adm__editor">
+          <div class="adm__tools" aria-hidden="true"><span>B</span><span>I</span><span>H2</span><span>•</span><span>↗</span><span>▣</span></div>
+          <div class="adm__doc">
+            <h5>What to do in the first 24 hours after a hailstorm</h5>
+            <div class="adm__img"></div>
+            <p>Before you call anyone, walk around the house and take photos of dented gutters, downspouts and window screens…</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tabpanel" id="tp-photos" role="tabpanel" aria-labelledby="t-photos" hidden>
+    <div class="adm" aria-label="Example: project photo gallery upload in the admin panel">
+      <aside class="adm__side" aria-hidden="true">
+        <div class="adm__brand"><i></i>Your Roofing Co.</div>
+        <nav class="adm__nav"><a>Leads <em>3</em></a><a>Business info</a><a>Services</a><a class="on">Photos</a><a>Blog</a><a>Settings</a></nav>
+      </aside>
+      <div class="adm__main">
+        <div class="adm__top"><p class="adm__h">Project gallery</p><span class="adm__btn adm__btn--o">Upload</span></div>
+        <div class="adm__gal">
+          <i style="background-image:url(/assets/img/home-new-roof-480.webp)"></i><i style="background-image:url(/assets/img/tear-off-480.webp)"></i><i style="background-image:url(/assets/img/metal-roof-480.webp)"></i><i style="background-image:url(/assets/img/home-blue-480.webp)"></i>
+          <i style="background-image:url(/assets/img/hail-shingles-480.webp)"></i><i style="background-image:url(/assets/img/crew-pair-480.webp)"></i><i style="background-image:url(/assets/img/home-white-metal-480.webp)"></i><i style="background-image:url(/assets/img/shingle-bundles-480.webp)"></i>
+          <div class="adm__drop">Drag photos here — or take them straight from your phone</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

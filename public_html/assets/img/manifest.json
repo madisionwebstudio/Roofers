@@ -1,0 +1,231 @@
+{
+ "hero-crew": {
+  "widths": [
+   640,
+   960,
+   1440,
+   1920,
+   2400
+  ],
+  "ratio": 0.56231
+ },
+ "crew-ridge": {
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "ratio": 0.75022
+ },
+ "roofer-sealant": {
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "ratio": 1.25036
+ },
+ "roofer-rope": {
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "ratio": 1.25036
+ },
+ "crew-pair": {
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "ratio": 0.75022
+ },
+ "tear-off": {
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "ratio": 0.75022
+ },
+ "shingle-bundles": {
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "ratio": 1.25036
+ },
+ "roofer-brick": {
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "ratio": 0.75022
+ },
+ "storm-house": {
+  "widths": [
+   640,
+   960,
+   1440,
+   1920,
+   2400
+  ],
+  "ratio": 0.42846
+ },
+ "storm-night": {
+  "widths": [
+   640,
+   960,
+   1440,
+   1920,
+   2400
+  ],
+  "ratio": 0.56231
+ },
+ "aerial-suburb": {
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "ratio": 0.75022
+ },
+ "aerial-culdesac": {
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "ratio": 0.75011
+ },
+ "hail-shingles": {
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "ratio": 0.75022
+ },
+ "metal-roof": {
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "ratio": 0.75022
+ },
+ "metal-fasten": {
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "ratio": 0.75022
+ },
+ "shingle-texture": {
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "ratio": 0.75
+ },
+ "home-new-roof": {
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "ratio": 0.75028
+ },
+ "home-farmhouse": {
+  "widths": [
+   640,
+   960,
+   1440,
+   1920
+  ],
+  "ratio": 0.56231
+ },
+ "home-blue": {
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "ratio": 0.75
+ },
+ "home-white-metal": {
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "ratio": 0.75
+ },
+ "golden-street": {
+  "widths": [
+   640,
+   960,
+   1440,
+   1920
+  ],
+  "ratio": 0.56267
+ },
+ "demo-ironpitch-desktop": {
+  "widths": [
+   640,
+   1000,
+   1440
+  ],
+  "ratio": 2.36042
+ },
+ "demo-ironpitch-mobile": {
+  "widths": [
+   240,
+   390
+  ],
+  "ratio": 12.98462
+ },
+ "demo-cedarslate-desktop": {
+  "widths": [
+   640,
+   1000,
+   1440
+  ],
+  "ratio": 2.36042
+ },
+ "demo-cedarslate-mobile": {
+  "widths": [
+   240,
+   390
+  ],
+  "ratio": 13.52564
+ },
+ "demo-bluebonnet-desktop": {
+  "widths": [
+   640,
+   1000,
+   1440
+  ],
+  "ratio": 2.32014
+ },
+ "demo-bluebonnet-mobile": {
+  "widths": [
+   240,
+   390
+  ],
+  "ratio": 12.98462
+ }
+}

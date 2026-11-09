@@ -1,0 +1,16 @@
+{
+  "_README": "The ONE place to set business details. Run `python3 tools/build.py` after editing; it rewrites public_html/. Leave a value empty to mark it as not set yet (the build warns you).",
+  "BRAND": "Roofrs",
+  "DOMAIN": "example.com",
+  "FOUNDER_NAME": "Rakesh Dadhich",
+  "FOUNDER_PHOTO": "/assets/img/founder-placeholder.webp",
+  "US_PHONE": "(210) 555-0142",
+  "EMAIL": "hello@example.com",
+  "CALENDLY_URL": "",
+  "GA4_ID": "",
+  "GADS_CONVERSION_ID": "",
+  "GADS_FORM_LABEL": "",
+  "GADS_CALL_LABEL": "",
+  "TO_EMAIL": "",
+  "FROM_EMAIL": ""
+}
