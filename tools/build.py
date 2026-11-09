@@ -81,6 +81,10 @@ def img_tag(m):
     h = round(w * info["ratio"])
     srcset = ", ".join(f"/assets/img/{name}-{x}.webp {x}w" for x in ws)
     load = ' fetchpriority="high"' if eager else ' loading="lazy" decoding="async"'
+    jw = info.get("jpg")
+    if jw:  # <picture>: WebP for modern browsers, one JPG for older Safari (iOS 13 and below)
+        return (f'<picture><source type="image/webp" srcset="{srcset}" sizes="{sizes}">'
+                f'<img src="/assets/img/{name}-{jw}.jpg" width="{w}" height="{h}" alt="{alt}"{cls}{load}></picture>')
     return (f'<img src="/assets/img/{name}-{w}.webp" srcset="{srcset}" sizes="{sizes}" width="{w}" height="{h}" alt="{alt}"{cls}{load}>')
 
 
@@ -353,6 +357,8 @@ def render(path_rel, raw, css_inline):
     page = page.replace("{{head}}", head).replace("{{content}}", body)
     page = page.replace("{{bodyclass}}", meta.get("bodyClass", ""))
     page = tokens(page)
+    # older Safari has no :has() — mark buttons that carry an arrow icon with a class instead
+    page = re.sub(r'(<(?:a|button) class="btn)([^"]*)("[^>]*>)(?=(?:(?!</(?:a|button)>).)*?<svg)', r'\1\2 btn--arrow\3', page, flags=re.S)
     return page, meta
 
 
