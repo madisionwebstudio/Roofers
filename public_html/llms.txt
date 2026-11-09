@@ -1,27 +1,30 @@
 # Roofrs
 
-> Roofrs is a marketing agency that works only with US roofing contractors. We build roofing websites designed to turn Google searches into calls, run local SEO, and manage Google Ads and Local Services Ads. Remote team, US Central business hours (Mon–Fri 8am–6pm). Phone (210) 555-0142, email hello@example.com.
+> Roofrs builds websites, SEO and Google Ads for US roofing contractors — only roofing contractors. One goal: more leads for the roofer. Remote team on US hours (Mon–Fri 8am–6pm Central). Founder: Rakesh Dadhich. Phone [US_PHONE], email [EMAIL].
 
 ## Offer
-- Free growth plan + homepage preview within 5 days of a 15-minute call. $0 upfront.
-- If the roofer approves the full website, they pay $199/month (12-month minimum; they own the site after 12 months) or $1,499 one-time (owned outright; 12 months of hosting and care included, then $29/month optional).
-- If they don't love the preview, they pay nothing.
-- Every website: custom design, 8–10 pages, mobile-first, click-to-call, quote form, admin panel (leads inbox, business info, photos, blog), Search Console + Analytics setup, on-page SEO, 1 month of SEO free.
-- Roofing SEO: Local SEO $597/month (1 city), SEO Pro $997/month (2–3 cities). Month to month. Sign 6 months → 3 extra landing pages free.
-- Google Ads management $597/month; Google Ads + Local Services Ads $797/month; $300 one-time setup; recommended ad spend $1,500+/month paid directly to Google.
-- Clients always own their domain, Google Business Profile and ad accounts. No ranking or lead guarantees.
+- Free homepage preview within 5 days of a 15-minute call. $0 upfront. Pay only if you love it.
+- Starter Site (1–3 pages): $499 one-time, incl. 12 months hosting & care, then $29/month.
+- Pro Site (4–10 pages incl. up to 3 city pages, admin panel, 1 month of SEO free): $199/month with a 12-month minimum (own it early by paying the difference to $1,499) or $1,499 one-time.
+- Roofing SEO: Local SEO $597/month (1 city), SEO Pro $997/month (2–3 cities). 6 months → 3 extra landing pages free.
+- Google Ads for roofers: $399 setup + 10% of ad spend; minimum ad budget $2,000/month paid directly to Google; weekly reports.
+- Clients own their domain, Google Business Profile and ad accounts. No ranking guarantees.
 
 ## Key pages
-- [Roofing website design](https://example.com/roofing-websites/)
-- [Roofing SEO](https://example.com/roofing-seo/)
-- [Google Ads & LSA for roofers](https://example.com/roofing-google-ads/)
-- [Pricing](https://example.com/pricing/)
-- [Free growth plan + website preview](https://example.com/free-preview/)
-- [Our work (demo builds, labeled)](https://example.com/our-work/)
-- [Admin panel](https://example.com/admin-panel/)
-- [About](https://example.com/about/)
+- [Roofing web design agency](https://[DOMAIN]/roofing-web-design-agency/)
+- [Roofing SEO agency](https://[DOMAIN]/roofing-seo-agency/)
+- [Roofing marketing agency — Google Ads](https://[DOMAIN]/roofing-marketing-agency/)
+- [Pricing](https://[DOMAIN]/pricing/)
+- [Free website preview](https://[DOMAIN]/free-preview/)
+- [Roofing website examples](https://[DOMAIN]/our-work/)
+- [About](https://[DOMAIN]/about/)
 
 ## Guides
-- [Roofing website checklist: 25 must-haves](https://example.com/blog/roofing-website-checklist/)
-- [How much does a roofing website cost in 2026?](https://example.com/blog/roofing-website-cost/)
-- [Do roofers need SEO? A straight answer](https://example.com/blog/do-roofers-need-seo/)
+- [What homeowners look for before hiring a roofer](https://[DOMAIN]/blog/what-homeowners-look-for-in-a-roofer/)
+- [Roofing website checklist: 25 things](https://[DOMAIN]/blog/roofing-website-checklist/)
+- [How much does a roofing website cost in 2026?](https://[DOMAIN]/blog/roofing-website-cost/)
+- [Roofing SEO: why your website needs it](https://[DOMAIN]/blog/roofing-seo-guide/)
+- [How to rank in the Google Maps top 3](https://[DOMAIN]/blog/google-maps-top-3-roofers/)
+- [Google Ads for roofers](https://[DOMAIN]/blog/google-ads-for-roofers/)
+- [Roofing leads without Angi or HomeAdvisor](https://[DOMAIN]/blog/roofing-leads-without-angi/)
+- [Are you sending customers to shingle manufacturer websites?](https://[DOMAIN]/blog/shingle-manufacturer-links/)

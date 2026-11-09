@@ -20,38 +20,40 @@
 
   /* ---------- Built-in answers ---------- */
   var KB = [
-    { k: ["catch", "free", "upfront", "risk", "love", "pay after", "pay only", "nothing", "zero", "$0"],
-      a: "No catch — the risk is on us. After a 15-minute call we send you a free growth plan and a designed homepage within 5 days. If you love it, we build the full site and you pay only when you're happy. If not, you owe nothing. <a href=\"/free-preview/\">Get your free growth plan</a>." },
-    { k: ["price", "cost", "how much", "pricing", "199", "1499", "1,499", "fee", "expensive", "cheap"],
-      a: "Websites are $199/month (12-month minimum, you own it after) or $1,499 one-time. Local SEO is $597/month, SEO Pro $997/month. Google Ads management is $597/month ($797 with Local Services Ads) plus a $300 setup. <a href=\"/pricing/\">See all pricing</a>." },
+    { k: ["catch", "free", "upfront", "risk", "love", "pay after", "pay only", "nothing", "zero", "$0", "preview"],
+      a: "No catch. After a 15-minute call we design your homepage — free, within 5 days. If you love it, we build the rest and you pay when you're happy. If not, you owe nothing. <a href=\"/free-preview/\">Get your free website preview</a>." },
+    { k: ["price", "cost", "how much", "pricing", "199", "499", "1499", "1,499", "fee", "expensive", "cheap"],
+      a: "Websites: Starter (1–3 pages) $499 one-time; Pro (4–10 pages) $199/month with a 12-month minimum or $1,499 one-time. SEO from [PRICE_SEO_LOCAL]/month. Google Ads: $399 setup + 10% of ad spend. <a href=\"/pricing/\">See all pricing</a>." },
+    { k: ["starter", "pro site", "which plan", "difference", "pages"],
+      a: "Starter ($499) is 1–3 pages — great if you're new or mostly work referrals. Pro (4–10 pages, incl. up to 3 city pages) adds replacement, repair, storm and insurance pages, a projects gallery, the admin panel and a free month of SEO." },
     { k: ["own", "ownership", "domain", "who owns", "my site", "leave", "cancel"],
-      a: "You do. Your domain, Google Business Profile and ad accounts are always in your name. The website is yours from day one on the $1,499 plan, or after 12 months on the $199/month plan." },
-    { k: ["12 month", "12-month", "minimum", "contract", "lock", "commitment"],
-      a: "The $199/month plan has a 12-month minimum because it replaces a big upfront build fee — hosting, security, backups and monthly edits are included, and the site is yours after 12 months. Prefer no commitment? Take the $1,499 one-time option. SEO and Ads plans are month to month." },
+      a: "You do. Your domain, Google profile and ad accounts are always in your name. The site is yours on day one with a one-time plan, or after 12 months on the $199/month plan." },
+    { k: ["12 month", "12-month", "minimum", "contract", "lock", "commitment", "buy out", "buyout"],
+      a: "The $199/month plan has a 12-month minimum because building your site is real work up front. You can own it early anytime by paying the difference to $1,499. SEO and Google Ads have no long contract." },
     { k: ["how long", "time", "days", "fast", "quick", "when", "timeline", "launch"],
-      a: "Your growth plan and homepage preview arrive within 5 days of our call. The full site follows with up to 2 rounds of changes, then we launch on your domain once you approve it." },
-    { k: ["seo", "rank", "google maps", "map", "found", "search", "organic", "first page"],
-      a: "Our roofing SEO puts you in Google Maps and search for the towns you want more jobs in: Business Profile management, new pages every month, citations and a monthly calls report. Most roofers see momentum in 3–6 months. We never guarantee rankings — Google decides. <a href=\"/roofing-seo/\">Roofing SEO</a>." },
+      a: "Your homepage preview arrives within 5 days of our call. Then we build the rest with 2 rounds of changes and launch on your domain once you approve and pay." },
+    { k: ["seo", "rank", "google maps", "maps", "found", "search", "organic", "first page"],
+      a: "SEO is the backbone of your leads: it gets you found on Google and Maps in your area. Local SEO is [PRICE_SEO_LOCAL]/month for 1 city, SEO Pro [PRICE_SEO_PRO]/month for 2–3 cities. Expect early movement in 1–3 months, strong results in 3–6. <a href=\"/roofing-seo-agency/\">Roofing SEO</a>." },
     { w: 3, k: ["guarantee", "promise", "results", "how many leads", "how many calls"],
-      a: "We don't guarantee rankings or a number of leads — nobody honest can, because Google and your market decide those. We guarantee the work, listed upfront, and clear monthly reporting on calls and leads by source." },
-    { k: ["ads", "google ads", "lsa", "local services", "ppc", "advertis", "guaranteed", "screened"],
-      a: "Google Ads and Local Services Ads get you calls within weeks. Management is $597/month, or $797 with LSA, plus a $300 setup. We recommend $1,500+/month in ad spend, paid straight to Google from your own account — no markup. <a href=\"/roofing-google-ads/\">Google Ads for roofers</a>." },
+      a: "No — nobody honest can guarantee #1 on Google. We guarantee the work and show you every result in plain reports." },
+    { k: ["ads", "google ads", "ppc", "lsa", "local services", "advertis", "budget"],
+      a: "Google Ads get you leads fast — usually in the first 1–2 weeks. $399 setup + 10% of ad spend, minimum ad budget $2,000/month paid directly to Google. Weekly reports and full access to your account. <a href=\"/roofing-marketing-agency/\">Google Ads for roofers</a>." },
     { k: ["admin", "edit", "change", "update", "login", "panel", "blog", "photos", "wordpress", "plugin"],
-      a: "Every site comes with an admin panel: update your phone, hours, services and photos, see every lead in one inbox and publish blog posts — from your phone. It's not WordPress, so there are no plugins to update. <a href=\"/admin-panel/\">See the admin panel</a>." },
-    { k: ["pages", "include", "included", "what do i get", "features", "storm", "insurance", "financing"],
-      a: "Every site has 8–10 pages — home, roof replacement, repair, storm & hail damage, insurance claims help, about, projects, reviews, contact and service areas — plus click-to-call, a quote form, financing section, on-page SEO, Search Console + Analytics and a free month of SEO." },
-    { k: ["existing", "redo", "redesign", "current site", "already have", "rebuild", "move"],
-      a: "Yes — most projects are redesigns. We keep your domain, carry over what's worth keeping and redirect your old pages so you don't lose rankings you've already earned." },
+      a: "Pro Sites include an admin panel: edit your info, see every lead in one inbox and publish blog posts — from your phone. No WordPress, no plugins to update." },
+    { k: ["include", "included", "what do i get", "features", "storm", "insurance", "financing", "city pages"],
+      a: "Every site is custom, mobile-first and fast, with click-to-call, a quote form, on-page SEO, Search Console and Analytics. Pro adds replacement, repair, storm & hail, insurance, projects, reviews, about, service areas, up to 3 city pages, the admin panel and 1 month of SEO free." },
+    { k: ["existing", "redo", "redesign", "current site", "already have", "rebuild"],
+      a: "Yes — most projects are redesigns. We keep your domain and redirect your old pages so you keep the rankings you've earned. See a before/after on <a href=\"/our-work/\">Our Work</a>." },
     { k: ["where", "located", "office", "team", "who are you", "remote", "hours", "founder"],
-      a: "We're a small remote team working US hours, Mon–Fri 8am–6pm Central. Our founder, [FOUNDER_NAME], runs every project personally. Call [US_PHONE] or email [EMAIL]." },
-    { k: ["example", "portfolio", "work", "samples", "demo", "show me"],
-      a: "You can see our roofing designs in desktop and phone views on <a href=\"/our-work/\">Our Work</a>. They're demo builds for fictional companies, clearly labeled — we don't pass off made-up clients as real." },
+      a: "We're a small remote team on US hours, Mon–Fri 8am–6pm Central. You talk to the founder, [FOUNDER_NAME], from the first call to launch. We reply within 1 business day." },
+    { k: ["example", "portfolio", "work", "samples", "show me", "before", "after"],
+      a: "See real roofers' current sites next to our redesigns on <a href=\"/our-work/\">Our Work</a> — each one labeled honestly as a redesign concept or a client." },
     { k: ["not included", "logo", "photo shoot", "photographer", "extra"],
-      a: "Not included: ad spend (paid to Google), professional photo shoots, and logo design (an optional add-on). We'll tell you exactly which job photos to take on your phone." },
+      a: "Not included: ad spend (paid to Google), professional photo shoots, and logo design (an optional add-on)." },
     { k: ["phone", "call", "talk", "human", "person", "contact", "email"],
-      a: "Happy to talk: call [US_PHONE] (Mon–Fri 8am–6pm Central) or email [EMAIL]. Or tap “Leave my details” and we'll reach out within one business day." }
+      a: "Call [US_PHONE] (Mon–Fri 8am–6pm Central) or email [EMAIL]. Or tap “Leave my details” and we'll reach out within 1 business day." }
   ];
-  var CHIPS = ["How does $0 upfront work?", "What does it cost?", "Do I own the website?", "How fast can you start?", "Do you do SEO?", "Leave my details"];
+  var CHIPS = ["How does $0 upfront work?", "What does it cost?", "Starter or Pro?", "Do you do Google Ads?", "Do I own the website?", "Leave my details"];
 
   function norm(s) { return (" " + s.toLowerCase().replace(/[^a-z0-9$,\- ]+/g, " ") + " "); }
   function match(q) {
@@ -100,7 +102,7 @@
     q = q.trim(); if (!q || busy) return;
     add("user", esc(q), q);
     if (lead) return leadStep(q);
-    if (/leave (my )?details|call me|contact me|get started|sign me up|growth plan|free preview/i.test(q)) return startLead();
+    if (/leave (my )?details|call me|contact me|get started|sign me up|free preview/i.test(q)) return startLead();
     var local = match(q);
     if (cfg.chatAI === "on") {
       busy = true; typing(true);
@@ -143,7 +145,7 @@
     lead.step++;
     if (lead.step < STEPS.length) { botSay(STEPS[lead.step].q); return; }
     // consent
-    var el = botSay("Last thing: is it OK if we contact you by phone, text and email about your growth plan? You can reply STOP to opt out anytime.");
+    var el = botSay("Last thing: is it OK if we contact you by phone, text and email about your request? You can reply STOP to opt out anytime.");
     setChips([]);
     var yes = d.createElement("button"); yes.type = "button"; yes.className = "chat__chip chat__chip--cta"; yes.textContent = "Yes, contact me";
     var no = d.createElement("button"); no.type = "button"; no.className = "chat__chip"; no.textContent = "No thanks";
@@ -158,6 +160,7 @@
     fd.append("name", data.name); fd.append("company", data.company); fd.append("city", data.city);
     fd.append("phone", data.phone || ""); fd.append("email", data.email || "");
     fd.append("consent", "yes"); fd.append("page", location.pathname);
+    var at = window.__attrib || {}; Object.keys(at).forEach(function (k) { fd.append(k, at[k]); });
     fd.append("message", transcript.map(function (m) { return (m.role === "user" ? "Visitor: " : "Assistant: ") + m.text; }).join("\n"));
     typing(true);
     fetch("/send.php", { method: "POST", body: fd, headers: { "Accept": "application/json" } })
@@ -167,12 +170,12 @@
         if (!res.ok) throw new Error(res.error);
         track("generate_lead", { form: "chat" });
         if (typeof window.gtag === "function" && cfg.adsId && cfg.adsFormLabel) window.gtag("event", "conversion", { send_to: cfg.adsId + "/" + cfg.adsFormLabel });
-        botSay("Done — thanks, " + esc(data.name.split(" ")[0]) + "! We'll be in touch within one business day (Mon–Fri, Central time). Want to pick a call time now? <a href=\"/free-preview/\">Request your growth plan</a> or call <a href=\"tel:[US_PHONE_E164]\">[US_PHONE]</a>.");
+        botSay("Done — thanks, " + esc(data.name.split(" ")[0]) + "! We'll be in touch within one business day (Mon–Fri, Central time). Want to start now? <a href=\"/free-preview/\">Get your free website preview</a> or call <a href=\"tel:[US_PHONE_E164]\">[US_PHONE]</a>.");
         setChips(["What does it cost?", "Do I own the website?"]);
       })
       .catch(function (e) {
         typing(false); input.disabled = false; lead = null;
-        botSay("Sorry, that didn't send (" + esc(String(e.message || "error")) + "). Please call <a href=\"tel:[US_PHONE_E164]\">[US_PHONE]</a> or use the <a href=\"/free-preview/\">growth plan form</a>.");
+        botSay("Sorry, that didn't send (" + esc(String(e.message || "error")) + "). Please call <a href=\"tel:[US_PHONE_E164]\">[US_PHONE]</a> or use the <a href=\"/free-preview/\">free preview form</a>.");
         setChips(CHIPS);
       });
   }
@@ -181,7 +184,7 @@
   function open() {
     panel.hidden = false; launcher.setAttribute("aria-expanded", "true"); root.classList.add("is-open");
     if (!log.children.length) {
-      botSay("Hi! I'm the [BRAND] assistant. Ask me anything about getting more roofing jobs from Google — pricing, how the free growth plan works, SEO, ads.");
+      botSay("Hi! I'm the [BRAND] assistant. Ask me about websites, SEO, Google Ads or pricing — or how the free website preview works.");
       setChips(CHIPS);
       track("chat_open");
     }

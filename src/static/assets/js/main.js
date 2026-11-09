@@ -25,7 +25,7 @@
   var mbar = d.querySelector(".mbar"), forms = d.querySelectorAll("form.form");
   if (mbar && forms.length && "IntersectionObserver" in window) {
     var io0 = new IntersectionObserver(function (es) {
-      es.forEach(function (e) { mbar.setAttribute("data-hide", e.isIntersecting ? "true" : "false"); });
+      es.forEach(function (e) { var h = e.isIntersecting ? "true" : "false"; mbar.setAttribute("data-hide", h); var c = d.getElementById("chatbot"); if (c && !c.classList.contains("is-open")) c.setAttribute("data-hide", h); });
     }, { threshold: 0.05 });
     forms.forEach(function (f) { io0.observe(f); });
   }
@@ -89,6 +89,31 @@
     if (cta) track("cta_click", { cta: cta, text: (a.textContent || "").trim().slice(0, 60) });
     if (a.href && a.href.indexOf("tel:") === 0) { track("phone_click", { cta: cta || "tel" }); adsConversion(cfg.adsCallLabel); }
   });
+
+  /* ---------- Before/after slider ---------- */
+  d.querySelectorAll("[data-ba]").forEach(function (ba) {
+    var r = ba.querySelector(".ba__range");
+    var set = function () { ba.style.setProperty("--pos", r.value + "%"); };
+    r.addEventListener("input", set); set();
+  });
+
+  /* ---------- Ad attribution: UTM + gclid -> hidden fields (kept for the visit) ---------- */
+  var ATTR = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "gclid"];
+  var qs = new URLSearchParams(location.search), attrib = {};
+  try { attrib = JSON.parse(sessionStorage.getItem("attrib") || "{}"); } catch (e) {}
+  ATTR.forEach(function (k) { if (qs.get(k)) attrib[k] = qs.get(k).slice(0, 200); });
+  if (!attrib.landing_page) attrib.landing_page = location.pathname;
+  try { sessionStorage.setItem("attrib", JSON.stringify(attrib)); } catch (e) {}
+  d.querySelectorAll("form.form").forEach(function (f) {
+    ATTR.concat(["landing_page"]).forEach(function (k) {
+      if (!attrib[k] || f.querySelector('[name="' + k + '"]')) return;
+      var i = d.createElement("input"); i.type = "hidden"; i.name = k; i.value = attrib[k]; f.appendChild(i);
+    });
+  });
+  /* Preselect the service from ?service=web-design|seo|google-ads */
+  var svc = qs.get("service"), sel = d.querySelector("select[name=service]");
+  if (svc && sel) { Array.prototype.forEach.call(sel.options, function (o) { if (o.value === svc) sel.value = svc; }); }
+  window.__attrib = attrib;
 
   /* ---------- Forms ---------- */
   d.querySelectorAll("form.form").forEach(function (form) {

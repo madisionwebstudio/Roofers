@@ -183,49 +183,42 @@
   ],
   "ratio": 0.56267
  },
- "demo-ironpitch-desktop": {
+ "work/hardtland-before": {
   "widths": [
    640,
    1000,
    1440
   ],
-  "ratio": 2.36042
+  "ratio": 0.625
  },
- "demo-ironpitch-mobile": {
-  "widths": [
-   240,
-   390
-  ],
-  "ratio": 12.98462
- },
- "demo-cedarslate-desktop": {
+ "work/hardtland-after": {
   "widths": [
    640,
    1000,
    1440
   ],
-  "ratio": 2.36042
+  "ratio": 0.625
  },
- "demo-cedarslate-mobile": {
+ "work/hardtland-mobile": {
   "widths": [
    240,
    390
   ],
-  "ratio": 13.52564
+  "ratio": 2.1641
  },
- "demo-bluebonnet-desktop": {
+ "work/rollnbrush-desktop": {
   "widths": [
    640,
    1000,
    1440
   ],
-  "ratio": 2.32014
+  "ratio": 0.625
  },
- "demo-bluebonnet-mobile": {
+ "work/rollnbrush-mobile": {
   "widths": [
    240,
    390
   ],
-  "ratio": 12.98462
+  "ratio": 2.1641
  }
 }

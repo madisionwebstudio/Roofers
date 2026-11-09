@@ -12,17 +12,25 @@ RewriteEngine On
 # RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
 </IfModule>
 
-# Old v1 URLs -> new pages (keeps any links/rankings the old site earned)
+# 301 redirects: old URLs -> current pages (keeps links and rankings)
+<IfModule mod_rewrite.c>
+RewriteRule ^admin-panel/?$ /roofing-web-design-agency/#admin-panel [NE,R=301,L]
+</IfModule>
+Redirect 301 /roofing-websites/ /roofing-web-design-agency/
+Redirect 301 /roofing-seo/ /roofing-seo-agency/
+Redirect 301 /roofing-google-ads/ /roofing-marketing-agency/
+Redirect 301 /blog/do-roofers-need-seo/ /blog/roofing-seo-guide/
 Redirect 301 /free-audit/ /free-preview/
-Redirect 301 /services/roofing-web-design/ /roofing-websites/
-Redirect 301 /services/roofing-seo/ /roofing-seo/
-Redirect 301 /services/roofing-marketing/ /roofing-google-ads/
+Redirect 301 /services/roofing-web-design/ /roofing-web-design-agency/
+Redirect 301 /services/roofing-seo/ /roofing-seo-agency/
+Redirect 301 /services/roofing-marketing/ /roofing-marketing-agency/
 Redirect 301 /services/website-care-plans/ /pricing/
-Redirect 301 /services/lead-response-automation/ /roofing-websites/
-Redirect 301 /services/reviews-reputation/ /roofing-seo/
-Redirect 301 /services/ /roofing-websites/
+Redirect 301 /services/lead-response-automation/ /roofing-web-design-agency/
+Redirect 301 /services/reviews-reputation/ /roofing-seo-agency/
+Redirect 301 /services/ /roofing-web-design-agency/
 Redirect 301 /locations/index.html /locations/san-antonio-tx/
 Redirect 301 /resources/ /blog/
+Redirect 301 /demos/ /our-work/
 
 <IfModule mod_headers.c>
 Header always set X-Content-Type-Options "nosniff"

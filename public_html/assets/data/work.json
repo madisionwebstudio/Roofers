@@ -1,0 +1,35 @@
+{
+  "_help": "Roofing redesigns shown on Home (first one) and /our-work/ (all). Images are names from assets/img/manifest.json (add screenshots with the steps in README). status: \"concept\" = redesign concept, not a client; \"client\" = signed client. An entry with an empty name renders as an open slot card.",
+  "roofing": [
+    {
+      "name": "Hardtland Home Improvement",
+      "city": "Madison",
+      "state": "WI",
+      "status": "concept",
+      "before_img": "work/hardtland-before",
+      "after_img": "work/hardtland-after",
+      "mobile_img": "work/hardtland-mobile",
+      "live_url": "https://hardtlandhomeimprovement.netlify.app/",
+      "description": "A family-run Madison roofer since 1972. Their current site hides the phone number, reviews and certifications. The redesign puts everything a homeowner checks on the first screen.",
+      "improvements": [
+        "Mobile speed score 51 → 100 (Google Lighthouse, simulated mobile)",
+        "Accessibility score 53 → 100 (Google Lighthouse)",
+        "Google rating, years in business, certifications and a one-tap call button on the first screen"
+      ],
+      "note": "Scores measured November 2026 on both homepages with Google Lighthouse (mobile). Scores vary between runs."
+    },
+    { "name": "", "city": "", "state": "", "status": "concept", "before_img": "", "after_img": "", "mobile_img": "", "live_url": "", "description": "", "improvements": [] },
+    { "name": "", "city": "", "state": "", "status": "concept", "before_img": "", "after_img": "", "mobile_img": "", "live_url": "", "description": "", "improvements": [] }
+  ],
+  "other": [
+    {
+      "name": "Roll n' Brush Painting",
+      "city": "Fitchburg",
+      "state": "WI",
+      "status": "client",
+      "img": "work/rollnbrush-desktop",
+      "mobile_img": "work/rollnbrush-mobile",
+      "live_url": "https://rollnbrushpainting.com/"
+    }
+  ]
+}

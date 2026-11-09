@@ -3,4 +3,4 @@ Disallow: /thank-you/
 Disallow: /styleguide.html
 Disallow: /send.php
 
-Sitemap: https://example.com/sitemap.xml
+Sitemap: https://[DOMAIN]/sitemap.xml

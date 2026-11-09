@@ -1,16 +1,13 @@
-# [BRAND] — roofing agency website (v2: “$0 upfront, pay only if you love it”)
+# [BRAND] — roofing marketing website (v3)
 
-Marketing site for an agency that builds websites, SEO and Google Ads **only for US roofing contractors**.
-Positioning: **growth, not “a website.”** Every page sells more roof jobs from Google (website + SEO + ads as one system), with
-“$0 upfront, pay only if you love it” as the safety net underneath. Every page pushes one action: **Get my free growth plan** (`/free-preview/`).
+Marketing site for an agency that sells **three services to US roofing contractors only: Web Design, SEO and Google Ads (PPC)** — with one goal: more leads for the roofer.
 
-- **Output:** plain HTML + one CSS file + vanilla JS + one PHP form handler, in `public_html/`. No framework, nothing to install on the server.
+Main promise: **“A perfect website captures more leads — and we know exactly what homeowners look for when they choose a roofing company.”**
+Main CTA everywhere: **Get my free website preview** → `/free-preview/` (on the Google Ads page: **Get a free Google Ads plan** → same form, service preselected).
+
+- **Output:** plain HTML + one CSS file + vanilla JS + two PHP files (`send.php`, optional `chat.php`), in `public_html/`. Nothing to install on the server.
 - **Hosting:** upload the *contents* of `public_html/` to Hostinger's `public_html`.
-- **Source:** `src/` + `config.json`. A small Python script (`tools/build.py`, standard library only) fills in your details,
-  stitches the shared header/footer into each page and writes `public_html/`.
-
-> The default brand in `config.json` is “Roofrs” (from v1), with a fictional 555 phone number and `example.com`.
-> Change them before launch — see below.
+- **Source:** `src/` + `config.json`. `python3 tools/build.py` (standard library only) fills in your details, stitches shared parts into pages and writes `public_html/`.
 
 ---
 
@@ -32,36 +29,34 @@ characters, pages without exactly one `<h1>`, and any config value you haven't s
 
 ## Placeholders — one config file
 
-Everything lives in **`config.json`**. Each `[KEY]` in the source is replaced site-wide (HTML, PHP, JS, robots.txt, sitemap).
+Everything lives in **`config.json`**. Values still in `[BRACKETS]` are not set yet — the build lists them every time.
 
-| Key | What | Default |
+| Key | What | Status |
 |---|---|---|
-| `BRAND` | Business name (logo wordmark, titles, schema, emails) | `Roofrs` |
-| `DOMAIN` | Domain without `https://`, e.g. `roofrs.com` (canonicals, sitemap, OG, schema, form origin check) | `example.com` |
-| `FOUNDER_NAME` | Founder name | `Rakesh Dadhich` |
-| `FOUNDER_PHOTO` | Path to founder photo (4:5) | `/assets/img/founder-placeholder.webp` (designed placeholder) |
-| `US_PHONE` | Display phone; the `tel:` link (`[US_PHONE_E164]`) is generated from it | `(210) 555-0142` (fictional) |
-| `EMAIL` | Public email | `hello@example.com` |
-| `CALENDLY_URL` | Calendly event URL (embedded on `/thank-you/`). Empty = “we'll call you” fallback | empty |
-| `GA4_ID` | GA4 measurement ID. Empty = no analytics script at all | empty |
-| `GADS_CONVERSION_ID` | Google Ads ID (`AW-…`) | empty |
-| `GADS_FORM_LABEL` / `GADS_CALL_LABEL` | Ads conversion labels for form submits and phone clicks | empty |
-| `TO_EMAIL` | Inbox that receives leads (`send.php`) — forms **and** chat leads | empty |
-| `FROM_EMAIL` | Sender — must be a mailbox on your own domain (create it in Hostinger → Emails) | empty |
-| `SAME_AS` | Comma-separated URLs of your own profiles (Google Business Profile, LinkedIn, Facebook, Clutch…) → Organization schema `sameAs` | empty |
-| `CHAT_AI` | `"on"` = chat questions the built-in answers can't handle go to Claude via `chat.php` (needs an API key, see below). `"off"` = built-in answers only, no API cost | `off` |
-
-**If you change the brand name**, also re-render the bitmaps that contain it:
-`node tools/brand/render.js "NewBrand" "Founder Name"` then convert the founder placeholder (or just add a real founder photo).
+| `BRAND` | Business name | `Roofrs` |
+| `DOMAIN` | Domain without `https://` (canonicals, sitemap, OG, schema, robots, form origin check) | **`[DOMAIN]` — set it** |
+| `US_PHONE` | Display phone, e.g. `(608) 555-1234` — use a **local US number**; `tel:` links are generated from it | **`[US_PHONE]` — set it** |
+| `EMAIL` | Public email | **`[EMAIL]` — set it** |
+| `FOUNDER_NAME`, `FOUNDER_PHOTO`, `FOUNDER_VIDEO` | Founder block (photo 4:5; video = YouTube/Vimeo embed URL or `/assets/video/intro.mp4`) | photo + video **needed** |
+| `LINKEDIN_URL`, `FIVERR_URL` | Founder profiles (also in Person schema `sameAs`) | set |
+| `PRICE_SEO_LOCAL`, `PRICE_SEO_PRO` | SEO prices used everywhere (pages, schema, chat, llms.txt) | **`[CONFIRM]` $597 / $997** |
+| `LAUNCH_PRICING` | `"on"`/`"off"` — shows or hides every launch-price line | `on` |
+| `LAUNCH_LINE` | Wording; `{after}` becomes the later price | “Launch price — goes to {after} after our first 10 roofing clients.” |
+| `DISPLAY_FONT` | `"anton"` (Anton + Barlow Condensed) or `"archivo"` | `anton` |
+| `TO_EMAIL`, `FROM_EMAIL` | Lead inbox / sender on your domain (`send.php`) | needed |
+| `CALENDLY_URL`, `GA4_ID`, `GADS_CONVERSION_ID`, `GADS_FORM_LABEL`, `GADS_CALL_LABEL` | Booking + tracking | needed |
+| `SAME_AS` | Business profile URLs (Google Business Profile, Facebook…) → Organization `sameAs` | optional |
+| `CHAT_AI` | `"on"` = chat sends unanswered questions to Claude (see below) | `off` |
 
 ### Placeholders that stay visible on purpose
 These are content gaps for *you* to fill. The build highlights them in orange on the page so they can't slip through:
 
 - `[SOURCE NEEDED: …]` — blog articles and city page. Add a link to the real source, or delete the claim.
 - `[DATA: …]` — San Antonio local facts. Fill with dated, checked numbers (see `docs/ADD-A-CITY.md`).
-- `[ADD: …]` — founder background (About), non-roofing past work (Our Work), legal details (Privacy/Terms).
+- `[ADD: …]` — founder story (About), legal details (Privacy/Terms).
+- `[IMAGE: …]`, `[REVIEW TEXT …]`, `[Reviewer name]`, `[VIDEO_1]`, `[VIDEO_2]` — Vidales Law screenshot, 3 Fiverr reviews (copy word for word), 2 video testimonials (in `src/partials/proof-other.html`).
 
-Find them all: `grep -rn "\[SOURCE NEEDED\|\[DATA:\|\[ADD:" src/pages`
+Find them all: `grep -rn "\[SOURCE NEEDED\|\[DATA:\|\[ADD:\|\[IMAGE\|\[REVIEW\|\[VIDEO" src`
 
 ---
 
@@ -72,11 +67,10 @@ config.json                 ← your details (the one place)
 src/
   pages/                    ← one file per page; folder = URL (pages/pricing/index.html → /pricing/)
   partials/                 ← header, footer, final CTA, price cards, fine print, admin mock, founder…
-  static/                   ← copied as-is: CSS, JS, fonts, images, send.php, .htaccess, robots.txt, /demos/
+  static/                   ← copied as-is: CSS, JS, fonts, images, send.php, .htaccess, robots.txt, assets/data/work.json
 tools/
   build.py                  ← builds public_html/
   images.py                 ← downloads Unsplash photos, exports responsive WebP + manifest.json
-  demos/make_demos.py       ← renders + screenshots the 3 demo roofing sites (also publishes them at /demos/…)
   brand/render.js           ← OG image, logo PNGs, founder placeholder
   shoot.js                  ← QA screenshots (Playwright)
 docs/ADD-A-CITY.md
@@ -93,7 +87,7 @@ Each page starts with a JSON comment the build reads:
   "service": {...}, "article": {...}, "noindex": true } -->
 ```
 Helpers inside pages: `<!--@include name-->` (a partial), `{{img name="crew-ridge" alt="…" sizes="…"}}` (responsive WebP
-with width/height/lazy loading), `{{device key="demo-ironpitch" url="…"}}` (browser + phone frame), `{{crumbs}}`.
+with width/height/lazy loading), `{{work}}` / `{{work limit="1"}}` (before/after cards from work.json), `{{qform service="seo"}}` (hero lead form), `{{launch after="$699"}}` (launch-price line), `{{crumbs}}`.
 FAQ schema is generated automatically from `<details class="faq-item">` blocks.
 
 ---
@@ -151,11 +145,22 @@ Still on you (from the manual's 26-week tracker): local phone number in `config.
 
 ---
 
-## Add your work
-- **Real client site:** screenshot desktop (1440 wide) and phone (390 wide @2x), add like `tools/demos/make_demos.py` does, then
-  use `{{device key="client-name" label="Client site" url="…"}}` on `/our-work/` and Home. Only with written permission.
-- **Demo builds** stay labeled “Demo build” and their live versions (`/demos/…`) carry a banner saying the company is fictional.
-- **Non-roofing work:** fill the `[ADD: …]` block on `/our-work/`, or delete it.
+## Pricing (single source of truth — keep these consistent)
+- **Starter Site** (1–3 pages): **$499** one-time (launch price → $699). 12 months hosting & care, then $29/month.
+- **Pro Site** (4–10 pages incl. up to 3 city pages): **$199/month**, 12-month minimum (→ $299/month) — own it early by paying the difference to $1,499 — or **$1,499** one-time (→ $1,999). Admin panel + 1 month of SEO free.
+- **SEO:** Local SEO `[PRICE_SEO_LOCAL]`/mo · SEO Pro `[PRICE_SEO_PRO]`/mo · 6 months → 3 landing pages free.
+- **Google Ads:** **$399** setup + **10%** of ad spend · **$2,000/month** minimum budget paid directly to Google · weekly reports.
+Prices appear in: `src/partials/price-cards.html`, `pricing`, the three service pages, `faq-core.html`, `terms`, `chat.js` (KB), `chat.php`, `llms.txt`, and the blog cost article. Search for the number before changing it.
+
+## Our Work — before/after redesigns (`src/static/assets/data/work.json`)
+Home shows the first entry; `/our-work/` shows all. Each entry: `name, city, state, status ("concept"|"client"), before_img, after_img, mobile_img, live_url, description, improvements[], note`. Entries with an empty `name` render as “Your roofing company here” slots.
+- **Honesty rules:** `concept` shows the badge “Redesign concept — not a client”; switch to `client` only after they sign. Improvements must be measurable and true (Hardtland's scores were measured with Lighthouse on both sites).
+- **Add a redesign:** screenshot the current site and your redesign at 1440×900 and the redesign on a phone at 390×844 @2x, convert to WebP (see SHOTLIST.md), add the names to `src/static/assets/img/manifest.json` like the `work/hardtland-*` entries, fill a slot in `work.json`, rebuild.
+- “Other proof” (Roll n' Brush, Vidales Law, Fiverr reviews, video testimonials) lives in `src/partials/proof-other.html`.
+
+## Service pages = Google Ads landing pages
+`/roofing-web-design-agency/`, `/roofing-seo-agency/`, `/roofing-marketing-agency/` each have a short lead form in the hero (`{{qform service="…"}}`), the keyword in the H1, a CTA every couple of sections, Service + FAQPage + BreadcrumbList schema, and a sticky mobile CTA bar.
+**Attribution:** `main.js` reads `utm_source, utm_medium, utm_campaign, utm_term, utm_content, gclid` from the landing URL, keeps them for the visit, and adds them (plus the landing page) as hidden fields to every form and chat lead. They appear in the lead email (“Source:” line) and in `form-leads/leads.csv`. `?service=web-design|seo|google-ads` preselects the service on `/free-preview/`.
 
 ## Add a blog post
 1. Copy `src/pages/blog/do-roofers-need-seo/` to a new folder (the slug is the URL).
@@ -200,7 +205,7 @@ See `src/static/assets/img/CREDITS.md` (every photo, photographer, source) and `
 2. **Tiny build script, static output.** Hand-duplicating a header/footer across 20 pages is how sites drift and break. `tools/build.py` (stdlib Python) does includes, placeholders, responsive images, schema, sitemap and link checks. The server only ever sees static files + `send.php`.
 3. **Whole CSS inlined as critical CSS.** It's ~11 KB gzipped, so inlining it removes the only render-blocking request. Fonts self-hosted (Fontsource, OFL); only Anton is preloaded.
 4. **Derived colors for accessibility:** `--orange-ink #B3480B` for orange *text* on light backgrounds (brand orange is 2.7:1 on paper — fails AA) and `--fog #A9B3BB` for muted text on navy. Brand orange text appears only on dark backgrounds; buttons use ink text on orange (white on orange fails).
-5. **Demo builds, honestly labeled.** No real client sites existed, so we built three fictional roofing homepages (Ironpitch, Cedar & Slate, Bluebonnet), screenshotted them into the device frames, label them “Demo build” everywhere, and publish them at `/demos/…` with a “fictional company” banner. Their Lighthouse mobile scores (96/97/98) were measured, not made up.
+5. ~~Demo builds~~ — replaced in v3 by real before/after redesigns (see v3 decisions).
 6. **No fake data anywhere.** Admin panel and report mocks are tagged “Example screen” / “Example layout — not client data” and use “Homeowner A/B/C”. The PageSpeed block is labeled “Sample report — illustration”. No testimonials, star ratings or results — the reviews feature is described, not faked.
 7. **Founder bio left for you.** We only wrote what the brief states (founder runs projects, remote team, US Central hours). Background is an `[ADD: …]` block, and the founder photo is a designed placeholder, not a stock face.
 8. **Interpretations of the offer you should confirm:**
@@ -212,12 +217,25 @@ See `src/static/assets/img/CREDITS.md` (every photo, photographer, source) and `
    - Logo design is listed as an optional add-on (price not stated); domain registration as a small yearly fee paid to the registrar.
 9. **Form leads are saved to CSV outside `public_html` even when `TO_EMAIL` is empty**, so the site works on day one and no lead is lost if email delivery fails.
 10. **Growth-first messaging (v2.1).** Headlines lead with the outcome roofers buy — more calls and booked jobs (“Turn Google searches into booked roof jobs”) — not with the website or with paying later. The risk reversal stays in the sub-copy, steps, pricing and FAQ. No result is promised: copy says what the system is *built to* do.
-11. **“Free growth plan” added to the free preview.** Delivered with the homepage preview in 5 days: who shows up in Google Maps for the roofer's towns, the searches homeowners use, and the first three fixes we'd make. Confirm you're happy to deliver this on every preview call.
-12. **Font: Archivo** (900/800, slightly condensed, subset to 22 KB) replaced Anton + Barlow Condensed for a cleaner, more premium look; body stays Inter. The demo sites keep their own fonts.
+11. ~~Free growth plan~~ — removed in v3; the offer is the free website preview (plus a free Google Ads plan on the Ads page).
+12. Font: Archivo was tried in v2; v3 is back on Anton + Barlow Condensed (switchable with `DISPLAY_FONT`).
 13. **Chat assistant** works without AI by default (no running cost, no wrong answers); AI answers are opt-in with your own key.
 14. **Only one city page**, built as a template with a `[DATA: …]` block. More cities should be added only with real local data (the footer says so).
 
-## Quality checks run
-- Playwright screenshots of all 20 pages at 390 and 1440 (plus 375 / 768 / 1024 on key pages): no horizontal scroll; offer + CTA visible in the first screen on mobile and desktop.
-- Lighthouse mobile (local PHP server, no gzip — production will be faster): Home 98/100/100/100, Free Preview 99/100/100/100, Pricing 100/100/100/100, Roofing SEO 96/100/100/100 (Performance/Accessibility/Best practices/SEO).
-- End-to-end form test: validation, submit, CSV write, redirect; `send.php` honeypot, origin check, GET rejection and plain-POST fallback tested with curl.
+## v3 decisions
+1. **Fonts back to Anton + Barlow Condensed** as the brief says; Archivo stays available (`DISPLAY_FONT`).
+2. **Demo builds removed.** Our Work is now real redesigns from `work.json` (Hardtland first) with an honest concept/client badge.
+3. **Chat assistant kept** (it's a website feature, not a service we sell) and updated to the v3 offer and prices; still no AI by default.
+4. **Placeholders are visible on purpose** (`[DOMAIN]`, `[US_PHONE]`, `[EMAIL]`, `[IMAGE]`, `[REVIEW TEXT]`, `[VIDEO_*]`), so nothing fake ships. Canonicals become correct as soon as `DOMAIN` is set.
+5. **The H1 on every page carries the target keyword** as a small line above the headline (e.g. “Roofing web design agency”), so the big sales headline stays readable.
+6. **Old URLs 301 → new** in `.htaccess`; `/admin-panel/` → `/roofing-web-design-agency/#admin-panel` (RewriteRule with `NE` so the `#` isn't encoded).
+7. Removed the unsourced “$3,000–$10,000” claim and all speed claims except measured, labeled Lighthouse scores.
+
+## Quality checks run (v3)
+- Playwright screenshots of every page at 360, 390 and 1440 px: no horizontal scroll; hero H1 fits; form or CTA in the first mobile screen on every service page; Our Work directly under the hero on Home.
+- Lighthouse mobile (local PHP server, no gzip; test domain set so canonicals are valid): Home 97/100/100/100 · Web design 96/100/100/100 · SEO 95–96/100/100/100 · Google Ads 97/100/100/100 · Pricing 100/100/100/100 · Free preview 97/100/100/100 (Performance/Accessibility/Best practices/SEO). CLS 0 on all. With `[DOMAIN]` still unset, SEO shows 85 because the canonical and robots sitemap URL are invalid — set `DOMAIN`.
+- End-to-end form test from `/roofing-marketing-agency/?utm_source=google&…&gclid=…`: validation → send.php → CSV row with service + UTM + gclid → `/thank-you/`. `?service=google-ads` preselects on `/free-preview/`; attribution persists across pages; chat leads carry it too.
+- Before/after slider works with mouse, touch and keyboard (arrow keys).
+- JSON-LD valid on all pages: Organization, WebSite, Person (sameAs LinkedIn/Fiverr), Service + offers, FAQPage, BreadcrumbList, Article.
+- `.htaccess` redirects reviewed by hand (no Apache available locally) — **test them on Hostinger after upload**: `/roofing-websites/`, `/roofing-seo/`, `/roofing-google-ads/`, `/admin-panel/`, `/blog/do-roofers-need-seo/`.
+- Site-wide search: no `example.com`, `555`, `lorem`, `growth plan`, `CRM`, `automation`, `text-back` in visible text.

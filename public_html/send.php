@@ -16,12 +16,12 @@ declare(strict_types=1);
 
 const TO_EMAIL   = '';
 const FROM_EMAIL = '';      // must be a mailbox on your own domain, e.g. forms@yourdomain.com
-const SITE_HOST  = 'example.com';
+const SITE_HOST  = '[DOMAIN]';
 const BRAND      = 'Roofrs';
 const RATE_MAX   = 5;
 const RATE_WINDOW = 900;               // seconds
 const MIN_FILL_SECONDS = 3;
-const CONSENT_TEXT = 'I agree to be contacted by phone, text and email about my preview. Reply STOP to opt out.';
+const CONSENT_TEXT = 'I agree to be contacted by phone, text and email about my request. Reply STOP to opt out.';
 
 // Private folder one level ABOVE public_html (not reachable from the web).
 $PRIVATE_DIR = dirname(__DIR__) . '/form-leads';
@@ -101,6 +101,14 @@ $message = clean_multiline('message', $form === 'chat' ? 6000 : 2000);
 $allowedServices = ['Replacement', 'Repair', 'Storm/insurance', 'Commercial', 'Gutters', 'Siding'];
 $services = array_values(array_intersect((array) ($_POST['services'] ?? []), $allowedServices));
 $consent = ($_POST['consent'] ?? '') === 'yes';
+$serviceNames = ['web-design' => 'Web design', 'seo' => 'SEO', 'google-ads' => 'Google Ads (PPC)', 'not-sure' => 'Not sure yet'];
+$service = $serviceNames[$_POST['service'] ?? ''] ?? '';
+// Ad attribution captured by main.js from the landing URL
+$attrib = [];
+foreach (['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid', 'landing_page'] as $k) {
+    $v = clean($k, 200);
+    if ($v !== '') $attrib[$k] = $v;
+}
 
 $errors = [];
 if ($name === '') $errors[] = 'name';
@@ -128,8 +136,9 @@ $page = clean('page', 200) ?: ($_SERVER['HTTP_REFERER'] ?? '');
 $ua = mb_substr((string) ($_SERVER['HTTP_USER_AGENT'] ?? ''), 0, 250);
 
 $lines = [
-    'New ' . ($form === 'free-preview' ? 'FREE PREVIEW request' : ($form === 'chat' ? 'CHAT lead' : 'contact message')) . ' — ' . BRAND,
+    'New ' . ($form === 'free-preview' ? 'LEAD: ' . ($service ?: 'free website preview') : ($form === 'chat' ? 'CHAT lead' : 'contact message')) . ' — ' . BRAND,
     str_repeat('-', 48),
+    "Service:   " . ($service ?: '—'),
     "Name:      $name",
     "Company:   $company",
     "Phone:     $phone",
@@ -147,6 +156,7 @@ $lines = [
     "Time:      $time",
     "IP:        $ip",
     "Page:      $page",
+    'Source:    ' . ($attrib ? implode(' | ', array_map(fn($k, $v) => "$k=$v", array_keys($attrib), $attrib)) : 'direct / unknown'),
     "Browser:   $ua",
 ];
 $body = implode("\n", $lines);
@@ -158,8 +168,9 @@ if (is_dir($PRIVATE_DIR) || @mkdir($PRIVATE_DIR, 0750, true)) {
     $new = !file_exists($csv);
     if ($fh = @fopen($csv, 'a')) {
         flock($fh, LOCK_EX);
-        if ($new) fputcsv($fh, ['time', 'form', 'name', 'company', 'phone', 'email', 'city', 'website', 'services', 'logo', 'notes', 'consent', 'ip']);
-        $row = [$time, $form, $name, $company, $phone, $email, $city, $website, implode('|', $services), $logo, $notes . $message, 'yes', $ip];
+        if ($new) fputcsv($fh, ['time', 'form', 'service', 'name', 'company', 'phone', 'email', 'city', 'website', 'services', 'logo', 'notes', 'consent', 'ip', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'gclid', 'landing_page']);
+        $row = [$time, $form, $service, $name, $company, $phone, $email, $city, $website, implode('|', $services), $logo, $notes . $message, 'yes', $ip,
+                $attrib['utm_source'] ?? '', $attrib['utm_medium'] ?? '', $attrib['utm_campaign'] ?? '', $attrib['utm_term'] ?? '', $attrib['gclid'] ?? '', $attrib['landing_page'] ?? ''];
         // neutralize spreadsheet formulas
         $row = array_map(fn($c) => preg_match('/^[=+\-@]/', (string) $c) ? "'" . $c : $c, $row);
         $saved = fputcsv($fh, $row) !== false;
@@ -171,7 +182,7 @@ if (is_dir($PRIVATE_DIR) || @mkdir($PRIVATE_DIR, 0750, true)) {
 $mailed = false;
 if (filter_var(TO_EMAIL, FILTER_VALIDATE_EMAIL)) {
     $from = filter_var(FROM_EMAIL, FILTER_VALIDATE_EMAIL) ? FROM_EMAIL : 'no-reply@' . SITE_HOST;
-    $subject = ($form === 'free-preview' ? 'Free preview: ' : ($form === 'chat' ? 'Chat lead: ' : 'Contact: ')) . ($company ?: $name);
+    $subject = ($form === 'free-preview' ? ($service === 'Google Ads (PPC)' ? 'Google Ads plan: ' : 'Free preview: ') : ($form === 'chat' ? 'Chat lead: ' : 'Contact: ')) . ($company ?: $name) . (isset($attrib['gclid']) ? ' [Google Ads]' : '');
     $subject = '=?UTF-8?B?' . base64_encode(mb_substr($subject, 0, 120)) . '?=';
     $headers = [
         'From: ' . BRAND . ' website <' . $from . '>',

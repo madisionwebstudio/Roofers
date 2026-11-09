@@ -32,6 +32,7 @@ Downloaded and converted to responsive WebP by `tools/images.py` (crop, resize, 
 
 ## Other images
 
-- `demo-*-desktop/mobile-*.webp` — screenshots of our own demo builds (`tools/demos/make_demos.py`).
+- `work/hardtland-*` — screenshots of hardtlandhomeimprovement.com (their current site, “before”) and our redesign concept at hardtlandhomeimprovement.netlify.app (“after”), taken November 2026. Shown as a labeled redesign concept, not a client.
+- `work/rollnbrush-*` — screenshots of rollnbrushpainting.com (client site).
 - `og-default.jpg`, `logo.png`, `apple-touch-icon.png`, `founder-placeholder.webp` — rendered from HTML by `tools/brand/render.js`.
 - Fonts: Anton, Barlow Condensed, Inter — SIL Open Font License, via Fontsource, self-hosted.

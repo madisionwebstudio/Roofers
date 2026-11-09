@@ -23,7 +23,7 @@ The script crops to the right shape (aspect ratios below) around the center — 
 | 9 | `golden-street` | 16:9 | A finished home at golden hour | About hero |
 | 10 | `metal-roof` | 4:3 | A standing-seam metal roof you installed | Contact |
 
-## Demo screenshots
-`demo-*` images are our own fictional demo builds and are labeled “Demo build” everywhere. When you have a real client site
-(with written permission), screenshot it at 1440 wide (desktop) and 390 wide (phone, 2x), save as `client-<name>-desktop.png` /
-`-mobile.png`, add them the way `tools/demos/make_demos.py` does, and use `{{device key="client-<name>" label="Client site"}}`.
+## Our Work screenshots (`assets/img/work/`)
+For each roofing redesign: desktop screenshots of the **current site** and **our redesign** at 1440×900 (same size, top of page) and a phone screenshot of the redesign at 390×844 @2x. Save as WebP at 640/1000/1440 (desktop) and 240/390 (phone), add them to `manifest.json` (see README → “Add a redesign”) and to `assets/data/work.json`.
+
+Still needed: `[IMAGE]` Vidales Law website + Google Search Console results screenshot · founder photo · founder 60-second video · 2 client video testimonials.
