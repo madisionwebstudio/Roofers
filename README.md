@@ -42,7 +42,7 @@ Everything lives in **`config.json`**. Values still in `[BRACKETS]` are not set 
 | `PRICE_SEO_LOCAL`, `PRICE_SEO_PRO` | SEO prices used everywhere (pages, schema, chat, llms.txt) | **`[CONFIRM]` $597 / $997** |
 | `LAUNCH_PRICING` | `"on"`/`"off"` — shows or hides every launch-price line | `on` |
 | `LAUNCH_LINE` | Wording; `{after}` becomes the later price | “Launch price — goes to {after} after our first 10 roofing clients.” |
-| `DISPLAY_FONT` | `"anton"` (Anton + Barlow Condensed) or `"archivo"` | `anton` |
+| `DISPLAY_FONT` | `"jakarta"` (Plus Jakarta Sans, minimalist), `"anton"` (Anton + Barlow Condensed, bold) or `"archivo"` | `jakarta` |
 | `TO_EMAIL`, `FROM_EMAIL` | Lead inbox / sender on your domain (`send.php`) | needed |
 | `CALENDLY_URL`, `GA4_ID`, `GADS_CONVERSION_ID`, `GADS_FORM_LABEL`, `GADS_CALL_LABEL` | Booking + tracking | needed |
 | `SAME_AS` | Business profile URLs (Google Business Profile, Facebook…) → Organization `sameAs` | optional |
@@ -230,6 +230,9 @@ See `src/static/assets/img/CREDITS.md` (every photo, photographer, source) and `
 5. **The H1 on every page carries the target keyword** as a small line above the headline (e.g. “Roofing web design agency”), so the big sales headline stays readable.
 6. **Old URLs 301 → new** in `.htaccess`; `/admin-panel/` → `/roofing-web-design-agency/#admin-panel` (RewriteRule with `NE` so the `#` isn't encoded).
 7. Removed the unsourced “$3,000–$10,000” claim and all speed claims except measured, labeled Lighthouse scores.
+
+## v4 — minimalist look
+Plus Jakarta Sans everywhere; sentence-case headings with tight letter-spacing and one italic orange accent word; pill buttons; soft rounded cards; no hazard tape, pitched edges or giant footer wordmark. Inspired by groksmm.com's calm layout — colors stay navy + orange. All of it is the `html.f-jakarta` layer at the end of `main.css`; set `DISPLAY_FONT` to `anton` to get the bold v3 look back.
 
 ## Quality checks run (v3)
 - Playwright screenshots of every page at 360, 390 and 1440 px: no horizontal scroll; hero H1 fits; form or CTA in the first mobile screen on every service page; Our Work directly under the hero on Home.

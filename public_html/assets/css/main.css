@@ -5,6 +5,9 @@
    ========================================================================== */
 
 /* ---------- Fonts (self-hosted, OFL) ---------- */
+@font-face{font-family:"Plus Jakarta Sans";src:url(/assets/fonts/plus-jakarta-sans-latin-wght-normal.woff2) format("woff2");font-weight:200 800;font-style:normal;font-display:swap}
+@font-face{font-family:"Plus Jakarta Sans";src:url(/assets/fonts/plus-jakarta-sans-latin-wght-italic.woff2) format("woff2");font-weight:200 800;font-style:italic;font-display:swap}
+@font-face{font-family:"Jakarta Fallback";src:local("Arial");size-adjust:104%;ascent-override:96%;descent-override:22%}
 @font-face{font-family:"Anton";src:url(/assets/fonts/anton-latin-400-normal.woff2) format("woff2");font-weight:400 900;font-display:optional}
 @font-face{font-family:"Barlow Condensed";src:url(/assets/fonts/barlow-condensed-latin-700-normal.woff2) format("woff2");font-weight:600 700;font-display:optional}
 @font-face{font-family:"Barlow Condensed";src:url(/assets/fonts/barlow-condensed-latin-800-normal.woff2) format("woff2");font-weight:800 900;font-display:optional}
@@ -903,3 +906,149 @@ picture{display:contents}
   .founder__photo{min-height:320px}
   .video-ph{min-height:200px}
 }
+
+
+/* ==========================================================================
+   v4 — minimalist theme (html.f-jakarta). Plus Jakarta Sans everywhere,
+   sentence-case headings with tight tracking, one italic accent word,
+   pill buttons, soft rounded cards, quiet surfaces. Navy + orange kept.
+   ========================================================================== */
+html.f-jakarta{
+  --f-display:"Plus Jakarta Sans","Jakarta Fallback",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --f-cond:"Plus Jakarta Sans","Jakarta Fallback",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --f-body:"Plus Jakarta Sans","Jakarta Fallback",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --t-hero:clamp(2.5rem,1.45rem + 4.3vw,5.4rem);
+  --t-h2:clamp(2rem,1.35rem + 2.5vw,3.5rem);
+  --t-h2s:clamp(1.7rem,1.25rem + 1.7vw,2.6rem);
+  --t-h3:clamp(1.15rem,1.05rem + .45vw,1.4rem);
+  --t-big:clamp(3rem,2rem + 4vw,5.5rem);
+  --rad:18px; --rad-s:12px;
+  --paper:#F5F2EC; --line:#E3DED4; --navy:#0F1E2E; --slate:#16283A;
+}
+html.f-jakarta body{font-size:1.0625rem;letter-spacing:-.006em;line-height:1.6}
+/* Headlines: sentence case, tight */
+html.f-jakarta .d-hero,html.f-jakarta .d-xl,html.f-jakarta .d-l,html.f-jakarta .d-big{text-transform:none;font-weight:750;letter-spacing:-.045em;line-height:1.02}
+html.f-jakarta .d-xl,html.f-jakarta .d-l{letter-spacing:-.035em;line-height:1.06}
+html.f-jakarta .hl,html.f-jakarta .stroke{font-style:italic;font-weight:600;letter-spacing:-.03em;color:var(--orange-ink);-webkit-text-stroke:0}
+html.f-jakarta .sec--navy .hl,html.f-jakarta .sec--slate .hl,html.f-jakarta .hero .hl,html.f-jakarta .band .hl,html.f-jakarta .on-dark .hl,html.f-jakarta .panel--dark .hl{color:var(--orange)}
+html.f-jakarta .stroke{color:inherit}
+html.f-jakarta .h3,html.f-jakarta .h4,html.f-jakarta .checks b,html.f-jakarta .pagelist b,html.f-jakarta .lookfor b,html.f-jakarta .tl b,html.f-jakarta .steps4 b,html.f-jakarta .price__name,html.f-jakarta .cmp thead th,html.f-jakarta .ptable thead th,html.f-jakarta .ptable tbody th,html.f-jakarta .vs td.us,html.f-jakarta .founder__sig,html.f-jakarta .wreport__head b,html.f-jakarta .qform h2,html.f-jakarta .report .rh,html.f-jakarta .chat__title,html.f-jakarta .finep b{text-transform:none;letter-spacing:-.015em;font-weight:700}
+html.f-jakarta .h3{font-size:var(--t-h3);line-height:1.2}
+html.f-jakarta .h4{font-size:1.05rem}
+html.f-jakarta .checks b,html.f-jakarta .lookfor b,html.f-jakarta .tl b,html.f-jakarta .steps4 b{font-size:1.02rem;line-height:1.3}
+html.f-jakarta .price__name{font-size:1rem;color:inherit}
+html.f-jakarta .qform h2{font-size:1.3rem}
+/* Small labels: quiet uppercase */
+html.f-jakarta .eyebrow,html.f-jakarta .h1-kw{font-size:.76rem;font-weight:700;letter-spacing:.12em;color:var(--orange-ink)}
+html.f-jakarta .sec--navy .eyebrow,html.f-jakarta .sec--slate .eyebrow,html.f-jakarta .hero .eyebrow,html.f-jakarta .band .eyebrow,html.f-jakarta .hero .h1-kw,html.f-jakarta .sec--navy .h1-kw,html.f-jakarta .on-dark .eyebrow{color:#F59A62}
+html.f-jakarta .eyebrow::before,html.f-jakarta .h1-kw::before{width:18px;height:2px}
+html.f-jakarta .h1-kw{margin-bottom:1.1em}
+html.f-jakarta .hero__micro,html.f-jakarta .work__meta,html.f-jakarta .num__l,html.f-jakarta .micro{text-transform:none;letter-spacing:0;font-weight:500;font-size:.92rem}
+html.f-jakarta .crumbs,html.f-jakarta .post-meta,html.f-jakarta .step__when,html.f-jakarta .badge,html.f-jakarta .label-chip,html.f-jakarta .chip,html.f-jakarta .ba__tag,html.f-jakarta .not-roofing,html.f-jakarta .split__cap{font-weight:600;font-size:.72rem;letter-spacing:.08em}
+html.f-jakarta .lede{font-size:clamp(1.06rem,1rem + .3vw,1.2rem);line-height:1.6}
+/* Buttons: pills */
+html.f-jakarta .btn{border-radius:999px;min-height:50px;padding:0 22px;gap:10px;text-transform:none;letter-spacing:-.01em;font:600 .98rem/1.2 var(--f-body);box-shadow:none;border-width:1px}
+html.f-jakarta .btn:hover{transform:translateY(-1px);box-shadow:0 8px 20px -10px rgba(15,30,46,.45)}
+html.f-jakarta .btn--lg{min-height:54px;padding:0 26px;font-size:1.02rem}
+html.f-jakarta .btn--arrow{padding-right:22px}
+html.f-jakarta .btn--lg.btn--arrow{padding-right:24px}
+html.f-jakarta .btn--arrow::after{display:none}
+html.f-jakarta .btn svg,html.f-jakarta .btn--lg svg{width:18px;height:18px;margin:0;transition:transform .2s}
+html.f-jakarta .btn--arrow>svg,html.f-jakarta .btn--lg.btn--arrow>svg{margin-left:0}
+html.f-jakarta .btn:hover svg{transform:translateX(3px)}
+html.f-jakarta .btn--ghost{--bd:rgba(255,255,255,.35)}
+html.f-jakarta .btn--block{justify-content:center}
+html.f-jakarta .btn-row .btn{justify-content:center}
+html.f-jakarta .arrow-link{text-transform:none;letter-spacing:-.01em;font:600 .98rem/1.2 var(--f-body);border-bottom:1px solid currentColor}
+html.f-jakarta .tlink{font-weight:600}
+/* Header: floating pill nav on navy */
+html.f-jakarta .hdr{background:rgba(15,30,46,.96);border-bottom:0}
+html.f-jakarta .hdr__in{min-height:76px}
+html.f-jakarta .logo b{font:800 1.3rem/1 var(--f-display);text-transform:none;letter-spacing:-.04em}
+@media (min-width:1080px){html.f-jakarta .nav{gap:2px;padding:5px;border:1px solid rgba(255,255,255,.12);border-radius:999px;background:rgba(255,255,255,.03)}}
+html.f-jakarta .nav a{text-transform:none;letter-spacing:-.01em;font:500 .92rem/1 var(--f-body);padding:10px 14px;border-radius:999px;border:0;opacity:.82}
+html.f-jakarta .nav a:hover,html.f-jakarta .nav a[aria-current=page]{opacity:1;background:rgba(255,255,255,.09);border:0}
+html.f-jakarta .hdr__phone{font:600 .92rem/1 var(--f-body)}
+html.f-jakarta .hdr .btn{min-height:42px;font-size:.9rem;padding:0 18px}
+html.f-jakarta .burger{border-radius:999px}
+html.f-jakarta .mnav a.mnav__l{font:700 1.6rem/1.2 var(--f-display);text-transform:none;letter-spacing:-.03em}
+html.f-jakarta .mbar .btn{border-radius:999px;font-size:.98rem}
+/* Sections: quieter, no pitched edges, no tape */
+html.f-jakarta .shed-top,html.f-jakarta .shed-top-r,html.f-jakarta .pitch-top{-webkit-clip-path:none;clip-path:none;margin-top:0;padding-top:var(--sec)}
+html.f-jakarta .tape,html.f-jakarta .tape-rule,html.f-jakarta .founder__photo .tape,html.f-jakarta .ftr .tape{display:none}
+html.f-jakarta .tape-badge{border-radius:999px;overflow:hidden}
+html.f-jakarta .tape-badge::before{display:none}
+html.f-jakarta .tape-badge span{border-radius:999px;font:600 .72rem/1 var(--f-body);letter-spacing:.06em;padding:7px 12px}
+html.f-jakarta .ftr__word{display:none}
+html.f-jakarta .lookfor-warn{font:700 clamp(1.2rem,1rem + .8vw,1.6rem)/1.3 var(--f-display);text-transform:none;letter-spacing:-.02em}
+html.f-jakarta .lookfor-warn::before{width:22px;height:22px;border-radius:50%;background:var(--orange)}
+html.f-jakarta .sec--white{background:#FBFAF7}
+/* Hero: calmer overlay, rounded media where boxed */
+html.f-jakarta .hero::before{background:linear-gradient(90deg,rgba(15,30,46,.96) 0%,rgba(15,30,46,.88) 42%,rgba(15,30,46,.55) 75%,rgba(15,30,46,.4) 100%)}
+@media (max-width:899px){html.f-jakarta .hero::before{background:linear-gradient(180deg,rgba(15,30,46,.72) 0%,rgba(15,30,46,.9) 45%,rgba(15,30,46,.97) 100%)}}
+html.f-jakarta .hero h1{max-width:14ch}
+@media (min-width:1000px){html.f-jakarta .hero h1{max-width:15ch}}
+html.f-jakarta .hero--form h1{max-width:13ch}
+html.f-jakarta .founder__photo,html.f-jakarta .split__media,html.f-jakarta .ba,html.f-jakarta .video-ph,html.f-jakarta .proof__ph{border-radius:var(--rad);overflow:hidden}
+html.f-jakarta .split{gap:0}
+html.f-jakarta .band .band__in{padding-block:clamp(80px,10vw,150px)}
+/* Cards & panels: soft, rounded, light borders */
+html.f-jakarta .price,html.f-jakarta .panel,html.f-jakarta .form-card,html.f-jakarta .qform,html.f-jakarta .post-card,html.f-jakarta .proof__card,html.f-jakarta .quote,html.f-jakarta .wcard--slot,html.f-jakarta .report,html.f-jakarta .wreport,html.f-jakarta .psi,html.f-jakarta .toc,html.f-jakarta .callout,html.f-jakarta .datablock,html.f-jakarta .finep,html.f-jakarta .cta-strip,html.f-jakarta .adm,html.f-jakarta .launch{border-radius:var(--rad)}
+html.f-jakarta .price,html.f-jakarta .post-card,html.f-jakarta .proof__card,html.f-jakarta .quote,html.f-jakarta .panel{border:1px solid var(--line);background:#fff;box-shadow:0 1px 2px rgba(15,30,46,.04)}
+html.f-jakarta .panel--dark,html.f-jakarta .sec--navy .panel{background:var(--slate);border-color:rgba(255,255,255,.08)}
+html.f-jakarta .plans{gap:18px}
+@media (min-width:900px){html.f-jakarta .plans{gap:18px}html.f-jakarta .price--hero{transform:none}}
+html.f-jakarta .price{padding:clamp(24px,3vw,36px)}
+html.f-jakarta .price--hero{background:var(--navy);border-color:var(--navy);box-shadow:0 24px 50px -24px rgba(15,30,46,.55)}
+html.f-jakarta .price__amt{font-weight:800;letter-spacing:-.05em;font-size:clamp(2.8rem,2.2rem + 2.2vw,4rem)}
+html.f-jakarta .plans .price .price__amt{font-size:clamp(2.8rem,2.2rem + 2vw,3.8rem)}
+html.f-jakarta .price__amt small{font:500 .95rem/1.2 var(--f-body);text-transform:none;letter-spacing:0;opacity:.75}
+html.f-jakarta .price__badge{top:-13px}
+html.f-jakarta .qform{border-top:0;box-shadow:0 30px 60px -28px rgba(0,0,0,.55)}
+html.f-jakarta .form-card{border-top:1px solid var(--line)}
+html.f-jakarta .field label,html.f-jakarta .field legend{font:600 .9rem/1.2 var(--f-body);text-transform:none;letter-spacing:0}
+html.f-jakarta .field input[type=text],html.f-jakarta .field input[type=email],html.f-jakarta .field input[type=tel],html.f-jakarta .field input[type=url],html.f-jakarta .field select,html.f-jakarta .field textarea{border-radius:var(--rad-s);border:1px solid #D7D1C6;background:#fff}
+html.f-jakarta .choice span{border-radius:var(--rad-s);border-width:1px}
+html.f-jakarta .cta-strip{border-left:0;background:var(--navy)}
+html.f-jakarta .cta-strip p{font:700 clamp(1.3rem,1.1rem + .8vw,1.8rem)/1.2 var(--f-display);text-transform:none;letter-spacing:-.03em}
+html.f-jakarta .callout{border-left:0}
+html.f-jakarta .launch{border-left:0;font-weight:600;font-size:.86rem;padding:8px 12px}
+html.f-jakarta .finep{border:1px solid var(--line);background:#fff}
+html.f-jakarta .finep b{font-size:.95rem}
+/* Lists & numbers */
+html.f-jakarta .steps4 li{border-top:1px solid var(--line)}
+html.f-jakarta .steps4 li:last-child{border-top-color:var(--orange)}
+html.f-jakarta .steps4 li::before,html.f-jakarta .svc3__n,html.f-jakarta .step__n,html.f-jakarta .pagelist li::before{font:italic 500 2rem/1 var(--f-display);letter-spacing:-.03em}
+@media (min-width:900px){html.f-jakarta .steps4 li::before{font-size:2.4rem}}
+html.f-jakarta .lookfor li{border-color:var(--line)}
+@media (min-width:1100px){html.f-jakarta .lookfor li{border-top:1px solid var(--ink)}}
+html.f-jakarta .lookfor .ico{width:30px;height:30px}
+html.f-jakarta .svc3{border-top:1px solid rgba(255,255,255,.2)}
+html.f-jakarta .svc3__t{font:700 clamp(1.6rem,1.3rem + 1.1vw,2.2rem)/1.1 var(--f-display);text-transform:none;letter-spacing:-.035em}
+html.f-jakarta .svc3__t span{font:600 .78rem/1.2 var(--f-body);letter-spacing:.1em;text-transform:uppercase;margin-top:10px}
+html.f-jakarta .svc3__p{font:600 .95rem/1.2 var(--f-body);text-transform:none;letter-spacing:0}
+html.f-jakarta .faq{border-top:1px solid var(--ink)}
+html.f-jakarta .faq-item summary{font:600 clamp(1.02rem,.98rem + .25vw,1.15rem)/1.35 var(--f-body);text-transform:none;letter-spacing:-.01em;padding:20px 0}
+html.f-jakarta .faq-item summary::after{width:28px;height:28px;border-width:1px;background-size:12px 1.5px,1.5px 12px}
+html.f-jakarta .vs thead th{text-transform:none;letter-spacing:0;font:600 .9rem var(--f-body)}
+html.f-jakarta .vs thead th.us{border-radius:12px 12px 0 0}
+html.f-jakarta .vs tbody th{text-transform:none;letter-spacing:0;font:600 .85rem var(--f-body)}
+html.f-jakarta .vs td.us{font-size:1.02rem}
+html.f-jakarta .ptable,html.f-jakarta .cmp{border-radius:var(--rad);overflow:hidden;border:1px solid var(--line)}
+html.f-jakarta .ptable thead th .p{font:800 1.8rem/1 var(--f-display);letter-spacing:-.04em}
+html.f-jakarta .cmp thead th:last-child{color:var(--ink)}
+html.f-jakarta .founder__q{font:700 clamp(1.7rem,1.3rem + 1.6vw,2.6rem)/1.15 var(--f-display);text-transform:none;letter-spacing:-.035em}
+html.f-jakarta .wcard__imps li{font-weight:500}
+html.f-jakarta .post-card h2,html.f-jakarta .post-card h3{font:700 1.2rem/1.25 var(--f-display);text-transform:none;letter-spacing:-.025em}
+html.f-jakarta .prose h2{font:750 clamp(1.6rem,1.3rem + 1.1vw,2.2rem)/1.15 var(--f-display);text-transform:none;letter-spacing:-.035em}
+html.f-jakarta .prose h3{font:700 1.2rem/1.3 var(--f-display);text-transform:none;letter-spacing:-.02em}
+html.f-jakarta .prose th{text-transform:none;letter-spacing:0;font:600 .9rem var(--f-body)}
+html.f-jakarta .kicker-num{font-weight:800;letter-spacing:-.05em}
+html.f-jakarta .ftr__cta .d-l{font-weight:750}
+html.f-jakarta .ftr h2.h4{text-transform:uppercase;font:600 .74rem var(--f-body);letter-spacing:.12em}
+html.f-jakarta .chat__launcher{font:600 .9rem/1 var(--f-body);text-transform:none;letter-spacing:0;box-shadow:0 12px 30px -10px rgba(8,16,26,.5)}
+html.f-jakarta .chat__panel{border-radius:20px}
+html.f-jakarta .chat__head{border-bottom:0}
+html.f-jakarta .tabs button{border-radius:999px;font:600 .9rem var(--f-body);text-transform:none;letter-spacing:0;border-width:1px}
+html.f-jakarta .wcard__phone{border-radius:28px}
+@media print{html.f-jakarta .hdr{display:none}}

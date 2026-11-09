@@ -35,7 +35,7 @@ cfg["US_PHONE_E164"] = "+1" + digits[-10:] if len(digits) >= 10 else ""
 cfg["YEAR"] = str(date.today().year)
 BASE = "https://" + cfg["DOMAIN"].strip().rstrip("/")
 LAUNCH_ON = cfg.get("LAUNCH_PRICING", "on").lower() == "on"
-FONT = "archivo" if cfg.get("DISPLAY_FONT", "anton").lower() == "archivo" else "anton"
+FONT = cfg.get("DISPLAY_FONT", "jakarta").lower() if cfg.get("DISPLAY_FONT", "jakarta").lower() in ("anton", "archivo", "jakarta") else "jakarta"
 FOUNDER_FIRST = cfg["FOUNDER_NAME"].split()[0] if cfg["FOUNDER_NAME"] else "the founder"
 cfg["FOUNDER_FIRST"] = FOUNDER_FIRST
 
@@ -347,7 +347,9 @@ def render(path_rel, raw, css_inline):
         f'<meta name="twitter:title" content="{html.escape(meta.get("ogTitle", title), quote=True)}">\n'
         f'<meta name="twitter:description" content="{html.escape(desc, quote=True)}">\n'
         f'<meta property="og:image:alt" content="{html.escape(cfg["BRAND"])} — roofing websites, SEO and Google Ads">\n'
-        + (f'<link rel="preload" href="/assets/fonts/anton-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>\n<link rel="preload" href="/assets/fonts/barlow-condensed-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>\n' if FONT == "anton" else f'<link rel="preload" href="/assets/fonts/archivo-cond-600-900.woff2" as="font" type="font/woff2" crossorigin>\n') +
+        + {"anton": '<link rel="preload" href="/assets/fonts/anton-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>\n<link rel="preload" href="/assets/fonts/barlow-condensed-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>\n',
+           "archivo": '<link rel="preload" href="/assets/fonts/archivo-cond-600-900.woff2" as="font" type="font/woff2" crossorigin>\n',
+           "jakarta": '<link rel="preload" href="/assets/fonts/plus-jakarta-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>\n'}[FONT] +
         f'{preload}'
         f'<style>{css_inline}</style>\n'
         f'<script>document.documentElement.classList.add("js");window.SITE={json.dumps(site_js)}</script>\n'
