@@ -1,4 +1,4 @@
-/* Roofrs — site script. Vanilla JS, loaded with `defer`. */
+/* Roof Web Studio — site script. Vanilla JS, loaded with `defer`. */
 (function () {
   "use strict";
   var d = document, cfg = window.SITE || {};

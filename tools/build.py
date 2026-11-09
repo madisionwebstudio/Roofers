@@ -235,17 +235,17 @@ ORG = {"@type": "Organization", "@id": BASE + "/#org", "name": cfg["BRAND"], "ur
        "founder": {"@type": "Person", "@id": BASE + "/about/#founder", "name": cfg["FOUNDER_NAME"]},
        "areaServed": {"@type": "Country", "name": "United States"},
        "slogan": "A perfect website gets you more roofing leads.",
-       "description": f"{cfg['BRAND']} is a marketing agency for US roofing contractors: roofing web design, roofing SEO and Google Ads.",
+       "description": f"{cfg['BRAND']} is a roofing marketing agency for US roofing contractors: roofing website design, roofing SEO, Google Ads / PPC and roofing lead generation.",
        "contactPoint": {"@type": "ContactPoint", "contactType": "sales", "email": cfg["EMAIL"], "url": cfg["WHATSAPP_URL"],
                         "areaServed": "US", "availableLanguage": "English",
                         "hoursAvailable": {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "08:00", "closes": "18:00"}},
-       "knowsAbout": ["Roofing web design", "Roofing SEO", "Google Ads for roofers"]}
+       "knowsAbout": ["Roofing marketing", "Roofing web design", "Roofing SEO", "Local SEO for roofing companies", "Roofing PPC management", "Roofing lead generation"]}
 SAME_AS = [u.strip() for u in cfg.get("SAME_AS", "").split(",") if u.strip()]
 if SAME_AS:
     ORG["sameAs"] = SAME_AS
 
-NAV = [("Web Design", "/roofing-web-design-agency/"), ("SEO", "/roofing-seo-agency/"), ("Google Ads", "/roofing-marketing-agency/"),
-       ("Pricing", "/pricing/"), ("Our Work", "/our-work/"), ("Blog", "/blog/"), ("About", "/about/")]
+NAV = [("Web Design", "/roofing-website-design/"), ("SEO", "/roofing-seo/"), ("Google Ads", "/roofing-google-ads/"),
+       ("Lead Gen", "/roofing-lead-generation/"), ("Pricing", "/pricing/"), ("Our Work", "/our-work/"), ("Blog", "/blog/"), ("About", "/about/")]
 
 
 def render(path_rel, raw, css_inline):

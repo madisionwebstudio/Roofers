@@ -33,7 +33,7 @@ Everything lives in **`config.json`**. Values still in `[BRACKETS]` are not set 
 
 | Key | What | Status |
 |---|---|---|
-| `BRAND` | Business name | `Roofrs` |
+| `BRAND` | Business name | `Roof Web Studio` |
 | `DOMAIN` | Domain without `https://` (canonicals, sitemap, OG, schema, robots, form origin check) | **`[DOMAIN]` — set it** |
 | `US_PHONE` | Display phone, e.g. `(608) 555-1234` — use a **local US number**; `tel:` links are generated from it | **`[US_PHONE]` — set it** |
 | `EMAIL` | Public email | **`[EMAIL]` — set it** |
@@ -160,7 +160,7 @@ Home shows the first entry; `/our-work/` shows all. Each entry: `name, city, sta
 - “Other proof” (Roll n' Brush, Vidales Law, Fiverr reviews, video testimonials) lives in `src/partials/proof-other.html`.
 
 ## Service pages = Google Ads landing pages
-`/roofing-web-design-agency/`, `/roofing-seo-agency/`, `/roofing-marketing-agency/` each have a short lead form in the hero (`{{qform service="…"}}`), the keyword in the H1, a CTA every couple of sections, Service + FAQPage + BreadcrumbList schema, and a sticky mobile CTA bar.
+`/roofing-website-design/`, `/roofing-seo/`, `/roofing-google-ads/` each have a short lead form in the hero (`{{qform service="…"}}`), the keyword in the H1, a CTA every couple of sections, Service + FAQPage + BreadcrumbList schema, and a sticky mobile CTA bar.
 **Attribution:** `main.js` reads `utm_source, utm_medium, utm_campaign, utm_term, utm_content, gclid` from the landing URL, keeps them for the visit, and adds them (plus the landing page) as hidden fields to every form and chat lead. They appear in the lead email (“Source:” line) and in `form-leads/leads.csv`. `?service=web-design|seo|google-ads` preselects the service on `/free-preview/`.
 
 ## Add a blog post
@@ -229,7 +229,7 @@ See `src/static/assets/img/CREDITS.md` (every photo, photographer, source) and `
 3. **Chat assistant kept** (it's a website feature, not a service we sell) and updated to the v3 offer and prices; still no AI by default.
 4. **Placeholders are visible on purpose** (`[DOMAIN]`, `[US_PHONE]`, `[EMAIL]`, `[IMAGE]`, `[REVIEW TEXT]`, `[VIDEO_*]`), so nothing fake ships. Canonicals become correct as soon as `DOMAIN` is set.
 5. **The H1 on every page carries the target keyword** as a small line above the headline (e.g. “Roofing web design agency”), so the big sales headline stays readable.
-6. **Old URLs 301 → new** in `.htaccess`; `/admin-panel/` → `/roofing-web-design-agency/#admin-panel` (RewriteRule with `NE` so the `#` isn't encoded).
+6. **Old URLs 301 → new** in `.htaccess`; `/admin-panel/` → `/roofing-website-design/#admin-panel` (RewriteRule with `NE` so the `#` isn't encoded).
 7. Removed the unsourced “$3,000–$10,000” claim and all speed claims except measured, labeled Lighthouse scores.
 
 ## v4 — minimalist look
@@ -238,7 +238,7 @@ Plus Jakarta Sans everywhere; sentence-case headings with tight letter-spacing a
 ## Quality checks run (v3)
 - Playwright screenshots of every page at 360, 390 and 1440 px: no horizontal scroll; hero H1 fits; form or CTA in the first mobile screen on every service page; Our Work directly under the hero on Home.
 - Lighthouse mobile (local PHP server, no gzip; test domain set so canonicals are valid): Home 97/100/100/100 · Web design 96/100/100/100 · SEO 95–96/100/100/100 · Google Ads 97/100/100/100 · Pricing 100/100/100/100 · Free preview 97/100/100/100 (Performance/Accessibility/Best practices/SEO). CLS 0 on all. With `[DOMAIN]` still unset, SEO shows 85 because the canonical and robots sitemap URL are invalid — set `DOMAIN`.
-- End-to-end form test from `/roofing-marketing-agency/?utm_source=google&…&gclid=…`: validation → send.php → CSV row with service + UTM + gclid → `/thank-you/`. `?service=google-ads` preselects on `/free-preview/`; attribution persists across pages; chat leads carry it too.
+- End-to-end form test from `/roofing-google-ads/?utm_source=google&…&gclid=…`: validation → send.php → CSV row with service + UTM + gclid → `/thank-you/`. `?service=google-ads` preselects on `/free-preview/`; attribution persists across pages; chat leads carry it too.
 - Before/after slider works with mouse, touch and keyboard (arrow keys).
 - JSON-LD valid on all pages: Organization, WebSite, Person (sameAs LinkedIn/Fiverr), Service + offers, FAQPage, BreadcrumbList, Article.
 - `.htaccess` redirects reviewed by hand (no Apache available locally) — **test them on Hostinger after upload**: `/roofing-websites/`, `/roofing-seo/`, `/roofing-google-ads/`, `/admin-panel/`, `/blog/do-roofers-need-seo/`.

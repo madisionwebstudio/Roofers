@@ -101,7 +101,7 @@ $message = clean_multiline('message', $form === 'chat' ? 6000 : 2000);
 $allowedServices = ['Replacement', 'Repair', 'Storm/insurance', 'Commercial', 'Gutters', 'Siding'];
 $services = array_values(array_intersect((array) ($_POST['services'] ?? []), $allowedServices));
 $consent = ($_POST['consent'] ?? '') === 'yes';
-$serviceNames = ['web-design' => 'Web design', 'seo' => 'SEO', 'google-ads' => 'Google Ads (PPC)', 'not-sure' => 'Not sure yet'];
+$serviceNames = ['web-design' => 'Web design', 'seo' => 'SEO', 'local-seo' => 'Local SEO / Google Maps', 'google-ads' => 'Google Ads (PPC)', 'lead-generation' => 'Lead generation', 'not-sure' => 'Not sure yet'];
 $service = $serviceNames[$_POST['service'] ?? ''] ?? '';
 // Ad attribution captured by main.js from the landing URL
 $attrib = [];

@@ -194,12 +194,13 @@ a.tlink{color:var(--orange-ink);font-weight:600;text-underline-offset:3px}
 .hdr__cta{display:none}
 .burger{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;background:none;border:1px solid var(--line-dark);border-radius:var(--r);color:var(--white);cursor:pointer}
 .burger svg{width:24px;height:24px}
-@media (min-width:1080px){
+@media (min-width:1080px){.hdr__cta{display:inline-flex}}
+@media (min-width:1180px){
   .nav{display:flex;gap:clamp(14px,1.6vw,26px)}
   .burger{display:none}
-  .hdr__cta{display:inline-flex}
 }
-@media (min-width:1260px){.hdr__phone{display:inline-flex}}
+.nav a{white-space:nowrap}
+@media (min-width:1420px){.hdr__phone{display:inline-flex}}
 .mnav{position:fixed;top:72px;right:0;bottom:0;left:0;z-index:49;background:var(--navy);color:var(--white);padding:24px var(--gutter) 120px;overflow-y:auto;display:none}
 .mnav[data-open=true]{display:block}
 .mnav a.mnav__l{display:block;font:900 2.4rem/1 var(--f-display);text-transform:uppercase;text-decoration:none;padding:14px 0;border-bottom:1px solid var(--line-dark)}
@@ -965,7 +966,7 @@ html.f-jakarta .tlink{font-weight:600}
 html.f-jakarta .hdr{background:rgba(15,30,46,.96);border-bottom:0}
 html.f-jakarta .hdr__in{min-height:76px}
 html.f-jakarta .logo b{font:800 1.3rem/1 var(--f-display);text-transform:none;letter-spacing:-.04em}
-@media (min-width:1080px){html.f-jakarta .nav{gap:2px;padding:5px;border:1px solid rgba(255,255,255,.12);border-radius:999px;background:rgba(255,255,255,.03)}}
+@media (min-width:1180px){html.f-jakarta .nav{gap:2px;padding:5px;border:1px solid rgba(255,255,255,.12);border-radius:999px;background:rgba(255,255,255,.03)}}
 html.f-jakarta .nav a{text-transform:none;letter-spacing:-.01em;font:500 .92rem/1 var(--f-body);padding:10px 14px;border-radius:999px;border:0;opacity:.82}
 html.f-jakarta .nav a:hover,html.f-jakarta .nav a[aria-current=page]{opacity:1;background:rgba(255,255,255,.09);border:0}
 html.f-jakarta .hdr__phone{font:600 .92rem/1 var(--f-body)}
@@ -1056,7 +1057,8 @@ html.f-jakarta .wcard__phone{border-radius:28px}
 /* Header: WhatsApp + email (no phone calls) */
 .hdr__mail{display:none;align-items:center;justify-content:center;width:42px;height:42px;border-radius:999px;color:var(--white);border:1px solid rgba(255,255,255,.18)}
 .hdr__mail svg{width:20px;height:20px}
-@media (min-width:1260px){.hdr__mail{display:inline-flex}}
+@media (min-width:1420px){.hdr__mail{display:inline-flex}}
+@media (min-width:1180px) and (max-width:1339px){html.f-jakarta .nav a{padding:10px 10px;font-size:.88rem}}
 html.f-jakarta .hdr__phone svg{color:#25D366}
 .mbar .mbar__call+.mbar__call{margin-left:0}
 
@@ -1092,3 +1094,5 @@ html.f-jakarta .hdr__phone svg{color:#25D366}
 .case-pages ul{list-style:none;padding:0;margin:10px 0 0;display:grid;gap:0}
 .case-pages li{padding:9px 0;border-bottom:1px solid var(--line);font-size:.98rem}
 @media (max-width:999px){.sec--navy .case-phones{margin-top:12px}}
+.logo b{white-space:nowrap}
+.steps4 li>span{grid-column:2}

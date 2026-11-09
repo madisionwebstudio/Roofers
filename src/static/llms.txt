@@ -1,6 +1,6 @@
 # [BRAND]
 
-> [BRAND] builds websites, SEO and Google Ads for US roofing contractors — only roofing contractors. One goal: more leads for the roofer. Remote team on US hours (Mon–Fri 8am–6pm Central). Founder: [FOUNDER_NAME]. Contact: WhatsApp ([WHATSAPP_URL]) or email [EMAIL].
+> [BRAND] is a roofing marketing agency: websites, SEO, Google Maps (local SEO) and Google Ads for US roofing contractors — only roofing contractors. One goal: more leads for the roofer. Remote team on US hours (Mon–Fri 8am–6pm Central). Founder: [FOUNDER_NAME]. Contact: WhatsApp ([WHATSAPP_URL]) or email [EMAIL].
 
 ## Offer
 - Free homepage preview within 5 days of a 15-minute call. $0 upfront. Pay only if you love it.
@@ -11,20 +11,30 @@
 - Clients own their domain, Google Business Profile and ad accounts. No ranking guarantees.
 
 ## Key pages
-- [Roofing web design agency](https://[DOMAIN]/roofing-web-design-agency/)
-- [Roofing SEO agency](https://[DOMAIN]/roofing-seo-agency/)
-- [Roofing marketing agency — Google Ads](https://[DOMAIN]/roofing-marketing-agency/)
+- [Roofing web design](https://[DOMAIN]/roofing-website-design/)
+- [Roofing SEO services](https://[DOMAIN]/roofing-seo/)
+- [Local SEO for roofing companies (Google Maps)](https://[DOMAIN]/local-seo-for-roofing-companies/)
+- [Roofing PPC management — Google Ads](https://[DOMAIN]/roofing-google-ads/)
+- [Roofing lead generation (no shared leads)](https://[DOMAIN]/roofing-lead-generation/)
 - [Pricing](https://[DOMAIN]/pricing/)
 - [Free website preview](https://[DOMAIN]/free-preview/)
 - [Roofing website examples](https://[DOMAIN]/our-work/)
 - [About](https://[DOMAIN]/about/)
 
 ## Guides
+- [How to market a roofing company](https://[DOMAIN]/blog/how-to-market-a-roofing-company/)
+- [12 roofing marketing strategies](https://[DOMAIN]/blog/roofing-marketing-strategies/)
+- [How to get roofing leads](https://[DOMAIN]/blog/how-to-get-roofing-leads/)
+- [How much does roofing marketing cost?](https://[DOMAIN]/blog/roofing-marketing-cost/)
+- [Roofing SEO vs Google Ads](https://[DOMAIN]/blog/roofing-seo-vs-google-ads/)
+- [Best marketing channels for roofing contractors](https://[DOMAIN]/blog/best-marketing-channels-for-roofing-contractors/)
+- [Roofing website design examples](https://[DOMAIN]/blog/roofing-website-design-examples/)
+- [Why roofing websites don't generate leads](https://[DOMAIN]/blog/why-roofing-websites-dont-generate-leads/)
 - [What homeowners look for before hiring a roofer](https://[DOMAIN]/blog/what-homeowners-look-for-in-a-roofer/)
 - [Roofing website checklist: 25 things](https://[DOMAIN]/blog/roofing-website-checklist/)
 - [How much does a roofing website cost in 2026?](https://[DOMAIN]/blog/roofing-website-cost/)
 - [Roofing SEO: why your website needs it](https://[DOMAIN]/blog/roofing-seo-guide/)
-- [How to rank in the Google Maps top 3](https://[DOMAIN]/blog/google-maps-top-3-roofers/)
-- [Google Ads for roofers](https://[DOMAIN]/blog/google-ads-for-roofers/)
+- [How to rank a roofing company on Google Maps](https://[DOMAIN]/blog/google-maps-top-3-roofers/)
+- [Google Ads for roofing companies: complete guide](https://[DOMAIN]/blog/google-ads-for-roofers/)
 - [Roofing leads without Angi or HomeAdvisor](https://[DOMAIN]/blog/roofing-leads-without-angi/)
 - [Are you sending customers to shingle manufacturer websites?](https://[DOMAIN]/blog/shingle-manufacturer-links/)

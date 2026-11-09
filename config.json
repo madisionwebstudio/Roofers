@@ -1,6 +1,6 @@
 {
   "_README": "The ONE place to set business details. Run `python3 tools/build.py` after editing; it rewrites public_html/. Values still in [BRACKETS] are not set yet — the build lists them.",
-  "BRAND": "Roofrs",
+  "BRAND": "Roof Web Studio",
   "DOMAIN": "[DOMAIN]",
   "_DOMAIN_help": "Your domain without https://, e.g. roofrs.com",
   "FOUNDER_NAME": "Rakesh Dadhich",

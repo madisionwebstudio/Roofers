@@ -1,6 +1,6 @@
 <?php
 /**
- * Roofrs — form handler for /free-preview/ and /contact/.
+ * Roof Web Studio — form handler for /free-preview/ and /contact/.
  *
  * - POST only, same-origin check
  * - Honeypot (fax_number) + minimum fill time: bots get a fake "success"
@@ -17,7 +17,7 @@ declare(strict_types=1);
 const TO_EMAIL   = '';
 const FROM_EMAIL = '';      // must be a mailbox on your own domain, e.g. forms@yourdomain.com
 const SITE_HOST  = '[DOMAIN]';
-const BRAND      = 'Roofrs';
+const BRAND      = 'Roof Web Studio';
 const RATE_MAX   = 5;
 const RATE_WINDOW = 900;               // seconds
 const MIN_FILL_SECONDS = 3;
@@ -101,7 +101,7 @@ $message = clean_multiline('message', $form === 'chat' ? 6000 : 2000);
 $allowedServices = ['Replacement', 'Repair', 'Storm/insurance', 'Commercial', 'Gutters', 'Siding'];
 $services = array_values(array_intersect((array) ($_POST['services'] ?? []), $allowedServices));
 $consent = ($_POST['consent'] ?? '') === 'yes';
-$serviceNames = ['web-design' => 'Web design', 'seo' => 'SEO', 'google-ads' => 'Google Ads (PPC)', 'not-sure' => 'Not sure yet'];
+$serviceNames = ['web-design' => 'Web design', 'seo' => 'SEO', 'local-seo' => 'Local SEO / Google Maps', 'google-ads' => 'Google Ads (PPC)', 'lead-generation' => 'Lead generation', 'not-sure' => 'Not sure yet'];
 $service = $serviceNames[$_POST['service'] ?? ''] ?? '';
 // Ad attribution captured by main.js from the landing URL
 $attrib = [];

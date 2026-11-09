@@ -35,8 +35,8 @@ for rel in files:
         head=re.search(r'<head>(.*?)</head>',h,re.S).group(1)
         body=re.search(r'<body[^>]*>(.*)</body>',h,re.S).group(1)
         head=re.sub(r'<meta charset="utf-8">\s*|<meta name="viewport"[^>]*>\s*','',head)
-        head=re.sub(r'<title>.*?</title>','<title>Roofrs Website</title>',head)
-        h=head.replace('<title>Roofrs Website</title>','<title>Roofrs Website</title>\n<script>document.documentElement.className+=" '+cls+'"</script>',1)+'\n'+body
+        head=re.sub(r'<title>.*?</title>','<title>Roof Web Studio Website</title>',head)
+        h=head.replace('<title>Roof Web Studio Website</title>','<title>Roof Web Studio Website</title>\n<script>document.documentElement.className+=" '+cls+'"</script>',1)+'\n'+body
     open(d_path,'w',encoding='utf-8').write(h)
 # patch JS for preview
 mj=os.path.join(OUT,'assets/js/main.js'); s=open(mj).read()

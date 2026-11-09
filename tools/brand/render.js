@@ -2,7 +2,7 @@
 // Usage: node tools/brand/render.js "<BRAND>" "<FOUNDER_NAME>"   (tools/build.py does NOT run this; run it when the brand changes)
 const { chromium } = require('playwright'); const path = require('path');
 const ROOT = path.resolve(__dirname, '../..'); const F = 'file://' + ROOT + '/src/static/assets/fonts/'; const IMG = ROOT + '/src/static/assets/img/';
-const brand = process.argv[2] || 'Roofrs'; const founder = process.argv[3] || 'Rakesh Dadhich';
+const brand = process.argv[2] || 'Roof Web Studio'; const founder = process.argv[3] || 'Rakesh Dadhich';
 const initials = founder.split(/\s+/).map(w => w[0]).join('').slice(0, 2).toUpperCase();
 const css = `@font-face{font-family:PJS;font-weight:200 800;src:url(${F}plus-jakarta-sans-latin-wght-normal.woff2)}@font-face{font-family:PJS;font-style:italic;font-weight:200 800;src:url(${F}plus-jakarta-sans-latin-wght-italic.woff2)}@font-face{font-family:Anton;src:url(${F}anton-latin-400-normal.woff2)}@font-face{font-family:B;font-weight:800;src:url(${F}barlow-condensed-latin-800-normal.woff2)}@font-face{font-family:B;font-weight:700;src:url(${F}barlow-condensed-latin-700-normal.woff2)}*{margin:0;box-sizing:border-box}body{background:#0F1E2E;color:#fff;font-family:B}`;
 const mark = (w) => `<svg width="${w}" viewBox="0 0 38 24"><path d="M2.5 21.5L19 5.5l16.5 16" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="square"/><path d="M26.5 9.5V3h4.5v10.8" fill="none" stroke="#F26B1D" stroke-width="3.2" stroke-linecap="square"/></svg>`;

@@ -1,4 +1,4 @@
-# Roofrs — Apache / Hostinger (LiteSpeed reads this too)
+# Roof Web Studio — Apache / Hostinger (LiteSpeed reads this too)
 Options -Indexes
 ErrorDocument 404 /404.html
 DirectoryIndex index.html
@@ -14,20 +14,21 @@ RewriteEngine On
 
 # 301 redirects: old URLs -> current pages (keeps links and rankings)
 <IfModule mod_rewrite.c>
-RewriteRule ^admin-panel/?$ /roofing-web-design-agency/#admin-panel [NE,R=301,L]
+RewriteRule ^admin-panel/?$ /roofing-website-design/#admin-panel [NE,R=301,L]
 </IfModule>
-Redirect 301 /roofing-websites/ /roofing-web-design-agency/
-Redirect 301 /roofing-seo/ /roofing-seo-agency/
-Redirect 301 /roofing-google-ads/ /roofing-marketing-agency/
+Redirect 301 /roofing-web-design-agency/ /roofing-website-design/
+Redirect 301 /roofing-seo-agency/ /roofing-seo/
+Redirect 301 /roofing-marketing-agency/ /roofing-google-ads/
+Redirect 301 /roofing-websites/ /roofing-website-design/
 Redirect 301 /blog/do-roofers-need-seo/ /blog/roofing-seo-guide/
 Redirect 301 /free-audit/ /free-preview/
-Redirect 301 /services/roofing-web-design/ /roofing-web-design-agency/
-Redirect 301 /services/roofing-seo/ /roofing-seo-agency/
-Redirect 301 /services/roofing-marketing/ /roofing-marketing-agency/
+Redirect 301 /services/roofing-web-design/ /roofing-website-design/
+Redirect 301 /services/roofing-seo/ /roofing-seo/
+Redirect 301 /services/roofing-marketing/ /roofing-google-ads/
 Redirect 301 /services/website-care-plans/ /pricing/
-Redirect 301 /services/lead-response-automation/ /roofing-web-design-agency/
-Redirect 301 /services/reviews-reputation/ /roofing-seo-agency/
-Redirect 301 /services/ /roofing-web-design-agency/
+Redirect 301 /services/lead-response-automation/ /roofing-lead-generation/
+Redirect 301 /services/reviews-reputation/ /local-seo-for-roofing-companies/
+Redirect 301 /services/ /roofing-website-design/
 Redirect 301 /locations/index.html /locations/san-antonio-tx/
 Redirect 301 /resources/ /blog/
 Redirect 301 /demos/ /our-work/
