@@ -1,7 +1,8 @@
 # [BRAND] — roofing agency website (v2: “$0 upfront, pay only if you love it”)
 
 Marketing site for an agency that builds websites, SEO and Google Ads **only for US roofing contractors**.
-Every page pushes one action: **Get my free website preview** (`/free-preview/`).
+Positioning: **growth, not “a website.”** Every page sells more roof jobs from Google (website + SEO + ads as one system), with
+“$0 upfront, pay only if you love it” as the safety net underneath. Every page pushes one action: **Get my free growth plan** (`/free-preview/`).
 
 - **Output:** plain HTML + one CSS file + vanilla JS + one PHP form handler, in `public_html/`. No framework, nothing to install on the server.
 - **Hosting:** upload the *contents* of `public_html/` to Hostinger's `public_html`.
@@ -178,9 +179,11 @@ See `src/static/assets/img/CREDITS.md` (every photo, photographer, source) and `
    - Admin panel claims were kept to the brief (leads, business info, services, photos, text, blog, mobile login) plus regular backups. Lead status tags appear only in the example mock.
    - Logo design is listed as an optional add-on (price not stated); domain registration as a small yearly fee paid to the registrar.
 9. **Form leads are saved to CSV outside `public_html` even when `TO_EMAIL` is empty**, so the site works on day one and no lead is lost if email delivery fails.
-10. **Only one city page**, built as a template with a `[DATA: …]` block. More cities should be added only with real local data (the footer says so).
+10. **Growth-first messaging (v2.1).** Headlines lead with the outcome roofers buy — more calls and booked jobs (“Turn Google searches into booked roof jobs”) — not with the website or with paying later. The risk reversal stays in the sub-copy, steps, pricing and FAQ. No result is promised: copy says what the system is *built to* do.
+11. **“Free growth plan” added to the free preview.** Delivered with the homepage preview in 5 days: who shows up in Google Maps for the roofer's towns, the searches homeowners use, and the first three fixes we'd make. Confirm you're happy to deliver this on every preview call.
+12. **Only one city page**, built as a template with a `[DATA: …]` block. More cities should be added only with real local data (the footer says so).
 
 ## Quality checks run
 - Playwright screenshots of all 20 pages at 390 and 1440 (plus 375 / 768 / 1024 on key pages): no horizontal scroll; offer + CTA visible in the first screen on mobile and desktop.
-- Lighthouse mobile (local PHP server, no gzip — production will be faster): Home 96/100/100/100, Free Preview 96/100/100/100, Pricing 100/100/100/100 (Performance/Accessibility/Best practices/SEO).
+- Lighthouse mobile (local PHP server, no gzip — production will be faster): Home 97/100/100/100, Free Preview 98/100/100/100, Pricing 100/100/100/100 (Performance/Accessibility/Best practices/SEO).
 - End-to-end form test: validation, submit, CSV write, redirect; `send.php` honeypot, origin check, GET rejection and plain-POST fallback tested with curl.

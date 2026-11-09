@@ -221,6 +221,7 @@ def render(path_rel, raw, css_inline):
         f'<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">\n'
         f'<meta name="twitter:card" content="summary_large_image">\n'
         f'<link rel="preload" href="/assets/fonts/anton-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>\n'
+        f'<link rel="preload" href="/assets/fonts/barlow-condensed-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>\n'
         f'{preload}'
         f'<style>{css_inline}</style>\n'
         f'<script>document.documentElement.classList.add("js");window.SITE={json.dumps(site_js)}</script>\n'
