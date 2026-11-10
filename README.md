@@ -33,7 +33,7 @@ Everything lives in **`config.json`**. Values still in `[BRACKETS]` are not set 
 
 | Key | What | Status |
 |---|---|---|
-| `BRAND` | Business name | `Roof Web Studio` |
+| `BRAND` | Business name | `Roofers Growth` |
 | `DOMAIN` | Domain without `https://` (canonicals, sitemap, OG, schema, robots, form origin check) | **`[DOMAIN]` — set it** |
 | `US_PHONE` | Display phone, e.g. `(608) 555-1234` — use a **local US number**; `tel:` links are generated from it | **`[US_PHONE]` — set it** |
 | `EMAIL` | Public email | **`[EMAIL]` — set it** |

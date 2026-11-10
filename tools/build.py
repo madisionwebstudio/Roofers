@@ -195,9 +195,7 @@ def qform_tag(m):
 def founder_video_tag(_m):
     v = cfg.get("FOUNDER_VIDEO", "").strip()
     if not v or UNSET(v):
-        return ('<div class="video-ph" role="img" aria-label="Founder intro video coming soon"><svg viewBox="0 0 24 24" aria-hidden="true">'
-                '<circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10 8.5l6 3.5-6 3.5z" fill="currentColor"/></svg>'
-                '60-second intro video from [FOUNDER_NAME] — coming soon</div>')
+        return ''
     if v.endswith(".mp4"):
         return f'<video controls preload="none" src="{html.escape(v)}"></video>'
     return f'<iframe src="{html.escape(v)}" title="60-second intro from [FOUNDER_NAME]" loading="lazy" allow="fullscreen; picture-in-picture"></iframe>'

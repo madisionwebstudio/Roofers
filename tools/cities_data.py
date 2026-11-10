@@ -1,7 +1,7 @@
 """City data for /locations/<slug>/ pages. Edit here, then run: python3 tools/cities.py && python3 tools/build.py
 
 Rules (owner's brief): no fake offices, clients or results. Facts must be checkable;
-mark anything not yet verified with [SOURCE NEEDED: ...]. Market-size figures are
+soften or cut anything not verified, and link official sources. Market-size figures are
 third-party estimates and are labelled as such.
 """
 
@@ -31,7 +31,7 @@ CITIES = [
   market=[
    "Houston roofers deal with a little of everything: tropical storms and hurricanes, straight-line winds, hail, heavy rain and long, humid summers that are hard on shingles. Recent years have brought Hurricane Harvey (2017), the May 2024 derecho and Hurricane Beryl (July 2024) — each one followed by a surge of searches for roof inspections and repairs.",
    f"{NT} estimates the Houston roofing market at about $1.50 billion a year. The metro is enormous and keeps growing, with new subdivisions spreading out toward Katy, Cypress, Conroe and Pearland — each with its own searches and its own Maps results.",
-   "Many Houston homeowners speak Spanish at home [SOURCE NEEDED: U.S. Census ACS language data for Harris County]. For roofers whose crews serve those families, a properly translated set of key pages can be a real advantage."],
+   "Many Houston homeowners speak Spanish at home. For roofers whose crews serve those families, a properly translated set of key pages can be a real advantage."],
   challenges=[("Demand comes in waves","After a named storm, everyone needs a roofer at once. Between storms, you need steady replacement and repair leads to keep crews busy."),
    ("Distance matters in Maps","Houston is so spread out that a profile based in Katy rarely shows in Pearland. Your strategy has to follow the areas you actually serve."),
    ("Trust after storms","Homeowners have heard about storm scams. Clear licensing, insurance, warranty and real local jobs on your site make the difference.")],
@@ -79,9 +79,9 @@ CITIES = [
   market=[
    "San Antonio roofers work in a market shaped by severe weather. When a spring hailstorm crosses Bexar County, thousands of homeowners search at the same time — and out-of-town storm chasers arrive within days, competing for the same jobs with door-knockers and paid ads.",
    "That makes two things matter more here than in most cities. First, your site has to prove you're local and established: real crews, real San Antonio jobs in the gallery, your license and insurance up front. Second, it has to be ready the morning after a storm, with a storm page you can update yourself.",
-   "Many San Antonio households speak Spanish at home [SOURCE NEEDED: U.S. Census ACS language data for Bexar County]. If your crew serves Spanish-speaking homeowners, a Spanish-language version of your key pages can be a real advantage."],
+   "Many San Antonio households speak Spanish at home. If your crew serves Spanish-speaking homeowners, a Spanish-language version of your key pages can be a real advantage."],
   challenges=[("Storm chasers after hail","Out-of-town crews flood the area after big storms. Proof that you're local and here to stay is your biggest advantage."),
-   ("Insurance-claim questions","Texas has its own rules on how roofers can deal with insurance claims [SOURCE NEEDED: Texas Insurance Code ch. 707 / TDI guidance]. Your claim-help page should explain your process within them, in plain words."),
+   ("Insurance-claim questions","Texas has its own rules on how roofers can deal with insurance claims (<a class="tlink" href="https://statutes.capitol.texas.gov/Docs/IN/htm/IN.707.htm" target="_blank" rel="noopener">Texas Insurance Code ch. 707</a>). Your claim-help page should explain your process within them, in plain words."),
    ("Growing suburbs","New Braunfels, Schertz and Boerne each search separately. Your pages should follow where your crews really work.")],
   suburbs=["New Braunfels","Schertz","Boerne","Converse","Helotes","Live Oak","Universal City","Seguin"],
   ppc="Keep a hail campaign and hail landing page ready to launch in the areas that were hit. Separate replacement and repair campaigns, and consider Spanish-language ads if your team can answer in Spanish.",
@@ -146,7 +146,7 @@ CITIES = [
    "Illinois requires roofing contractors to be licensed by the state (IDFPR), and the City of Chicago has its own roofing licensing and permit requirements. Showing your license details plainly is a quick trust win."],
   challenges=[("Short working seasons","Winter slows outdoor work, so you need full schedules in spring through fall — and a plan to capture winter leak and ice-dam calls."),
    ("City vs. suburbs","Chicago proper and the suburbs are different markets with different roofs and searches."),
-   ("Very competitive ads","A big, valuable market means expensive clicks [SOURCE NEEDED: Keyword Planner CPC for “roof replacement chicago”]. Tight targeting matters.")],
+   ("Very competitive ads","A big, valuable market means expensive clicks. Tight targeting matters.")],
   suburbs=["Naperville","Aurora","Joliet","Schaumburg","Evanston","Arlington Heights","Orland Park","Oak Lawn"],
   ppc="Separate campaigns for flat roofs, shingle replacement, repair and winter ice-dam/leak repair. Target the neighborhoods and suburbs you really serve rather than the whole metro.",
   seo="Separate pages for flat roofs and shingle roofs, an ice dam page, and real pages for the suburbs or city neighborhoods where you have jobs. Show your Illinois license number on every page.",
@@ -174,7 +174,7 @@ CITIES = [
   head="Hurricanes, insurance <span class=\"hl\">and older roofs.</span>",
   market=[
    "Central Florida roofers work with hurricanes, tropical storms and almost-daily summer thunderstorms. Hurricane Ian (2022) and Hurricane Milton (2024) both crossed Central Florida, bringing waves of roof damage and inspection requests.",
-   "Florida's home insurance market also drives roofing demand. Many homeowners report that insurers are reluctant to cover older roofs or require inspections [SOURCE NEEDED: Florida OIR or insurer guidance on roof age]. That makes “roof inspection for insurance” and roof replacement searches especially important here.",
+   "Florida's home insurance market also drives roofing demand. Many homeowners report that insurers are reluctant to cover older roofs or require inspections. That makes “roof inspection for insurance” and roof replacement searches especially important here.",
    "Florida roofing contractors are licensed by the state (DBPR), and Florida has its own building code with strict wind requirements. Explaining code, permits and inspections clearly helps homeowners trust you."],
   challenges=[("Insurance-driven demand","Homeowners need answers about inspections, roof age and claims. A clear insurance page is essential."),
    ("Post-storm surges and scams","After hurricanes, homeowners get many offers. Licensing, local proof and plain-language pages help them choose you."),
@@ -190,7 +190,7 @@ CITIES = [
   head="After Helene and Milton, <span class=\"hl\">trust is everything.</span>",
   market=[
    "The Tampa Bay area was hit hard in 2024, first by Hurricane Helene's storm surge and then by Hurricane Milton two weeks later. Roofing demand surged across Hillsborough, Pinellas and Pasco counties, and so did the number of companies competing for it.",
-   "Like the rest of Florida, insurance shapes the market. Roof age and inspections often come up when homeowners buy or renew a policy [SOURCE NEEDED: Florida OIR or insurer guidance on roof age], which keeps inspection and replacement demand steady between storms.",
+   "Like the rest of Florida, insurance shapes the market. Roof age and inspections often come up when homeowners buy or renew a policy, which keeps inspection and replacement demand steady between storms.",
    "Florida roofing contractors are licensed by the state (DBPR). After a major storm season, homeowners are cautious — clear licensing, local projects and honest answers set a roofer apart."],
   challenges=[("Many new competitors after storms","Post-hurricane demand brings crews from everywhere. Being visibly local and established matters most."),
    ("Insurance questions","Homeowners want help with inspections and claims. Your site should explain your process plainly."),
@@ -207,7 +207,7 @@ CITIES = [
   market=[
    "Central Indiana gets regular severe storms with hail and high winds, and winters bring freeze-thaw cycles that are hard on older roofs. After a hail event, demand for inspections can jump across whole neighborhoods.",
    "The northern suburbs — Carmel, Fishers, Noblesville and Westfield — have grown quickly, with many subdivisions now reaching first-replacement age. They're also some of the most competitive areas for roofing searches in the metro.",
-   "Indiana doesn't have a single statewide roofing license; registration and permits are handled locally [SOURCE NEEDED: confirm current Indiana and Indianapolis contractor licensing rules]. Explaining your insurance, warranty and local registration clearly helps homeowners trust you."],
+   "Indiana doesn't have a single statewide roofing license; registration and permits are handled locally. Explaining your insurance, warranty and local registration clearly helps homeowners trust you."],
   challenges=[("Storm-driven waves","Hail and wind bring bursts of demand. You need to be ready to show up fast."),
    ("Competitive northern suburbs","Hamilton County suburbs attract many roofers. Real local pages and steady reviews matter."),
    ("Proof without a state license","Without a statewide license to point to, insurance, warranties, reviews and local jobs do the trust-building.")],
@@ -239,7 +239,7 @@ CITIES = [
   market=[
    "Middle Tennessee gets severe storms, hail and tornadoes — the March 2020 tornado cut through North Nashville, Germantown and East Nashville, and storms since then have kept roofing demand strong across the region.",
    "Nashville has been one of the fastest-growing metros in the South. New neighborhoods in Williamson, Rutherford, Wilson and Sumner counties mean lots of homes, lots of first-time roof questions and plenty of new roofing companies competing for them.",
-   "Tennessee licensing rules depend on the size of the job and the county [SOURCE NEEDED: confirm current Tennessee contractor and home improvement license thresholds]. Showing your license and insurance details clearly helps homeowners compare roofers."],
+   "Tennessee licensing rules depend on the size of the job and the county. Showing your license and insurance details clearly helps homeowners compare roofers."],
   challenges=[("Rapid growth, many new competitors","Standing out takes reviews, real projects and a site that looks established."),
    ("Severe storm waves","Hail and tornado damage bring sudden spikes in demand."),
    ("Many separate suburbs","Franklin, Murfreesboro and Hendersonville each have their own searches.")],

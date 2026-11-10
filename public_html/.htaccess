@@ -1,4 +1,4 @@
-# Roof Web Studio — Apache / Hostinger (LiteSpeed reads this too)
+# Roofers Growth — Apache / Hostinger (LiteSpeed reads this too)
 Options -Indexes
 ErrorDocument 404 /404.html
 DirectoryIndex index.html

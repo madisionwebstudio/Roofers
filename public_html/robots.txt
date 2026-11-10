@@ -3,4 +3,4 @@ Disallow: /thank-you/
 Disallow: /styleguide.html
 Disallow: /send.php
 
-Sitemap: https://[DOMAIN]/sitemap.xml
+Sitemap: https://roofersgrowth.com/sitemap.xml

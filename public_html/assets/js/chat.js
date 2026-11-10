@@ -1,4 +1,4 @@
-/* Roof Web Studio — website chat assistant.
+/* Roofers Growth — website chat assistant.
    Loaded on demand by main.js (first hover/focus/tap on the chat button).
    - Answers common questions instantly from the built-in list below (no AI cost).
    - If AI is switched on (config.json CHAT_AI = "on" + an API key on the server),
@@ -55,7 +55,7 @@
     { k: ["not included", "logo", "photo shoot", "photographer", "extra"],
       a: "Not included: ad spend (paid to Google), professional photo shoots, and logo design (an optional add-on)." },
     { k: ["phone", "call", "talk", "human", "person", "contact", "email", "whatsapp", "number"],
-      a: "Message us on <a href=\"https://wa.me/[WHATSAPP]\" target=\"_blank\" rel=\"noopener\">WhatsApp</a> or email <a href=\"mailto:[EMAIL]\">[EMAIL]</a> (Mon–Fri 8am–6pm Central). Or tap “Leave my details” and we'll reach out within 1 business day." }
+      a: "Message us on <a href=\"https://wa.me/14144144043?text=Hi%20Rakesh%2C%20I%27m%20a%20roofer%20and%20I%27d%20like%20a%20free%20website%20preview.\" target=\"_blank\" rel=\"noopener\">WhatsApp</a> or email <a href=\"mailto:Offer@RoofersGrowth.com\">Offer@RoofersGrowth.com</a> (Mon–Fri 8am–6pm Central). Or tap “Leave my details” and we'll reach out within 1 business day." }
   ];
   var CHIPS = ["How does $0 upfront work?", "What does it cost?", "Starter or Pro?", "Do you do Google Ads?", "Do I own the website?", "Leave my details"];
 
@@ -122,7 +122,7 @@
   function botSay(html, plain) { add("bot", html, plain); }
   function fallback(local) {
     if (local) botSay(local);
-    else botSay("Good question — I don't want to guess. Leave your details and Rakesh will answer it personally within one business day, or message us on <a href=\"https://wa.me/[WHATSAPP]\" target=\"_blank\" rel=\"noopener\">WhatsApp</a>.");
+    else botSay("Good question — I don't want to guess. Leave your details and Rakesh will answer it personally within one business day, or message us on <a href=\"https://wa.me/14144144043?text=Hi%20Rakesh%2C%20I%27m%20a%20roofer%20and%20I%27d%20like%20a%20free%20website%20preview.\" target=\"_blank\" rel=\"noopener\">WhatsApp</a>.");
     setChips(CHIPS);
   }
 
@@ -174,12 +174,12 @@
         if (!res.ok) throw new Error(res.error);
         track("generate_lead", { form: "chat" });
         if (typeof window.gtag === "function" && cfg.adsId && cfg.adsFormLabel) window.gtag("event", "conversion", { send_to: cfg.adsId + "/" + cfg.adsFormLabel });
-        botSay("Done — thanks, " + esc(data.name.split(" ")[0]) + "! We'll be in touch within one business day (Mon–Fri, Central time). Want to start now? <a href=\"/free-preview/\">Get your free website preview</a> or message us on <a href=\"https://wa.me/[WHATSAPP]\" target=\"_blank\" rel=\"noopener\">WhatsApp</a>.");
+        botSay("Done — thanks, " + esc(data.name.split(" ")[0]) + "! We'll be in touch within one business day (Mon–Fri, Central time). Want to start now? <a href=\"/free-preview/\">Get your free website preview</a> or message us on <a href=\"https://wa.me/14144144043?text=Hi%20Rakesh%2C%20I%27m%20a%20roofer%20and%20I%27d%20like%20a%20free%20website%20preview.\" target=\"_blank\" rel=\"noopener\">WhatsApp</a>.");
         setChips(["What does it cost?", "Do I own the website?"]);
       })
       .catch(function (e) {
         typing(false); input.disabled = false; lead = null;
-        botSay("Sorry, that didn't send (" + esc(String(e.message || "error")) + "). Please <a href=\"https://wa.me/[WHATSAPP]\" target=\"_blank\" rel=\"noopener\">WhatsApp us</a> or use the <a href=\"/free-preview/\">free preview form</a>.");
+        botSay("Sorry, that didn't send (" + esc(String(e.message || "error")) + "). Please <a href=\"https://wa.me/14144144043?text=Hi%20Rakesh%2C%20I%27m%20a%20roofer%20and%20I%27d%20like%20a%20free%20website%20preview.\" target=\"_blank\" rel=\"noopener\">WhatsApp us</a> or use the <a href=\"/free-preview/\">free preview form</a>.");
         setChips(CHIPS);
       });
   }
@@ -188,7 +188,7 @@
   function open() {
     panel.hidden = false; launcher.setAttribute("aria-expanded", "true"); root.classList.add("is-open");
     if (!log.children.length) {
-      botSay("Hi! I'm the Roof Web Studio assistant. Ask me about websites, SEO, Google Ads or pricing — or how the free website preview works.");
+      botSay("Hi! I'm the Roofers Growth assistant. Ask me about websites, SEO, Google Ads or pricing — or how the free website preview works.");
       setChips(CHIPS);
       track("chat_open");
     }

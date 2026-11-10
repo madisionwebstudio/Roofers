@@ -16,8 +16,8 @@
         "1 page → 22 pages: 8 service pages, 6 town pages, reviews, about, gallery, insurance and FAQ",
         "Google rating, years in business, certifications and a free-inspection button on the first screen"
       ],
-      "note": "Scores measured November 2026 on both homepages with Google Lighthouse (simulated mobile). Scores vary between runs.",
-      "status_note": "New site launching soon",
+      "note": "Google Lighthouse (simulated mobile), November 2026: old live homepage vs. the finished new site, tested before launch. Scores vary between runs.",
+      "status_note": "Site built, launching soon",
       "case_study": "/our-work/hardtland-home-improvement/"
     },
     {

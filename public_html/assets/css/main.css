@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Roof Web Studio — design system
+   Roofers Growth — design system
    One file. Inlined into every page by tools/build.py (it is small enough to
    be the "critical CSS"), and also published at /assets/css/main.css.
    ========================================================================== */
@@ -1131,3 +1131,26 @@ html.f-jakarta .hdr__phone svg{color:#25D366}
 .hdr__c svg{width:26px;height:26px}
 .mbar .mbar__c{--cb:56px}
 .mbar .mbar__c.cbtn--wa svg{width:32px;height:32px}
+.founder__video:empty{display:none}
+/* client reviews */
+.tgrid{display:grid;gap:18px}
+@media (min-width:900px){.tgrid{grid-template-columns:repeat(3,1fr)}}
+.tcard{margin:0;display:flex;flex-direction:column;gap:14px;padding:28px 26px;background:var(--white);border:1px solid var(--line);border-radius:22px}
+.tcard__t{font-weight:700;font-size:1.05rem;letter-spacing:-.01em;color:var(--ink)}
+.tcard__t::before{content:"";display:block;width:34px;height:3px;border-radius:2px;background:var(--orange);margin-bottom:14px}
+.tcard blockquote{margin:0;flex:1}
+.tcard blockquote p{font-size:1rem;line-height:1.6;color:var(--ink)}
+.tcard figcaption{display:flex;flex-direction:column;gap:2px;padding-top:14px;border-top:1px solid var(--line)}
+.tcard figcaption span{font-size:.88rem;color:var(--steel)}
+/* hero offer + offer highlights */
+.hero-offer{display:inline-flex;flex-direction:column;gap:4px;padding:14px 20px;border-radius:18px;background:rgba(242,107,29,.14);border:1px solid rgba(242,107,29,.5);color:#fff;max-width:560px}
+.hero-offer b{font-size:1.15rem;letter-spacing:-.01em}
+.hero-offer span{font-size:.95rem;color:#E6EAEE}
+.offerbar{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr))}
+.offerbar div{display:flex;gap:12px;align-items:flex-start;padding:18px 20px;background:var(--white);border:1px solid var(--line);border-radius:18px}
+.offerbar svg{width:26px;height:26px;flex:none;color:var(--orange)}
+.offerbar b{display:block;font-size:1rem;letter-spacing:-.01em}
+.offerbar span{display:block;font-size:.88rem;color:var(--steel);margin-top:2px}
+.price__for{font-size:.9rem;font-weight:600;color:var(--orange-ink);margin-top:-4px}
+.price--hero .price__for{color:#FFB27A}
+.ftr__cols>*{min-width:0}.ftr a[href^="mailto:"]{overflow-wrap:anywhere;word-break:break-word}

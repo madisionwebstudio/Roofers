@@ -1,6 +1,6 @@
 <?php
 /**
- * Roof Web Studio — form handler for /free-preview/ and /contact/.
+ * Roofers Growth — form handler for /free-preview/ and /contact/.
  *
  * - POST only, same-origin check
  * - Honeypot (fax_number) + minimum fill time: bots get a fake "success"
@@ -14,10 +14,10 @@
  */
 declare(strict_types=1);
 
-const TO_EMAIL   = '';
+const TO_EMAIL   = 'Offer@RoofersGrowth.com';
 const FROM_EMAIL = '';      // must be a mailbox on your own domain, e.g. forms@yourdomain.com
-const SITE_HOST  = '[DOMAIN]';
-const BRAND      = 'Roof Web Studio';
+const SITE_HOST  = 'roofersgrowth.com';
+const BRAND      = 'Roofers Growth';
 const RATE_MAX   = 5;
 const RATE_WINDOW = 900;               // seconds
 const MIN_FILL_SECONDS = 3;
