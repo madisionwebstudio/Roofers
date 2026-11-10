@@ -1154,3 +1154,4 @@ html.f-jakarta .hdr__phone svg{color:#25D366}
 .price__for{font-size:.9rem;font-weight:600;color:var(--orange-ink);margin-top:-4px}
 .price--hero .price__for{color:#FFB27A}
 .ftr__cols>*{min-width:0}.ftr a[href^="mailto:"]{overflow-wrap:anywhere;word-break:break-word}
+.hero-proof{font-size:.92rem;color:#C9D1D8;max-width:560px}.hero-proof a{color:#fff;font-weight:600;text-underline-offset:3px}
