@@ -19,7 +19,7 @@ The owner uses an **older iPhone (older iOS) that cannot open claude.ai artifact
 
 ## Contact
 - No phone-call buttons. Contact is **WhatsApp** (`WHATSAPP` in config.json → `[WHATSAPP_URL]`) and **email**. Clicks on both are tracked as conversions.
-- Hardtland Home Improvement is a **client** (new site launching soon) with a case study at `/our-work/hardtland-home-improvement/`. Facts come from crawling both sites; add post-launch results only when real.
+- Hardtland Home Improvement is a **client** with a case study (owner: don't show "launching soon" anywhere) at `/our-work/hardtland-home-improvement/`. Facts come from crawling both sites; add post-launch results only when real.
 
 ## URLs and keywords (Nov 2026 keyword plan)
 - Brand **Roofers Growth** (roofersgrowth.com; was Roof Web Studio). Contact: Offer@RoofersGrowth.com, WhatsApp +1 (414) 414-4043. Home targets "roofing marketing agency"; /roofing-website-design/ "roofing web design"; /roofing-seo/ "roofing SEO services"; /roofing-google-ads/ "roofing PPC management / Google Ads for roofing companies"; /roofing-lead-generation/ "roofing lead generation"; /local-seo-for-roofing-companies/ "local SEO for roofing companies / roofing Google Maps SEO". Old URLs 301 in `src/static/.htaccess`.
@@ -29,4 +29,5 @@ The owner uses an **older iPhone (older iOS) that cannot open claude.ai artifact
 ## Rules from the owner's briefs
 - Services: Web Design, SEO, Google Ads only. Main CTA "Get my free website preview".
 - Prices: Starter $499 · Pro $199/mo (12-mo min, buyout to $1,499) or $1,499 · SEO from config · Ads $399 setup + 10% of spend, $2,000/mo min.
+- Owner (Nov 10): launch-price lines off (`LAUNCH_PRICING: "off"`); no non-roofing client proof — the site presents a roofing specialist.
 - Never invent reviews, results, clients or stats. The 3 client reviews in `src/partials/testimonials.html` were confirmed real by the owner (Nov 10, 2026). For launch, no visible [BRACKET] placeholders: hide unfinished sections and link official sources instead of [SOURCE NEEDED].
