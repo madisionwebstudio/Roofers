@@ -1,0 +1,59 @@
+# [BRAND]
+
+> [BRAND] is a roofing marketing agency: websites, SEO, Google Maps (local SEO) and Google Ads for US roofing contractors — only roofing contractors. One goal: more leads for the roofer. Remote team on US hours (Mon–Fri 8am–6pm Central). Founder: [FOUNDER_NAME]. Contact: WhatsApp ([WHATSAPP_URL]) or email [EMAIL].
+
+## Offer
+- Free homepage preview within 5 days of a 15-minute call. $0 upfront. Pay only if you love it.
+- Starter Site (1–3 pages): $499 one-time, incl. 12 months hosting & care, then $29/month.
+- Pro Site (4–10 pages incl. up to 3 city pages, admin panel, 1 month of SEO free): $199/month with a 12-month minimum (own it early by paying the difference to $1,499) or $1,499 one-time.
+- Roofing SEO: Local SEO [PRICE_SEO_LOCAL]/month (1 city), SEO Pro [PRICE_SEO_PRO]/month (2–3 cities). 6 months → 3 extra landing pages free.
+- Google Ads for roofers: $399 setup + 10% of ad spend; minimum ad budget $2,000/month paid directly to Google; weekly reports.
+- Clients own their domain, Google Business Profile and ad accounts. No ranking guarantees.
+
+## Key pages
+- [Roofing web design](https://[DOMAIN]/roofing-website-design/)
+- [Roofing SEO services](https://[DOMAIN]/roofing-seo/)
+- [Local SEO for roofing companies (Google Maps)](https://[DOMAIN]/local-seo-for-roofing-companies/)
+- [Roofing PPC management — Google Ads](https://[DOMAIN]/roofing-google-ads/)
+- [Roofing lead generation (no shared leads)](https://[DOMAIN]/roofing-lead-generation/)
+- [Pricing](https://[DOMAIN]/pricing/)
+- [Free website preview](https://[DOMAIN]/free-preview/)
+- [Roofing website examples](https://[DOMAIN]/our-work/)
+- [About](https://[DOMAIN]/about/)
+
+## City pages (roofing marketing agency by city)
+- [All locations](https://[DOMAIN]/locations/)
+- [Roofing marketing agency Dallas, TX](https://[DOMAIN]/locations/dallas-tx/)
+- [Roofing marketing agency Houston, TX](https://[DOMAIN]/locations/houston-tx/)
+- [Roofing marketing agency Phoenix, AZ](https://[DOMAIN]/locations/phoenix-az/)
+- [Roofing marketing agency Austin, TX](https://[DOMAIN]/locations/austin-tx/)
+- [Roofing marketing agency San Antonio, TX](https://[DOMAIN]/locations/san-antonio-tx/)
+- [Roofing marketing agency Las Vegas, NV](https://[DOMAIN]/locations/las-vegas-nv/)
+- [Roofing marketing agency Atlanta, GA](https://[DOMAIN]/locations/atlanta-ga/)
+- [Roofing marketing agency Charlotte, NC](https://[DOMAIN]/locations/charlotte-nc/)
+- [Roofing marketing agency Chicago, IL](https://[DOMAIN]/locations/chicago-il/)
+- [Roofing marketing agency Minneapolis, MN](https://[DOMAIN]/locations/minneapolis-mn/)
+- [Roofing marketing agency Orlando, FL](https://[DOMAIN]/locations/orlando-fl/)
+- [Roofing marketing agency Tampa, FL](https://[DOMAIN]/locations/tampa-fl/)
+- [Roofing marketing agency Indianapolis, IN](https://[DOMAIN]/locations/indianapolis-in/)
+- [Roofing marketing agency Kansas City, MO](https://[DOMAIN]/locations/kansas-city-mo/)
+- [Roofing marketing agency Nashville, TN](https://[DOMAIN]/locations/nashville-tn/)
+- [Roofing marketing agency Seattle, WA](https://[DOMAIN]/locations/seattle-wa/)
+
+## Guides
+- [How to market a roofing company](https://[DOMAIN]/blog/how-to-market-a-roofing-company/)
+- [12 roofing marketing strategies](https://[DOMAIN]/blog/roofing-marketing-strategies/)
+- [How to get roofing leads](https://[DOMAIN]/blog/how-to-get-roofing-leads/)
+- [How much does roofing marketing cost?](https://[DOMAIN]/blog/roofing-marketing-cost/)
+- [Roofing SEO vs Google Ads](https://[DOMAIN]/blog/roofing-seo-vs-google-ads/)
+- [Best marketing channels for roofing contractors](https://[DOMAIN]/blog/best-marketing-channels-for-roofing-contractors/)
+- [Roofing website design examples](https://[DOMAIN]/blog/roofing-website-design-examples/)
+- [Why roofing websites don't generate leads](https://[DOMAIN]/blog/why-roofing-websites-dont-generate-leads/)
+- [What homeowners look for before hiring a roofer](https://[DOMAIN]/blog/what-homeowners-look-for-in-a-roofer/)
+- [Roofing website checklist: 25 things](https://[DOMAIN]/blog/roofing-website-checklist/)
+- [How much does a roofing website cost in 2026?](https://[DOMAIN]/blog/roofing-website-cost/)
+- [Roofing SEO: why your website needs it](https://[DOMAIN]/blog/roofing-seo-guide/)
+- [How to rank a roofing company on Google Maps](https://[DOMAIN]/blog/google-maps-top-3-roofers/)
+- [Google Ads for roofing companies: complete guide](https://[DOMAIN]/blog/google-ads-for-roofers/)
+- [Roofing leads without Angi or HomeAdvisor](https://[DOMAIN]/blog/roofing-leads-without-angi/)
+- [Are you sending customers to shingle manufacturer websites?](https://[DOMAIN]/blog/shingle-manufacturer-links/)

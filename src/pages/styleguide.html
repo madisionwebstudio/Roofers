@@ -1,0 +1,52 @@
+<!--meta {
+  "title": "Styleguide | [BRAND]",
+  "description": "Internal design system reference for the [BRAND] website: colors, type, buttons, signature elements and components. Not for search engines.",
+  "path": "/styleguide.html",
+  "noindex": true
+} -->
+<section class="sec sec--navy" aria-labelledby="h1">
+  <div class="wrap stack" style="--s:1.2rem">
+    <p class="eyebrow">Internal · noindex</p>
+    <h1 id="h1" class="d-hero">Design <span class="hl">system.</span></h1>
+    <p class="lede muted">Every token and component used on the site. Source: <code>src/static/assets/css/main.css</code>.</p>
+  </div>
+</section>
+
+<section class="sec sec--paper" aria-labelledby="c-h">
+  <div class="wrap stack" style="--s:2rem">
+    <h2 id="c-h" class="d-l">Colors</h2>
+    <div class="grid g-4" style="gap:16px">
+      <div><div style="height:110px;background:#0F1E2E"></div><p class="h4 mt-s">--navy</p><p class="muted small">#0F1E2E · hero, dark sections, footer</p></div>
+      <div><div style="height:110px;background:#1F2A37"></div><p class="h4 mt-s">--slate</p><p class="muted small">#1F2A37 · dark panels</p></div>
+      <div><div style="height:110px;background:#F26B1D"></div><p class="h4 mt-s">--orange</p><p class="muted small">#F26B1D · buttons, key words (rare). Ink text on it, never white.</p></div>
+      <div><div style="height:110px;background:#F5F3EF;border:1px solid #D9D4CB"></div><p class="h4 mt-s">--paper</p><p class="muted small">#F5F3EF · light sections</p></div>
+      <div><div style="height:110px;background:#14181D"></div><p class="h4 mt-s">--ink</p><p class="muted small">#14181D · body text</p></div>
+      <div><div style="height:110px;background:#5B6770"></div><p class="h4 mt-s">--steel</p><p class="muted small">#5B6770 · muted text on light</p></div>
+      <div><div style="height:110px;background:#B3480B"></div><p class="h4 mt-s">--orange-ink (derived)</p><p class="muted small">#B3480B · orange TEXT on light (AA)</p></div>
+      <div><div style="height:110px;background:#A9B3BB"></div><p class="h4 mt-s">--fog (derived)</p><p class="muted small">#A9B3BB · muted text on navy (AA)</p></div>
+    </div>
+    <h2 class="d-l mt-l">Type</h2>
+    <p class="d-hero">Archivo 900 hero <span class="hl">orange</span> <span class="stroke">stroke</span></p>
+    <p class="d-xl">Archivo section H2</p>
+    <p class="h3">Archivo 800 condensed — H3</p>
+    <p class="eyebrow">Eyebrow label</p>
+    <p class="lede">Inter lede — 18–22px, line-height 1.5.</p>
+    <p>Inter body — 17–18px, line-height 1.6. <a class="tlink" href="/">Text link</a>.</p>
+    <h2 class="d-l mt-l">Buttons</h2>
+    <div class="btn-row"><a class="btn btn--lg" href="/free-preview/">Primary large <svg aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow"/></svg></a><a class="btn" href="/free-preview/">Primary <svg aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow"/></svg></a><a class="btn btn--dark" href="/pricing/">Dark <svg aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow"/></svg></a><a class="btn btn--line" href="/pricing/">Line <svg aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow"/></svg></a><a class="arrow-link" href="/pricing/">Arrow link <svg aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow"/></svg></a></div>
+    <h2 class="d-l mt-l">Signature elements</h2>
+    <div class="tape tape-rule"></div>
+    <p><span class="tape-badge"><span>Most popular</span></span> &nbsp; <span class="label-chip">Demo build</span> &nbsp; <span class="label-chip label-chip--light" style="border:1px solid #ddd">Example screen</span></p>
+    <div class="dim" style="max-width:420px"><i></i>Measurement line<i></i></div>
+    <p class="d-big hl">$0</p>
+    <h2 class="d-l mt-l">Icons</h2>
+    <div class="tag-row" style="gap:18px">
+      <svg class="ico"><use href="/assets/img/icons.svg#i-roof"/></svg><svg class="ico"><use href="/assets/img/icons.svg#i-phone"/></svg><svg class="ico"><use href="/assets/img/icons.svg#i-storm"/></svg><svg class="ico"><use href="/assets/img/icons.svg#i-hail"/></svg><svg class="ico"><use href="/assets/img/icons.svg#i-shield"/></svg><svg class="ico"><use href="/assets/img/icons.svg#i-search"/></svg><svg class="ico"><use href="/assets/img/icons.svg#i-pin"/></svg><svg class="ico"><use href="/assets/img/icons.svg#i-speed"/></svg><svg class="ico"><use href="/assets/img/icons.svg#i-inbox"/></svg><svg class="ico"><use href="/assets/img/icons.svg#i-edit"/></svg><svg class="ico"><use href="/assets/img/icons.svg#i-image"/></svg><svg class="ico"><use href="/assets/img/icons.svg#i-money"/></svg><svg class="ico"><use href="/assets/img/icons.svg#i-key"/></svg><svg class="ico"><use href="/assets/img/icons.svg#i-lock"/></svg><svg class="ico"><use href="/assets/img/icons.svg#i-chart"/></svg>
+    </div>
+    <h2 class="d-l mt-l">Components</h2>
+    <!--@include price-cards-->
+    <!--@include fineprint-->
+    <div class="faq"><details class="faq-item" open><summary>FAQ item</summary><div class="faq-a"><p>Answer text.</p></div></details></div>
+    {{work limit="1"}}</div>
+  </div>
+</section>

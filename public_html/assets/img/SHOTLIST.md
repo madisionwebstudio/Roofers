@@ -1,26 +1,29 @@
-# Roofrs — photo shot list
+# Shot list — photos to replace with real client photos
 
-Every photo on the site is currently a blueprint-style placeholder with the same filename the real photo should use.
-Replace each pair (`.jpg` + `.webp`) at the size listed. Keep filenames, or update the `<picture>` tags.
+The site launches with high-quality Unsplash roofing photos (see CREDITS.md). Real photos of real crews always win.
+Replace them as soon as you can, starting at the top of this list.
 
-**Art direction for all shots:** real roofs, real crews, overcast or golden-hour light. Slightly desaturated (−15 to −25% saturation), cool shadows. No staged handshakes, no people pointing at laptops, no hard-hat-and-clipboard stock. Leave calm space where text may sit — the site adds a navy overlay.
+**How to replace one:** save your photo as `tools/.img-cache/<name>.jpg` (at least 2400px wide for heroes, 1600px for the rest),
+delete `src/static/assets/img/<name>-*.webp`, then run `python3 tools/images.py && python3 tools/build.py`.
+The script crops to the right shape (aspect ratios below) around the center — adjust the focal point in `tools/images.py` if needed.
 
-**Export:** JPG at quality ~78 and WebP at ~72. Keep the hero under 250 KB (WebP), others under 150 KB.
-`cwebp -q 72 in.jpg -o out.webp` or Squoosh.app.
+**Art direction:** real roofs, real crews, overcast or golden-hour light. Leave calm space on the LEFT of hero photos
+(the headline sits there behind a navy gradient). No posed handshakes, no laptops, no hard-hat-and-clipboard stock.
 
-| File | Size (px) | Orientation | Subject | Mood | Used on |
-|---|---|---|---|---|---|
-| `hero-storm-sky-suburb` | 1920×1080 | Landscape | Dark storm clouds over a row of suburban homes, rooflines visible along the bottom third | Heavy, tense, just before the storm | Home hero (at ~18% opacity behind navy) |
-| `svc-roofing-seo` | 1200×900 | Landscape 4:3 | Drone shot looking straight down or at 45° on a neighborhood of shingle roofs | Orderly, mapped, wide | Roofing SEO, Services hub |
-| `svc-web-design` | 1200×900 | Landscape 4:3 | Roofer at the tailgate of a work truck, looking at a quote on a phone | Real, mid-workday | Web Design, Services hub |
-| `svc-roofing-marketing` | 1200×900 | Landscape 4:3 | Shelf cloud or storm rolling over a cul-de-sac, late afternoon | Dramatic but not apocalyptic | Google Ads / LSA, Services hub |
-| `svc-lead-response` | 1200×900 | Landscape 4:3 | Two roofers in harnesses on a steep pitch, mid tear-off (hands busy — the point is nobody can answer the phone) | Busy, physical | Lead Response, Services hub |
-| `svc-reviews` | 1200×900 | Landscape 4:3 | Freshly re-roofed house, crew packing up the truck, homeowner on the driveway | Finished, proud, calm | Reviews, Services hub |
-| `svc-care-plans` | 1200×900 | Landscape 4:3 | Macro of new architectural shingles and ridge cap, raking light | Precise, crafted | Website Care, Services hub |
-| `city-san-antonio` | 1200×900 | Landscape 4:3 | San Antonio-area home with visible hail marks on shingles, South Texas sky | Local, specific, post-storm | Locations hub |
-| `founder.jpg` (new) | 800×1000 | Portrait 4:5 | One real founder photo — on a job site or at a desk, natural light, no suit | Honest, approachable | About (replace the dashed placeholder block) |
-| `og-default.jpg` | 1200×630 | Landscape | Already designed (brand card). Optionally replace with a photo + wordmark | — | Social shares |
+| Priority | Name | Shape | What to shoot | Used on |
+|---|---|---|---|---|
+| 1 | `founder` (set `FOUNDER_PHOTO` in config.json) | 4:5 portrait, 800×1000+ | The founder, natural light, on a call or at a desk. No suit needed. | Home, About, blog bylines |
+| 2 | `hero-crew` | 16:9 | Crew on a steep shingle roof mid-install, harnesses on, subject on the right third | Home hero, OG image |
+| 3 | `storm-night` | 16:9 | Dark storm sky over suburban homes, rooflines along the bottom | Final CTA on every page |
+| 4 | `storm-house` | 21:9 | Shelf cloud or storm rolling over houses, late afternoon | Home band, Google Ads |
+| 5 | `home-new-roof` | 4:3 | A freshly finished re-roof, whole house in frame | Roofing websites hero |
+| 6 | `hail-shingles` | 4:3 | Close-up of real hail damage on asphalt shingles (with the homeowner's permission) | Google Ads, San Antonio |
+| 7 | `crew-truck` (new) | 4:3 | Crew unloading ladders and shingles from the work truck | Suggested for About |
+| 8 | `aerial-suburb` | 4:3 | Drone shot over a neighborhood you actually work in | Roofing SEO |
+| 9 | `golden-street` | 16:9 | A finished home at golden hour | About hero |
+| 10 | `metal-roof` | 4:3 | A standing-seam metal roof you installed | Contact |
 
-## Demo site screenshots (optional)
-The three demo builds on Home and Our Work are drawn in CSS. If you build the real demo sites, replace the `.mock` blocks
-with screenshots at 1440×900 (laptop) and 390×820 (phone), keeping the "Demo build — not a client" label.
+## Our Work screenshots (`assets/img/work/`)
+For each roofing redesign: desktop screenshots of the **current site** and **our redesign** at 1440×900 (same size, top of page) and a phone screenshot of the redesign at 390×844 @2x. Save as WebP at 640/1000/1440 (desktop) and 240/390 (phone), add them to `manifest.json` (see README → “Add a redesign”) and to `assets/data/work.json`.
+
+Still needed: `[IMAGE]` Vidales Law website + Google Search Console results screenshot · founder photo · founder 60-second video · 2 client video testimonials.

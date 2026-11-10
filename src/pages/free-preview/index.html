@@ -1,0 +1,100 @@
+<!--meta {
+  "title": "Free Roofing Website Preview in 5 Days | [BRAND]",
+  "description": "Get a free homepage preview for your roofing company in 5 days. Pay only if you love it. Or ask for a free Google Ads plan or SEO check.",
+  "path": "/free-preview/",
+  "crumbs": [["Home", "/"], ["Free website preview", "/free-preview/"]],
+  "preload": "tear-off"
+} -->
+
+<section class="hero hero--page" aria-labelledby="h1">
+  <div class="hero__media">{{img name="tear-off" alt="" sizes="100vw" eager}}</div>
+  <div class="wrap hero__in">
+    <div class="grid g-7-5 ai-e">
+      <div class="stack" style="--s:1.4rem">
+        {{crumbs}}
+        <h1 id="h1" class="d-hero" style="font-size:clamp(2.4rem,1.3rem + 4.6vw,5.4rem)"><span class="h1-kw">Free roofing website preview</span> See your new website before you pay <span class="hl">a dollar.</span></h1>
+        <p class="lede">Fill this in (about 2 minutes). After a 15-minute call we design your homepage — free, within 5 days. Don't love it? You owe nothing.</p>
+        <div class="btn-row"><a class="btn btn--lg" href="#form-h" data-cta="preview-hero-start">Start my free preview <svg aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow"/></svg></a></div>
+      </div>
+      <ol class="tl" role="list" style="color:#fff">
+        <li><em>Today</em><b>You send this form</b><span>We reply within one business day.</span></li>
+        <li><em>Step 2</em><b>15-minute call</b><span>Your services, towns and what you want more of.</span></li>
+        <li><em>Within 5 days</em><b>Your homepage preview</b><span>Designed with your logo, services and towns.</span></li>
+        <li><em>Your call</em><b>Love it? We build the rest</b><span>Pay only when the full site is done and you're happy.</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--paper" id="form" aria-labelledby="form-h">
+  <div class="wrap grid g-7-5">
+    <div class="form-card">
+      <h2 id="form-h" class="h3">Tell us about your roofing company</h2>
+      <p class="muted mt-s mb-m">Fields marked “optional” can be skipped. Everything else helps us design a preview that actually looks like your business.</p>
+      <form class="form" action="/send.php" method="post" data-form="free-preview" novalidate>
+        <input type="hidden" name="form" value="free-preview">
+        <input type="hidden" name="_ts" value="">
+        <div class="hp" aria-hidden="true"><label for="fp-fax">Leave this empty</label><input id="fp-fax" type="text" name="fax_number" tabindex="-1" autocomplete="off"></div>
+        <div class="field"><label for="fp-service">What do you need?</label>
+          <select id="fp-service" name="service">
+            <option value="web-design">A new website (free preview)</option>
+            <option value="seo">SEO — get found on Google &amp; Maps</option>
+            <option value="google-ads">Google Ads — a free Google Ads plan</option>
+            <option value="lead-generation">Lead generation — website + SEO + ads</option>
+            <option value="local-seo">Local SEO — Google Maps</option>
+            <option value="not-sure">Not sure yet</option>
+          </select></div>
+        <div class="row row-2">
+          <div class="field"><label for="fp-name">Your name</label><input id="fp-name" type="text" name="name" autocomplete="name" required data-msg="Please tell us your name." aria-describedby="fp-name-e"><p class="err" id="fp-name-e"></p></div>
+          <div class="field"><label for="fp-company">Company name</label><input id="fp-company" type="text" name="company" autocomplete="organization" required data-msg="What's your company called?" aria-describedby="fp-company-e"><p class="err" id="fp-company-e"></p></div>
+        </div>
+        <div class="row row-2">
+          <div class="field"><label for="fp-site">Current website <span class="opt">(optional)</span></label><input id="fp-site" type="url" name="website" inputmode="url" placeholder="yourroofing.com" autocomplete="url"></div>
+          <div class="field"><label for="fp-city">City and state</label><input id="fp-city" type="text" name="city" placeholder="San Antonio, TX" autocomplete="address-level2" required data-msg="Which city and state do you work in?" aria-describedby="fp-city-e"><p class="err" id="fp-city-e"></p></div>
+        </div>
+        <div class="row row-2">
+          <div class="field"><label for="fp-phone">Phone</label><input id="fp-phone" type="tel" name="phone" autocomplete="tel" inputmode="tel" required aria-describedby="fp-phone-e"><p class="err" id="fp-phone-e"></p></div>
+          <div class="field"><label for="fp-email">Email</label><input id="fp-email" type="email" name="email" autocomplete="email" required aria-describedby="fp-email-e"><p class="err" id="fp-email-e"></p></div>
+        </div>
+        <fieldset class="field">
+          <legend>Services you offer <span class="opt">(tick all that apply)</span></legend>
+          <div class="choices choices--3">
+            <label class="choice"><input type="checkbox" name="services[]" value="Replacement"><span>Roof replacement</span></label>
+            <label class="choice"><input type="checkbox" name="services[]" value="Repair"><span>Roof repair</span></label>
+            <label class="choice"><input type="checkbox" name="services[]" value="Storm/insurance"><span>Storm / insurance</span></label>
+            <label class="choice"><input type="checkbox" name="services[]" value="Commercial"><span>Commercial</span></label>
+            <label class="choice"><input type="checkbox" name="services[]" value="Gutters"><span>Gutters</span></label>
+            <label class="choice"><input type="checkbox" name="services[]" value="Siding"><span>Siding</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="field">
+          <legend>Do you have a logo?</legend>
+          <div class="choices choices--2">
+            <label class="choice"><input type="radio" name="logo" value="Yes"><span>Yes</span></label>
+            <label class="choice"><input type="radio" name="logo" value="No"><span>No</span></label>
+          </div>
+          <p class="hint">No logo? That's fine — we'll use a clean wordmark for the preview. Logo design is an optional add-on.</p>
+        </fieldset>
+        <div class="field"><label for="fp-love">Anything you love on other websites? <span class="opt">(optional)</span></label><textarea id="fp-love" name="notes" rows="4" placeholder="A competitor's site you like, colors you want, things you hate about your current site…"></textarea></div>
+        <label class="consent field"><input type="checkbox" name="consent" value="yes" required data-msg="Please tick the box so we can contact you about your preview."><span>I agree to be contacted by phone, text and email about my request. Reply STOP to opt out. <span class="err" style="grid-column:2"></span></span></label>
+        <p class="form-status" role="alert" tabindex="-1"></p>
+        <button class="btn btn--lg btn--block" type="submit" data-cta="form-free-preview">Get my free website preview <svg aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow"/></svg></button>
+        <p class="form-note">No payment details. No obligation. We'll never sell or share your information — see our <a class="tlink" href="/privacy/">privacy policy</a>.</p>
+      </form>
+    </div>
+    <aside class="stack" style="--s:2rem" aria-label="What you get">
+      <div class="founder__photo" style="aspect-ratio:4/3">{{img name="roofer-sealant" alt="Roofer sealing flashing on a shingle roof" sizes="(min-width:1000px) 40vw, 100vw"}}<div class="tape" aria-hidden="true"></div></div>
+      <div class="stack">
+        <h2 class="h3">What the preview is</h2>
+        <p class="muted">A real, designed homepage for your roofing company — your name, logo, phone, services and towns — sent as a link you can open on your phone. Asking about SEO or Google Ads? We'll also send a short, free plan for your area.</p>
+      </div>
+      <ul class="checks" role="list">
+        <li><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-check"/></svg><div><b>Free, within 5 days</b><span>Counted from our call, once we have your logo and details.</span></div></li>
+        <li><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-check"/></svg><div><b>Don't love it? Pay nothing</b><span>No hard feelings, no follow-up sales calls.</span></div></li>
+        <li><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-check"/></svg><div><b>You own your domain</b><span>And your Google profile and ad accounts. Always.</span></div></li>
+      </ul>
+      <!--@include fineprint-->
+      <p class="muted">Rather talk now? <a class="tlink" href="[WHATSAPP_URL]" target="_blank" rel="noopener" data-cta="preview-whatsapp">WhatsApp us</a> or <a class="tlink" href="mailto:[EMAIL]" data-cta="preview-email">email us</a> — Mon–Fri, 8am–6pm Central. Or see <a class="tlink" href="/pricing/">pricing</a> first.</p>
+    </aside>
+  </div>
+</section>

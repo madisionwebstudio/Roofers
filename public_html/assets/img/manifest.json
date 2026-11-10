@@ -1,0 +1,288 @@
+{
+ "hero-crew": {
+  "widths": [
+   640,
+   960,
+   1440,
+   1920,
+   2400
+  ],
+  "ratio": 0.56231,
+  "jpg": 1440
+ },
+ "crew-ridge": {
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "ratio": 0.75022,
+  "jpg": 1200
+ },
+ "roofer-sealant": {
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "ratio": 1.25036,
+  "jpg": 1200
+ },
+ "roofer-rope": {
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "ratio": 1.25036,
+  "jpg": 1200
+ },
+ "crew-pair": {
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "ratio": 0.75022,
+  "jpg": 1200
+ },
+ "tear-off": {
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "ratio": 0.75022,
+  "jpg": 1200
+ },
+ "shingle-bundles": {
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "ratio": 1.25036,
+  "jpg": 1200
+ },
+ "roofer-brick": {
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "ratio": 0.75022,
+  "jpg": 1200
+ },
+ "storm-house": {
+  "widths": [
+   640,
+   960,
+   1440,
+   1920,
+   2400
+  ],
+  "ratio": 0.42846,
+  "jpg": 1440
+ },
+ "storm-night": {
+  "widths": [
+   640,
+   960,
+   1440,
+   1920,
+   2400
+  ],
+  "ratio": 0.56231,
+  "jpg": 1440
+ },
+ "aerial-suburb": {
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "ratio": 0.75022,
+  "jpg": 1200
+ },
+ "aerial-culdesac": {
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "ratio": 0.75011,
+  "jpg": 1200
+ },
+ "hail-shingles": {
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "ratio": 0.75022,
+  "jpg": 1200
+ },
+ "metal-roof": {
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "ratio": 0.75022,
+  "jpg": 1200
+ },
+ "metal-fasten": {
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "ratio": 0.75022,
+  "jpg": 1200
+ },
+ "shingle-texture": {
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "ratio": 0.75,
+  "jpg": 1200
+ },
+ "home-new-roof": {
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "ratio": 0.75028,
+  "jpg": 1200
+ },
+ "home-farmhouse": {
+  "widths": [
+   640,
+   960,
+   1440,
+   1920
+  ],
+  "ratio": 0.56231,
+  "jpg": 1440
+ },
+ "home-blue": {
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "ratio": 0.75,
+  "jpg": 1200
+ },
+ "home-white-metal": {
+  "widths": [
+   480,
+   800,
+   1200
+  ],
+  "ratio": 0.75,
+  "jpg": 1200
+ },
+ "golden-street": {
+  "widths": [
+   640,
+   960,
+   1440,
+   1920
+  ],
+  "ratio": 0.56267,
+  "jpg": 1440
+ },
+ "work/hardtland-before": {
+  "widths": [
+   640,
+   1000,
+   1440
+  ],
+  "ratio": 0.625,
+  "jpg": 1000
+ },
+ "work/hardtland-after": {
+  "widths": [
+   640,
+   1000,
+   1440
+  ],
+  "ratio": 0.625,
+  "jpg": 1000
+ },
+ "work/hardtland-mobile": {
+  "widths": [
+   240,
+   390
+  ],
+  "ratio": 2.1641,
+  "jpg": 390
+ },
+ "work/rollnbrush-desktop": {
+  "widths": [
+   640,
+   1000,
+   1440
+  ],
+  "ratio": 0.625,
+  "jpg": 1000
+ },
+ "work/rollnbrush-mobile": {
+  "widths": [
+   240,
+   390
+  ],
+  "ratio": 2.1641,
+  "jpg": 390
+ },
+ "work/hardtland-before-mobile": {
+  "widths": [
+   240,
+   390
+  ],
+  "ratio": 2.1641,
+  "jpg": 390
+ },
+ "work/hardtland-before-full": {
+  "widths": [
+   640,
+   1000
+  ],
+  "ratio": 1.52708,
+  "jpg": 1000
+ },
+ "work/hardtland-after-full": {
+  "widths": [
+   640,
+   1000
+  ],
+  "ratio": 2.29167,
+  "jpg": 1000
+ },
+ "work/hardtland-before-mobile-long": {
+  "widths": [
+   390
+  ],
+  "ratio": 4.32821,
+  "jpg": 390
+ },
+ "work/hardtland-after-mobile-long": {
+  "widths": [
+   390
+  ],
+  "ratio": 4.32821,
+  "jpg": 390
+ }
+}

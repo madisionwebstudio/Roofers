@@ -1,51 +1,58 @@
-# Roofrs — Apache / Hostinger config
+# Roofers Growth — Apache / Hostinger (LiteSpeed reads this too)
 Options -Indexes
-DirectoryIndex index.html index.php
 ErrorDocument 404 /404.html
+DirectoryIndex index.html
 
 <IfModule mod_rewrite.c>
-  RewriteEngine On
-  # Force HTTPS (uncomment once SSL is active in Hostinger)
-  # RewriteCond %{HTTPS} off
-  # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-  # Force non-www (or flip to www — pick one and match canonical tags)
-  # RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-  # RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
-  # Add trailing slash to folder URLs
-  RewriteCond %{REQUEST_FILENAME} -d
-  RewriteCond %{REQUEST_URI} !/$
-  RewriteRule ^(.*)$ /$1/ [L,R=301]
+RewriteEngine On
+# Uncomment once SSL is active (Hostinger > SSL). Pick www OR non-www and keep it.
+# RewriteCond %{HTTPS} off
+# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+# RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# 301 redirects: old URLs -> current pages (keeps links and rankings)
+<IfModule mod_rewrite.c>
+RewriteRule ^admin-panel/?$ /roofing-website-design/#admin-panel [NE,R=301,L]
+</IfModule>
+Redirect 301 /roofing-web-design-agency/ /roofing-website-design/
+Redirect 301 /roofing-seo-agency/ /roofing-seo/
+Redirect 301 /roofing-marketing-agency/ /roofing-google-ads/
+Redirect 301 /roofing-websites/ /roofing-website-design/
+Redirect 301 /blog/do-roofers-need-seo/ /blog/roofing-seo-guide/
+Redirect 301 /free-audit/ /free-preview/
+Redirect 301 /services/roofing-web-design/ /roofing-website-design/
+Redirect 301 /services/roofing-seo/ /roofing-seo/
+Redirect 301 /services/roofing-marketing/ /roofing-google-ads/
+Redirect 301 /services/website-care-plans/ /pricing/
+Redirect 301 /services/lead-response-automation/ /roofing-lead-generation/
+Redirect 301 /services/reviews-reputation/ /local-seo-for-roofing-companies/
+Redirect 301 /services/ /roofing-website-design/
+Redirect 301 /resources/ /blog/
+Redirect 301 /demos/ /our-work/
+
+<IfModule mod_headers.c>
+Header always set X-Content-Type-Options "nosniff"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+Header always set X-Frame-Options "SAMEORIGIN"
+Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+<FilesMatch "\.(woff2|webp|jpg|png|svg)$">
+Header set Cache-Control "public, max-age=31536000, immutable"
+</FilesMatch>
+<FilesMatch "\.(css|js)$">
+Header set Cache-Control "public, max-age=604800"
+</FilesMatch>
+<FilesMatch "\.html$">
+Header set Cache-Control "public, max-age=600"
+</FilesMatch>
 </IfModule>
 
 <IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html text/css application/javascript text/javascript application/json image/svg+xml text/xml application/xml text/plain
+AddOutputFilterByType DEFLATE text/html text/css application/javascript image/svg+xml application/json text/xml application/xml text/plain
 </IfModule>
 
-<IfModule mod_expires.c>
-  ExpiresActive On
-  ExpiresDefault "access plus 1 hour"
-  ExpiresByType text/html "access plus 0 seconds"
-  ExpiresByType text/css "access plus 30 days"
-  ExpiresByType application/javascript "access plus 30 days"
-  ExpiresByType text/javascript "access plus 30 days"
-  ExpiresByType image/svg+xml "access plus 1 year"
-  ExpiresByType image/webp "access plus 1 year"
-  ExpiresByType image/jpeg "access plus 1 year"
-  ExpiresByType image/png "access plus 1 year"
-</IfModule>
-
-<IfModule mod_headers.c>
-  Header always set X-Content-Type-Options "nosniff"
-  Header always set Referrer-Policy "strict-origin-when-cross-origin"
-  Header always set X-Frame-Options "SAMEORIGIN"
-  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
-  <FilesMatch "\.(css|js)$">
-    # Bump ?v= in HTML if you need to force-refresh after edits, or lower this.
-    Header set Cache-Control "public, max-age=2592000"
-  </FilesMatch>
-</IfModule>
-
-# Block direct access to docs and dotfiles
-<FilesMatch "^(README\.md|SHOTLIST\.md|\..*)$">
-  Require all denied
+# Never serve these
+<FilesMatch "^(manifest\.json|.*\.md|.*\.csv)$">
+Require all denied
 </FilesMatch>

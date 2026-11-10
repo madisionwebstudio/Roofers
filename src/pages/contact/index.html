@@ -1,0 +1,51 @@
+<!--meta {
+  "title": "Contact [BRAND]: Roofing Website & SEO Agency",
+  "description": "Questions about a roofing website, SEO or Google Ads? WhatsApp us, email us or send a message. Mon–Fri 8am–6pm Central. We reply within one business day.",
+  "path": "/contact/",
+  "crumbs": [["Home", "/"], ["Contact", "/contact/"]]
+} -->
+
+<section class="sec sec--navy" aria-labelledby="h1" style="padding-bottom:clamp(96px,10vw,160px)">
+  <div class="wrap stack" style="--s:1.4rem">
+    {{crumbs}}
+    <h1 id="h1" class="d-hero" style="font-size:clamp(2.5rem,1.4rem + 5vw,5.8rem)"><span class="h1-kw">Contact [BRAND]</span> Talk to the founder. <span class="hl">Not a call center.</span></h1>
+    <p class="lede" style="color:#E6EAEE">Want to see your new website? <a class="tlink" href="/free-preview/" data-cta="contact-to-preview">Get your free website preview</a> — it's the fastest way to start. For anything else, call or send a message.</p>
+  </div>
+</section>
+
+<section class="sec sec--paper shed-top" aria-labelledby="form-h">
+  <div class="wrap grid g-7-5">
+    <div class="form-card">
+      <h2 id="form-h" class="h3 mb-m">Send a message</h2>
+      <form class="form" action="/send.php" method="post" data-form="contact" novalidate>
+        <input type="hidden" name="form" value="contact">
+        <input type="hidden" name="_ts" value="">
+        <div class="hp" aria-hidden="true"><label for="c-fax">Leave this empty</label><input id="c-fax" type="text" name="fax_number" tabindex="-1" autocomplete="off"></div>
+        <div class="row row-2">
+          <div class="field"><label for="c-name">Your name</label><input id="c-name" type="text" name="name" autocomplete="name" required data-msg="Please tell us your name." aria-describedby="c-name-e"><p class="err" id="c-name-e"></p></div>
+          <div class="field"><label for="c-company">Company <span class="opt">(optional)</span></label><input id="c-company" type="text" name="company" autocomplete="organization"></div>
+        </div>
+        <div class="row row-2">
+          <div class="field"><label for="c-phone">Phone</label><input id="c-phone" type="tel" name="phone" autocomplete="tel" inputmode="tel" required aria-describedby="c-phone-e"><p class="err" id="c-phone-e"></p></div>
+          <div class="field"><label for="c-email">Email</label><input id="c-email" type="email" name="email" autocomplete="email" required aria-describedby="c-email-e"><p class="err" id="c-email-e"></p></div>
+        </div>
+        <div class="field"><label for="c-msg">Message</label><textarea id="c-msg" name="message" rows="5" required data-msg="What can we help with?" aria-describedby="c-msg-e"></textarea><p class="err" id="c-msg-e"></p></div>
+        <label class="consent field"><input type="checkbox" name="consent" value="yes" required data-msg="Please tick the box so we can reply."><span>I agree to be contacted by phone, text and email about my request. Reply STOP to opt out. <span class="err"></span></span></label>
+        <p class="form-status" role="alert" tabindex="-1"></p>
+        <button class="btn btn--lg btn--block" type="submit" data-cta="form-contact">Send message <svg aria-hidden="true"><use href="/assets/img/icons.svg#i-arrow"/></svg></button>
+      </form>
+    </div>
+    <aside class="stack" style="--s:2rem">
+      <div class="stack">
+        <h2 class="h3">WhatsApp</h2>
+        <p><a class="cbtn cbtn--wa cbtn--wide cbtn--solid" href="[WHATSAPP_URL]" target="_blank" rel="noopener" data-cta="contact-whatsapp"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-whatsapp"/></svg><span>Message us on WhatsApp</span></a></p>
+        <p><b>[US_PHONE]</b> (WhatsApp messages only)</p>
+        <p class="muted small">Fastest way to reach us. We reply within 1 business day, usually sooner.</p>
+      </div>
+      <div class="stack"><h2 class="h3">Email</h2><p><a class="cbtn cbtn--mail cbtn--wide cbtn--solid" href="mailto:[EMAIL]" data-cta="contact-email"><svg aria-hidden="true"><use href="/assets/img/icons.svg#i-mail"/></svg><span>Email us</span></a></p><p class="muted small"><a class="tlink" href="mailto:[EMAIL]">[EMAIL]</a></p></div>
+      <div class="stack"><h2 class="h3">Hours</h2><p>Mon–Fri 8am–6pm Central<br><span class="muted">Remote team · US hours · We reply within 1 business day.</span></p></div>
+      <div class="founder__photo" style="aspect-ratio:4/3">{{img name="metal-roof" alt="Grey standing-seam metal roof with a white dormer window" sizes="(min-width:900px) 40vw, 100vw"}}<div class="tape" aria-hidden="true"></div></div>
+      <p class="muted">Looking for prices? They're all on the <a class="tlink" href="/pricing/">pricing page</a>.</p>
+    </aside>
+  </div>
+</section>
