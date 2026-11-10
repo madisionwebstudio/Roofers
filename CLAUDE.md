@@ -4,9 +4,7 @@
 The owner uses an **older iPhone (older iOS) that cannot open claude.ai artifacts**. So after every change:
 1. Rebuild (`python3 tools/build.py`), commit and push.
 2. Republish the clickable artifact (preview copy with relative links — see the preview script used before).
-3. **Always also send files that open on any iPhone, via SendUserFile:**
-   - a PDF of phone-size screenshots (390 px wide @2x) of Home, the service pages (Web Design, SEO, Google Ads, Lead Gen, Local SEO), Pricing, Our Work, the Hardtland case study and Free Preview, one phone screen per PDF page;
-   - 1–2 JPG screenshots of what changed (phone + desktop).
+3. **Always also send 1–2 JPG screenshots of what changed (phone + desktop)** via SendUserFile — they open on any iPhone. (Owner, Nov 10: no more full-site phone PDF.)
 4. Send the zips (`public_html` upload zip + full project) when asked.
 
 ## Older iPhone / Safari support (keep it)
@@ -16,6 +14,10 @@ The owner uses an **older iPhone (older iOS) that cannot open claude.ai artifact
 
 ## Design (current)
 - Font: Plus Jakarta Sans everywhere (`DISPLAY_FONT: "jakarta"`), minimalist style inspired by groksmm.com: sentence-case headings with tight tracking, one italic orange accent word, pill buttons, soft rounded white cards, quiet labels. Navy + orange kept. Theme layer = the `html.f-jakarta` block at the end of main.css.
+
+## Founder & work
+- Founder photo: `assets/img/founder.jpg` + `.webp` (4:5) and `founder-sq.jpg` (author box), from the owner's headshot.
+- Our Work covers new builds AND redesigns — don't call it "redesigns" only; no "Redesign concept — not a client" legend.
 
 ## Contact
 - No phone-call buttons. Contact is **WhatsApp** (`WHATSAPP` in config.json → `[WHATSAPP_URL]`) and **email**. Clicks on both are tracked as conversions.

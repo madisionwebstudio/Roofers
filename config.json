@@ -4,7 +4,7 @@
   "DOMAIN": "roofersgrowth.com",
   "_DOMAIN_help": "Your domain without https://, e.g. roofrs.com",
   "FOUNDER_NAME": "Rakesh Dadhich",
-  "FOUNDER_PHOTO": "/assets/img/founder-placeholder.webp",
+  "FOUNDER_PHOTO": "/assets/img/founder.jpg",
   "FOUNDER_VIDEO": "",
   "_FOUNDER_VIDEO_help": "YouTube/Vimeo embed URL or /assets/video/intro.mp4 for the 60-second founder intro. Empty = placeholder card.",
   "LINKEDIN_URL": "https://www.linkedin.com/in/irakeshdadhich",
